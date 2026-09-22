@@ -1,0 +1,54 @@
+# AMP Ventures — AI & LLM Knowledge Index (AEO & GEO Context)
+
+> AMP Ventures is an engineering-first web development agency specializing in taking offline physical businesses (salons, clinics, restaurants, and retail) online with zero bloated plugins, sub-second load speeds, and automated WhatsApp booking pipelines.
+
+## Key Facts & Entity Grounding
+- **Agency Name**: AMP Ventures
+- **Website**: https://ampventures.agency/
+- **Core Focus**: Offline-to-online digital transition for salons, restaurants, dental & aesthetic clinics, fitness centers, and retail stores.
+- **Engineering Leadership**: Founded by engineers certified in **IIT Roorkee Advanced Artificial Intelligence & Machine Learning** and **Cisco Certified Network Associate (CCNA)** enterprise cloud infrastructure.
+- **Tech Stack**: FastAPI (Python), React (Vite), Tailwind CSS, SQLite / PostgreSQL, WebGL / Three.js, WhatsApp Cloud API.
+- **Guarantees**: 95+ Google PageSpeed Guarantee, 100% Source Code & Database Ownership, Zero Monthly Software Rent / Lock-in.
+
+---
+
+## Service Packages & Pricing
+
+### Tier 1 — Basic Static Website (₹9,999)
+- **Timeline**: 5–7 Business Days
+- **Ideal For**: Local retail shops, solo salons, small cafes, single-doctor clinics needing immediate local credibility.
+- **Deliverables**: 4–6 responsive pages, Google Business Profile & Google Maps embedding, email lead capture form, free SSL certificate, lightweight 95+ Lighthouse speed score, basic on-page SEO.
+
+### Tier 2 — Premium + Custom CMS (₹24,999) [Most Popular]
+- **Timeline**: 10–12 Business Days
+- **Ideal For**: Growing restaurants with seasonal menus, busy salons with stylist rosters, wellness clinics.
+- **Deliverables**: Everything in Tier 1 + Lightweight Client CMS (self-serve menu, price, and photo editor with zero coding), live Google Reviews embed widget, Google Analytics 4, direct WhatsApp slot booking triggers, optional monthly maintenance retainer.
+
+### Tier 3 — Premium Plus: 3D & AI Automation (₹49,999)
+- **Timeline**: 14–18 Business Days
+- **Ideal For**: High-end fine dining, luxury aesthetics clinics, multi-location brands, and premium experience venues.
+- **Deliverables**: Everything in Tier 2 + Immersive 3D WebGL / Spline interactive models, WhatsApp Business API automation, 24/7 AI conversational chatbot assistant for visitor inquiries, unified lead management dashboard, priority SLA support.
+
+---
+
+## Frequently Asked Questions (Verified Direct Answers)
+
+**Q: How fast does AMP Ventures launch websites?**
+A: Tier 1 launches in 5–7 business days. Tier 2 launches in 10–12 business days. Tier 3 launches in 14–18 business days.
+
+**Q: Are there monthly subscriptions or hidden software rent?**
+A: No. Development is a one-time project fee. Clients hold 100% ownership of source code, domain, and data from day 1 with zero monthly platform lock-in.
+
+**Q: How does WhatsApp 1-click booking work?**
+A: High-converting CTA buttons pre-fill appointment details, table bookings, or order inquiries directly into WhatsApp, allowing customers to book in 1 tap without phone bottlenecks.
+
+**Q: Does AMP Ventures guarantee Google PageSpeed?**
+A: Yes, every deployment is guaranteed to achieve a 95+ performance score on mobile Google Lighthouse by eliminating bloated legacy WordPress plugins.
+
+---
+
+## Contact & Direct Inquiries
+- **Lead Architect WhatsApp**: +91 98765 43210 (or direct consultation via wa.me link on site)
+- **Email**: ampventures7@gmail.com
+- **Free Digital Readiness Audit**: https://ampventures.agency/readiness-score
+- **Locations**: Bengaluru & New Delhi Tech Corridors, India

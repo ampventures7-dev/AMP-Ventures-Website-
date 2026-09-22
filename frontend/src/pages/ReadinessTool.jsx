@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Sparkles, CheckCircle2, AlertTriangle, ArrowUpRight, 
-  MessageSquare, Activity, Check, RefreshCw 
+  CheckCircle2, AlertTriangle, ArrowUpRight, 
+  MessageSquare, Activity, RefreshCw 
 } from 'lucide-react';
 import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 
@@ -147,23 +147,23 @@ export default function ReadinessTool() {
   };
 
   return (
-    <div className="readiness-tool-page pt-28 pb-20">
+    <div className="readiness-tool-page pt-28 pb-20 bg-white text-slate-900">
       {/* Header */}
       <section className="py-12 text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.12] text-xs font-semibold uppercase tracking-wider text-sky-400 mb-6 shadow-inner">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-6 shadow-xs">
             <Activity className="w-3.5 h-3.5" />
             <span>Interactive Diagnostic Engine</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
             Free Digital Readiness <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-lime-accent">
+            <span className="text-sky-600">
               & Revenue Gap Audit
             </span>
           </h1>
 
-          <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Take this 60-second diagnostic to calculate your online maturity score, identify lost revenue bottlenecks, and discover your optimal growth tier.
           </p>
         </div>
@@ -173,29 +173,29 @@ export default function ReadinessTool() {
       <section className="py-8">
         <div className="container mx-auto px-4 max-w-3xl">
           {!result ? (
-            <div className="p-8 lg:p-10 rounded-3xl bg-[#111522] border border-white/[0.1] shadow-2xl backdrop-blur-2xl">
+            <div className="p-8 lg:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl">
               <form onSubmit={handleAudit} className="space-y-6">
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="form-group">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Business Name *</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Business Name *</label>
                     <input 
                       type="text" 
                       name="business_name"
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white text-sm focus:border-sky-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
                       placeholder="e.g. Luxe Glow Salon"
                       value={form.business_name}
                       onChange={handleChange}
                     />
                   </div>
                   <div className="form-group">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">City / Location *</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">City / Location *</label>
                     <input 
                       type="text" 
                       name="city"
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white text-sm focus:border-sky-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
                       placeholder="e.g. Bengaluru"
                       value={form.city}
                       onChange={handleChange}
@@ -204,10 +204,10 @@ export default function ReadinessTool() {
                 </div>
 
                 <div className="form-group">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Industry Sector</label>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Industry Sector</label>
                   <select 
                     name="industry"
-                    className="w-full px-4 py-3 rounded-xl bg-[#0e1118] border border-white/[0.1] text-white text-sm focus:border-sky-400 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
                     value={form.industry}
                     onChange={handleChange}
                   >
@@ -218,49 +218,49 @@ export default function ReadinessTool() {
                 </div>
 
                 {/* Audit Checklist Checkboxes */}
-                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-3.5">
-                  <div className="text-xs font-bold uppercase tracking-wider text-slate-300">Current Setup (Select all that apply):</div>
+                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3.5">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-900">Current Setup (Select all that apply):</div>
 
-                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-300">
+                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-700">
                     <input 
                       type="checkbox" 
                       name="has_website"
                       checked={form.has_website}
                       onChange={handleChange}
-                      className="checkbox checkbox-accent checkbox-sm rounded-md"
+                      className="checkbox checkbox-primary checkbox-sm rounded-md"
                     />
                     <span>We currently have an active company website</span>
                   </label>
 
-                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-300">
+                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-700">
                     <input 
                       type="checkbox" 
                       name="has_google_maps"
                       checked={form.has_google_maps}
                       onChange={handleChange}
-                      className="checkbox checkbox-accent checkbox-sm rounded-md"
+                      className="checkbox checkbox-primary checkbox-sm rounded-md"
                     />
                     <span>We have a verified Google Business Profile / Google Maps listing</span>
                   </label>
 
-                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-300">
+                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-700">
                     <input 
                       type="checkbox" 
                       name="accepts_online_booking"
                       checked={form.accepts_online_booking}
                       onChange={handleChange}
-                      className="checkbox checkbox-accent checkbox-sm rounded-md"
+                      className="checkbox checkbox-primary checkbox-sm rounded-md"
                     />
                     <span>Customers can book slots or order online (not just manual phone calls)</span>
                   </label>
 
-                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-300">
+                  <label className="flex items-center gap-3 cursor-pointer text-xs sm:text-sm text-slate-700">
                     <input 
                       type="checkbox" 
                       name="has_social"
                       checked={form.has_social}
                       onChange={handleChange}
-                      className="checkbox checkbox-accent checkbox-sm rounded-md"
+                      className="checkbox checkbox-primary checkbox-sm rounded-md"
                     />
                     <span>We actively post on Instagram / Facebook</span>
                   </label>
@@ -268,22 +268,22 @@ export default function ReadinessTool() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="form-group">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Email (For report copy)</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Email (For report copy)</label>
                     <input 
                       type="email" 
                       name="email"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white text-sm focus:border-sky-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
                       placeholder="owner@business.com"
                       value={form.email}
                       onChange={handleChange}
                     />
                   </div>
                   <div className="form-group">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">WhatsApp Number (Optional)</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">WhatsApp Number (Optional)</label>
                     <input 
                       type="tel" 
                       name="phone"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white text-sm focus:border-sky-400 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
                       placeholder="+91 98765 43210"
                       value={form.phone}
                       onChange={handleChange}
@@ -293,7 +293,7 @@ export default function ReadinessTool() {
 
                 <button 
                   type="submit" 
-                  className="w-full py-4 rounded-xl bg-lime-accent hover:bg-lime-400 text-slate-950 font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                  className="w-full py-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
                   disabled={loading}
                 >
                   {loading ? 'Analyzing Digital Architecture...' : 'Generate Instant Diagnostic Score'}
@@ -303,52 +303,56 @@ export default function ReadinessTool() {
             </div>
           ) : (
             /* Result Screen */
-            <div className="p-8 lg:p-10 rounded-3xl bg-[#111522] border border-white/[0.1] shadow-2xl backdrop-blur-2xl space-y-8">
+            <div className="p-8 lg:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-8">
               <div className="text-center">
-                <span className="badge badge-info badge-sm font-bold uppercase tracking-wider mb-2">Diagnostic Complete</span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Digital Maturity Audit</h2>
-                <p className="text-xs text-slate-400 mt-1">For: <strong className="text-white">{form.business_name}</strong> ({form.city})</p>
+                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-50 text-sky-700 border border-sky-200 mb-2 inline-block">Diagnostic Complete</span>
+                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">Digital Maturity Audit</h2>
+                <p className="text-xs text-slate-500 mt-1">For: <strong className="text-slate-900">{form.business_name}</strong> ({form.city})</p>
               </div>
 
               {/* Score Box */}
-              <div className="p-6 rounded-2xl bg-[#151a26] border border-white/[0.08] flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-                <div className="w-24 h-24 rounded-2xl bg-[#0a0d14] border-2 border-lime-accent/40 flex flex-col items-center justify-center flex-shrink-0">
-                  <div className={`text-3xl font-black font-mono ${result.score > 70 ? 'text-emerald-400' : result.score > 40 ? 'text-amber-400' : 'text-rose-400'}`}>
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+                <div className="w-24 h-24 rounded-2xl bg-white border-2 border-sky-400 shadow-sm flex flex-col items-center justify-center flex-shrink-0">
+                  <div className={`text-3xl font-black font-mono ${result.score > 70 ? 'text-emerald-600' : result.score > 40 ? 'text-amber-600' : 'text-rose-600'}`}>
                     {result.score}
                   </div>
-                  <div className="text-[10px] text-slate-500 font-mono">/ 100</div>
+                  <div className="text-[10px] text-slate-400 font-mono">/ 100</div>
                 </div>
 
                 <div className="space-y-1.5 flex-grow">
-                  <div className="text-sm font-bold text-white">{result.level}</div>
-                  <p className="text-xs text-slate-400 leading-relaxed">{result.summary}</p>
+                  <div className="text-sm font-bold text-slate-900">{result.level}</div>
+                  <p className="text-xs text-slate-600 leading-relaxed">{result.summary}</p>
                   <div className="pt-2 flex items-center gap-2 text-xs">
-                    <span className="text-slate-400">Estimated Revenue Opportunity:</span>
-                    <span className="badge badge-accent badge-sm font-bold">{result.potential_revenue_boost}</span>
+                    <span className="text-slate-500">Estimated Revenue Opportunity:</span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">{result.potential_revenue_boost}</span>
                   </div>
                 </div>
               </div>
 
               {/* Actionable Gap Checklist */}
               <div className="space-y-3">
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Identified Growth Gaps & Action Items:</h3>
+                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-display">Identified Growth Gaps & Action Items:</h3>
                 
                 <div className="space-y-2.5">
                   {result.checklist.map((item, idx) => (
-                    <div key={idx} className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-start gap-3.5">
+                    <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3.5">
                       {item.status === 'optimal' ? (
-                        <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                       ) : (
-                        <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                        <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
                       )}
                       <div className="flex-grow">
                         <div className="flex justify-between items-center mb-1">
-                          <strong className="text-xs font-bold text-white">{item.item}</strong>
-                          <span className={`badge ${item.status === 'optimal' ? 'badge-success' : 'badge-warning'} badge-xs font-semibold`}>
+                          <strong className="text-xs font-bold text-slate-900">{item.item}</strong>
+                          <span className={`text-[10px] px-2 py-0.5 rounded font-semibold border ${
+                            item.status === 'optimal' 
+                              ? 'bg-emerald-50 text-emerald-700 border-emerald-200' 
+                              : 'bg-amber-50 text-amber-700 border-amber-200'
+                          }`}>
                             {item.impact} Impact
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400 leading-relaxed">{item.description}</p>
+                        <p className="text-xs text-slate-600 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -356,13 +360,13 @@ export default function ReadinessTool() {
               </div>
 
               {/* Recommended Solution Card */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-950/40 to-[#121624] border border-indigo-500/30 space-y-4">
-                <span className="badge badge-primary badge-sm font-bold uppercase tracking-wider">Recommended Setup</span>
-                <h4 className="text-lg font-bold text-white">{result.recommended_tier}</h4>
-                <p className="text-xs text-slate-300 leading-relaxed">{result.recommended_tier_reason}</p>
+              <div className="p-6 rounded-2xl bg-sky-50/70 border border-sky-200 space-y-4">
+                <span className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-sky-100 text-sky-800 border border-sky-200 inline-block">Recommended Setup</span>
+                <h4 className="text-lg font-bold text-slate-900 font-display">{result.recommended_tier}</h4>
+                <p className="text-xs text-slate-600 leading-relaxed">{result.recommended_tier_reason}</p>
                 
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <Link to="/contact" className="px-5 py-2.5 rounded-xl bg-lime-accent text-slate-950 font-bold text-xs shadow-md flex items-center gap-1.5">
+                  <Link to="/contact" className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-500/25 flex items-center gap-1.5 transition-all">
                     <span>Fix These Gaps With Us</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
@@ -370,7 +374,7 @@ export default function ReadinessTool() {
                     href={getWhatsAppUrl(`Hi AMP Ventures, I got a score of ${result.score}/100 for ${form.business_name} and want to improve it.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 font-bold text-xs flex items-center gap-1.5"
+                    className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-all"
                   >
                     <MessageSquare className="w-3.5 h-3.5" />
                     <span>WhatsApp Strategy Chat</span>
@@ -381,7 +385,7 @@ export default function ReadinessTool() {
               <div className="text-center pt-2">
                 <button 
                   onClick={() => setResult(null)} 
-                  className="text-xs text-slate-400 hover:text-white inline-flex items-center gap-1.5 font-medium"
+                  className="text-xs text-slate-500 hover:text-slate-900 inline-flex items-center gap-1.5 font-medium transition-colors"
                 >
                   <RefreshCw className="w-3 h-3" />
                   <span>Audit Another Business</span>

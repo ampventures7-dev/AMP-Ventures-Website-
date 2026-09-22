@@ -184,7 +184,10 @@ export default function MockupGenerator() {
   const [previewData, setPreviewData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [viewMode, setViewMode] = useState('desktop'); // 'desktop' | 'mobile'
+  const [previewTheme, setPreviewTheme] = useState('dark'); // 'light' | 'dark'
   const [simulationToast, setSimulationToast] = useState(null);
+
+  const isDark = previewTheme === 'dark';
 
   // Trigger simulated interactive action toast
   const triggerSimulation = (actionName) => {
@@ -276,7 +279,7 @@ export default function MockupGenerator() {
         {/* Left Column: Interactive Customizer Controls */}
         <div className="glass-card" style={{ padding: '1.75rem', position: 'sticky', top: '90px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-            <h3 style={{ fontSize: '1.15rem', color: '#fff', margin: 0 }}>⚡ Storefront Customizer</h3>
+            <h3 style={{ fontSize: '1.15rem', color: '#0f172a', margin: 0, fontWeight: 700 }}>⚡ Storefront Customizer</h3>
             {loading && <span className="badge badge-cyan" style={{ fontSize: '0.72rem' }}>Updating...</span>}
           </div>
 
@@ -313,7 +316,7 @@ export default function MockupGenerator() {
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
               placeholder="e.g. Saffron Hearth Bistro"
-              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem' }}
+              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#ffffff', color: '#0f172a', border: '1px solid #cbd5e1' }}
             />
           </div>
 
@@ -326,12 +329,12 @@ export default function MockupGenerator() {
               value={city}
               onChange={(e) => setCity(e.target.value)}
               placeholder="e.g. Bengaluru, Mumbai, Delhi"
-              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem' }}
+              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#ffffff', color: '#0f172a', border: '1px solid #cbd5e1' }}
             />
           </div>
 
           {/* 4. Brand Accent Color */}
-          <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+          <div className="form-group" style={{ marginBottom: '1.25rem' }}>
             <label className="form-label" style={{ fontSize: '0.85rem' }}>4. Brand Theme Accent</label>
             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
               {THEMES.map((theme) => (
@@ -353,6 +356,62 @@ export default function MockupGenerator() {
                   title={theme.name}
                 />
               ))}
+            </div>
+          </div>
+
+          {/* 5. Website Preview Theme (Light / Dark) */}
+          <div className="form-group" style={{ marginBottom: '1.4rem' }}>
+            <label className="form-label" style={{ fontSize: '0.85rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span>5. Website Preview Theme</span>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: isDark ? '#64748b' : '#0284c7' }}>
+                {isDark ? '🌙 Dark Active' : '☀️ Light Active'}
+              </span>
+            </label>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+              <button
+                type="button"
+                onClick={() => setPreviewTheme('light')}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.4rem',
+                  fontSize: '0.82rem',
+                  padding: '0.6rem 0.5rem',
+                  borderRadius: '10px',
+                  fontWeight: !isDark ? 700 : 500,
+                  background: !isDark ? '#e0f2fe' : '#ffffff',
+                  color: !isDark ? '#0284c7' : '#475569',
+                  border: !isDark ? '2px solid #0284c7' : '1px solid #cbd5e1',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: !isDark ? '0 2px 8px rgba(2,132,199,0.2)' : 'none'
+                }}
+              >
+                <span>☀️</span> Light Theme
+              </button>
+              <button
+                type="button"
+                onClick={() => setPreviewTheme('dark')}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.4rem',
+                  fontSize: '0.82rem',
+                  padding: '0.6rem 0.5rem',
+                  borderRadius: '10px',
+                  fontWeight: isDark ? 700 : 500,
+                  background: isDark ? '#0f172a' : '#ffffff',
+                  color: isDark ? '#ffffff' : '#475569',
+                  border: isDark ? '2px solid #0f172a' : '1px solid #cbd5e1',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: isDark ? '0 2px 8px rgba(15,23,42,0.25)' : 'none'
+                }}
+              >
+                <span>🌙</span> Dark Theme
+              </button>
             </div>
           </div>
 
@@ -385,25 +444,26 @@ export default function MockupGenerator() {
             style={{
               width: '100%',
               maxWidth: viewMode === 'mobile' ? '380px' : '100%',
-              background: '#0B0F19',
+              background: isDark ? '#0B0F19' : '#ffffff',
               borderRadius: '20px',
-              border: `1.5px solid rgba(255, 255, 255, 0.15)`,
-              boxShadow: `0 25px 60px rgba(0,0,0,0.85), 0 0 40px ${themeColor}22`,
+              border: isDark ? '1.5px solid rgba(255, 255, 255, 0.15)' : '1.5px solid #cbd5e1',
+              boxShadow: isDark ? `0 25px 60px rgba(0,0,0,0.85), 0 0 40px ${themeColor}22` : `0 20px 50px rgba(0,0,0,0.08), 0 0 35px ${themeColor}15`,
               overflow: 'hidden',
-              transition: 'max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+              transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative'
             }}
           >
             {/* Simulated Browser Chrome Topbar */}
             <div
               style={{
-                background: '#111827',
+                background: isDark ? '#111827' : '#f8fafc',
                 padding: '0.75rem 1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 gap: '0.75rem',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+                borderBottom: isDark ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid #e2e8f0',
+                transition: 'background 0.3s ease'
               }}
             >
               {/* Traffic Lights */}
@@ -417,61 +477,113 @@ export default function MockupGenerator() {
               <div
                 style={{
                   flexGrow: 1,
-                  background: '#070B12',
+                  background: isDark ? '#070B12' : '#ffffff',
                   padding: '0.35rem 0.75rem',
                   borderRadius: '30px',
                   fontSize: '0.75rem',
-                  color: 'var(--text-secondary)',
+                  color: isDark ? 'var(--text-secondary)' : '#475569',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.4rem',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  border: isDark ? '1px solid rgba(255,255,255,0.06)' : '1px solid #cbd5e1',
                   fontFamily: 'var(--font-mono)',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  transition: 'all 0.3s ease'
                 }}
               >
                 <span style={{ color: '#10B981', fontSize: '0.75rem' }}>🔒</span>
-                <span style={{ color: '#fff', fontWeight: 600 }}>https://www.{domainSlug || 'business'}.in</span>
+                <span style={{ color: isDark ? '#fff' : '#0f172a', fontWeight: 600 }}>https://www.{domainSlug || 'business'}.in</span>
               </div>
 
-              {/* Viewport Switcher Buttons */}
-              <div style={{ display: 'flex', gap: '4px', background: 'rgba(255,255,255,0.05)', padding: '2px', borderRadius: '8px' }}>
-                <button
-                  type="button"
-                  onClick={() => setViewMode('desktop')}
-                  style={{
-                    background: viewMode === 'desktop' ? themeColor : 'transparent',
-                    color: '#fff',
-                    border: 'none',
-                    borderRadius: '6px',
-                    padding: '3px 7px',
-                    fontSize: '0.72rem',
-                    cursor: 'pointer',
-                    fontWeight: 600
-                  }}
-                  title="Desktop View"
-                >
-                  💻
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setViewMode('mobile')}
-                  style={{
-                    background: viewMode === 'mobile' ? themeColor : 'transparent',
-                    color: '#fff',
-                    border: 'none',
-                    borderRadius: '6px',
-                    padding: '3px 7px',
-                    fontSize: '0.72rem',
-                    cursor: 'pointer',
-                    fontWeight: 600
-                  }}
-                  title="Mobile View"
-                >
-                  📱
-                </button>
+              {/* Controls Group: Theme Switcher + Viewport Switcher */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                {/* Direct Light / Dark Theme Switcher */}
+                <div style={{ display: 'flex', gap: '2px', background: isDark ? 'rgba(255,255,255,0.08)' : '#e2e8f0', padding: '2px', borderRadius: '8px' }}>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewTheme('light')}
+                    style={{
+                      background: !isDark ? '#ffffff' : 'transparent',
+                      color: !isDark ? '#0284c7' : '#94a3b8',
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '3px 7px',
+                      fontSize: '0.72rem',
+                      cursor: 'pointer',
+                      fontWeight: 700,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '3px',
+                      boxShadow: !isDark ? '0 1px 3px rgba(0,0,0,0.12)' : 'none',
+                      transition: 'all 0.2s ease'
+                    }}
+                    title="Switch Preview to Light Theme"
+                  >
+                    ☀️ Light
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewTheme('dark')}
+                    style={{
+                      background: isDark ? '#0f172a' : 'transparent',
+                      color: isDark ? '#ffffff' : '#64748b',
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '3px 7px',
+                      fontSize: '0.72rem',
+                      cursor: 'pointer',
+                      fontWeight: 700,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '3px',
+                      boxShadow: isDark ? '0 1px 3px rgba(0,0,0,0.25)' : 'none',
+                      transition: 'all 0.2s ease'
+                    }}
+                    title="Switch Preview to Dark Theme"
+                  >
+                    🌙 Dark
+                  </button>
+                </div>
+
+                {/* Viewport Switcher Buttons */}
+                <div style={{ display: 'flex', gap: '2px', background: isDark ? 'rgba(255,255,255,0.05)' : '#e2e8f0', padding: '2px', borderRadius: '8px' }}>
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('desktop')}
+                    style={{
+                      background: viewMode === 'desktop' ? themeColor : 'transparent',
+                      color: viewMode === 'desktop' ? '#fff' : (isDark ? '#94a3b8' : '#64748b'),
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '3px 7px',
+                      fontSize: '0.72rem',
+                      cursor: 'pointer',
+                      fontWeight: 600
+                    }}
+                    title="Desktop View"
+                  >
+                    💻
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setViewMode('mobile')}
+                    style={{
+                      background: viewMode === 'mobile' ? themeColor : 'transparent',
+                      color: viewMode === 'mobile' ? '#fff' : (isDark ? '#94a3b8' : '#64748b'),
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '3px 7px',
+                      fontSize: '0.72rem',
+                      cursor: 'pointer',
+                      fontWeight: 600
+                    }}
+                    title="Mobile View"
+                  >
+                    📱
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -511,15 +623,16 @@ export default function MockupGenerator() {
             {previewData && (
               <div
                 style={{
-                  background: '#080C16',
-                  color: '#F8FAFC',
+                  background: isDark ? '#080C16' : '#ffffff',
+                  color: isDark ? '#F8FAFC' : '#0F172A',
                   padding: viewMode === 'mobile' ? '1rem' : '1.5rem',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '1.25rem',
                   fontFamily: 'var(--font-sans)',
                   maxHeight: '620px',
-                  overflowY: 'auto'
+                  overflowY: 'auto',
+                  transition: 'background 0.3s ease, color 0.3s ease'
                 }}
               >
                 {/* 1. Header Navigation Bar */}
@@ -529,7 +642,7 @@ export default function MockupGenerator() {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     paddingBottom: '0.75rem',
-                    borderBottom: '1px solid rgba(255,255,255,0.08)'
+                    borderBottom: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid #e2e8f0'
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
@@ -551,10 +664,10 @@ export default function MockupGenerator() {
                       ⚡
                     </div>
                     <div>
-                      <div style={{ fontWeight: 800, fontSize: '0.95rem', color: '#fff', lineHeight: 1.1 }}>
+                      <div style={{ fontWeight: 800, fontSize: '0.95rem', color: isDark ? '#fff' : '#0f172a', lineHeight: 1.1 }}>
                         {previewData.business_name}
                       </div>
-                      <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>
+                      <div style={{ fontSize: '0.68rem', color: isDark ? 'var(--text-muted)' : '#64748b' }}>
                         📍 {previewData.city} • Open Now
                       </div>
                     </div>
@@ -562,7 +675,7 @@ export default function MockupGenerator() {
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     {viewMode === 'desktop' && (
-                      <div style={{ display: 'flex', gap: '0.75rem', fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
+                      <div style={{ display: 'flex', gap: '0.75rem', fontSize: '0.78rem', color: isDark ? 'var(--text-secondary)' : '#475569' }}>
                         <span>Menu & Rates</span>
                         <span>Reviews</span>
                       </div>
@@ -590,9 +703,11 @@ export default function MockupGenerator() {
                 {/* 2. Hero Section with Media & CTAs */}
                 <div
                   style={{
-                    background: `linear-gradient(135deg, ${themeColor}18 0%, rgba(15,23,42,0.85) 100%)`,
+                    background: isDark 
+                      ? `linear-gradient(135deg, ${themeColor}18 0%, rgba(15,23,42,0.85) 100%)`
+                      : `linear-gradient(135deg, ${themeColor}12 0%, #f8fafc 100%)`,
                     borderRadius: '16px',
-                    border: `1px solid ${themeColor}33`,
+                    border: isDark ? `1px solid ${themeColor}33` : `1px solid ${themeColor}40`,
                     padding: viewMode === 'mobile' ? '1rem' : '1.35rem',
                     display: 'grid',
                     gridTemplateColumns: viewMode === 'mobile' ? '1fr' : '1.1fr 0.9fr',
@@ -623,7 +738,7 @@ export default function MockupGenerator() {
                     <h4
                       style={{
                         fontSize: viewMode === 'mobile' ? '1.15rem' : '1.35rem',
-                        color: '#fff',
+                        color: isDark ? '#fff' : '#0f172a',
                         fontWeight: 800,
                         marginBottom: '0.45rem',
                         lineHeight: 1.25
@@ -635,7 +750,7 @@ export default function MockupGenerator() {
                     <p
                       style={{
                         fontSize: '0.78rem',
-                        color: 'var(--text-secondary)',
+                        color: isDark ? 'var(--text-secondary)' : '#475569',
                         lineHeight: 1.45,
                         marginBottom: '1rem'
                       }}
@@ -670,9 +785,9 @@ export default function MockupGenerator() {
                         type="button"
                         onClick={() => triggerSimulation('Google Maps Location Direction Click')}
                         style={{
-                          background: 'rgba(255,255,255,0.08)',
-                          color: '#fff',
-                          border: '1px solid rgba(255,255,255,0.15)',
+                          background: isDark ? 'rgba(255,255,255,0.08)' : '#ffffff',
+                          color: isDark ? '#fff' : '#0f172a',
+                          border: isDark ? '1px solid rgba(255,255,255,0.15)' : '1px solid #cbd5e1',
                           padding: '0.45rem 0.75rem',
                           borderRadius: '8px',
                           fontSize: '0.75rem',
@@ -694,7 +809,7 @@ export default function MockupGenerator() {
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
-                        filter: 'brightness(0.9)'
+                        filter: isDark ? 'brightness(0.9)' : 'brightness(0.98)'
                       }}
                     />
                     <div
@@ -703,18 +818,18 @@ export default function MockupGenerator() {
                         bottom: '8px',
                         left: '8px',
                         right: '8px',
-                        background: 'rgba(11, 15, 25, 0.85)',
+                        background: isDark ? 'rgba(11, 15, 25, 0.85)' : 'rgba(255, 255, 255, 0.95)',
                         backdropFilter: 'blur(8px)',
                         padding: '0.35rem 0.65rem',
                         borderRadius: '8px',
-                        border: '1px solid rgba(255,255,255,0.12)',
+                        border: isDark ? '1px solid rgba(255,255,255,0.12)' : '1px solid #cbd5e1',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between'
                       }}
                     >
                       <div style={{ fontSize: '0.7rem', color: '#F59E0B', fontWeight: 800 }}>
-                        ★ 4.9 <span style={{ color: '#fff', fontWeight: 500, fontSize: '0.65rem' }}>({previewData.review_count})</span>
+                        ★ 4.9 <span style={{ color: isDark ? '#fff' : '#0f172a', fontWeight: 500, fontSize: '0.65rem' }}>({previewData.review_count})</span>
                       </div>
                       <span style={{ fontSize: '0.65rem', color: '#10B981', fontWeight: 600 }}>
                         ● Google Maps Sync
@@ -726,7 +841,7 @@ export default function MockupGenerator() {
                 {/* 3. Featured Offerings & Services Grid */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.65rem' }}>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 800, color: isDark ? 'var(--text-muted)' : '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                       🔥 Popular Offerings & Instant Booking
                     </span>
                     <span style={{ fontSize: '0.7rem', color: themeColor, fontWeight: 600, cursor: 'pointer' }} onClick={() => triggerSimulation('View Full Catalog')}>
@@ -739,9 +854,9 @@ export default function MockupGenerator() {
                       <div
                         key={sIdx}
                         style={{
-                          background: 'rgba(255,255,255,0.03)',
+                          background: isDark ? 'rgba(255,255,255,0.03)' : '#f8fafc',
                           borderRadius: '12px',
-                          border: '1px solid rgba(255,255,255,0.07)',
+                          border: isDark ? '1px solid rgba(255,255,255,0.07)' : '1px solid #e2e8f0',
                           overflow: 'hidden',
                           display: 'flex',
                           flexDirection: 'column',
@@ -780,16 +895,16 @@ export default function MockupGenerator() {
                         {/* Service Body */}
                         <div style={{ padding: '0.75rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
-                            <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>
+                            <div style={{ fontSize: '0.82rem', fontWeight: 700, color: isDark ? '#fff' : '#0f172a', lineHeight: 1.2 }}>
                               {svc.title}
                             </div>
                           </div>
 
-                          <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', lineHeight: 1.35, marginBottom: '0.65rem', flexGrow: 1 }}>
+                          <div style={{ fontSize: '0.7rem', color: isDark ? 'var(--text-secondary)' : '#64748b', lineHeight: 1.35, marginBottom: '0.65rem', flexGrow: 1 }}>
                             {svc.desc}
                           </div>
 
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.4rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '0.4rem', borderTop: isDark ? '1px solid rgba(255,255,255,0.05)' : '1px solid #e2e8f0' }}>
                             <span style={{ fontSize: '0.88rem', fontWeight: 900, color: themeColor }}>
                               {svc.price}
                             </span>
@@ -797,9 +912,9 @@ export default function MockupGenerator() {
                               type="button"
                               onClick={() => triggerSimulation(`Booked: ${svc.title} (${svc.price})`)}
                               style={{
-                                background: 'rgba(255,255,255,0.08)',
-                                color: '#fff',
-                                border: '1px solid rgba(255,255,255,0.15)',
+                                background: isDark ? 'rgba(255,255,255,0.08)' : '#ffffff',
+                                color: isDark ? '#fff' : '#0f172a',
+                                border: isDark ? '1px solid rgba(255,255,255,0.15)' : '1px solid #cbd5e1',
                                 borderRadius: '6px',
                                 padding: '3px 8px',
                                 fontSize: '0.68rem',
@@ -819,8 +934,8 @@ export default function MockupGenerator() {
                 {/* 4. Live Google Reviews Social Proof Card */}
                 <div
                   style={{
-                    background: 'rgba(16, 185, 129, 0.05)',
-                    border: '1px solid rgba(16, 185, 129, 0.25)',
+                    background: isDark ? 'rgba(16, 185, 129, 0.05)' : 'rgba(16, 185, 129, 0.08)',
+                    border: isDark ? '1px solid rgba(16, 185, 129, 0.25)' : '1px solid rgba(16, 185, 129, 0.3)',
                     borderRadius: '12px',
                     padding: '0.85rem 1rem',
                     display: 'flex',
@@ -841,12 +956,12 @@ export default function MockupGenerator() {
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                         <span style={{ color: '#F59E0B', fontSize: '0.75rem' }}>★★★★★</span>
-                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#fff' }}>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: isDark ? '#fff' : '#0f172a' }}>
                           {previewData.reviews && previewData.reviews[0]?.author}
                         </span>
                         <span style={{ fontSize: '0.65rem', color: '#10B981', fontWeight: 600 }}>✓ Verified Google Review</span>
                       </div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', fontStyle: 'italic', marginTop: '2px' }}>
+                      <div style={{ fontSize: '0.72rem', color: isDark ? 'var(--text-secondary)' : '#475569', fontStyle: 'italic', marginTop: '2px' }}>
                         "{previewData.reviews && previewData.reviews[0]?.text}"
                       </div>
                     </div>
@@ -856,9 +971,9 @@ export default function MockupGenerator() {
                     type="button"
                     onClick={() => triggerSimulation('Google Reviews Modal Opened')}
                     style={{
-                      background: 'rgba(16,185,129,0.15)',
-                      color: '#10B981',
-                      border: '1px solid rgba(16,185,129,0.3)',
+                      background: isDark ? 'rgba(16,185,129,0.15)' : 'rgba(16,185,129,0.2)',
+                      color: isDark ? '#10B981' : '#047857',
+                      border: isDark ? '1px solid rgba(16,185,129,0.3)' : '1px solid rgba(16,185,129,0.4)',
                       borderRadius: '8px',
                       padding: '0.3rem 0.65rem',
                       fontSize: '0.7rem',

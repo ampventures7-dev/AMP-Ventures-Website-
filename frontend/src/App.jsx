@@ -17,6 +17,8 @@ import ReadinessTool from './pages/ReadinessTool.jsx';
 import Blog from './pages/Blog.jsx';
 import AdminLeads from './pages/AdminLeads.jsx';
 
+import SEOHead from './components/SEOHead.jsx';
+
 // Scroll to top automatically on route change
 function ScrollToTop() {
   const { pathname, search, hash } = useLocation();
@@ -34,6 +36,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SEOHead />
       <div className="site-wrapper">
         {/* Ambient Glowing Background Layer */}
         <div className="ambient-bg">

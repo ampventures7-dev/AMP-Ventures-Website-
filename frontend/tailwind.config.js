@@ -13,15 +13,30 @@ export default {
           700: '#151a26',
           600: '#232b3e',
         },
+        accent: {
+          DEFAULT: '#10b981',
+          hover: '#059669',
+          light: '#34d399',
+          muted: 'rgba(16, 185, 129, 0.12)',
+        },
+        surface: {
+          base: '#ffffff',
+          elevated: '#f8fafc',
+          card: '#ffffff',
+          cardHover: '#f1f5f9',
+          border: '#e2e8f0',
+          borderHover: '#cbd5e1',
+        },
         lime: {
-          accent: '#d2f829',
+          accent: '#059669',
         },
         cyan: {
-          accent: '#38bdf8',
+          accent: '#0284c7',
         }
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       }
     },
@@ -30,33 +45,10 @@ export default {
     require('daisyui'),
   ],
   daisyui: {
-    themes: [
-      {
-        ampdark: {
-          "primary": "#6366f1",
-          "primary-content": "#ffffff",
-          "secondary": "#38bdf8",
-          "secondary-content": "#08090d",
-          "accent": "#d2f829",
-          "accent-content": "#08090d",
-          "neutral": "#151a26",
-          "neutral-content": "#f8fafc",
-          "base-100": "#08090d",
-          "base-200": "#0e1118",
-          "base-300": "#151a26",
-          "base-content": "#f8fafc",
-          "info": "#38bdf8",
-          "success": "#10b981",
-          "warning": "#f59e0b",
-          "error": "#ef4444",
-        },
-      },
-      "dark",
-      "night",
-    ],
-    darkTheme: "ampdark",
+    themes: ["light"],
+    darkTheme: "light",
     base: false,
     styled: true,
     utils: true,
   },
-}
+};

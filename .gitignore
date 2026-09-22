@@ -39,8 +39,6 @@ yarn-debug.log*
 yarn-error.log*
 *.log
 
-# IDE & OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# Temporary Lovable folder
+loveable.py/
+

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X, Send, Mic, MicOff, RotateCcw, MessageSquare, ArrowUpRight, Volume2, Sparkles } from 'lucide-react';
+import { X, Send, Mic, MicOff, RotateCcw, Bot, MessageSquare, ArrowUpRight, Volume2, Sparkles } from 'lucide-react';
 import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 
 const INITIAL_MESSAGES = [
@@ -18,6 +18,36 @@ const SUGGESTED_QUESTIONS = [
   "Do you provide WhatsApp booking?",
   "Can you sync Google Maps & Reviews?"
 ];
+
+// Latest modern AI Assistant symbol: Sleek messenger bubble with 4-point AI intelligence star
+function ModernAiChatIcon({ className = "w-6 h-6", filled = false }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Modern conversational bubble */}
+      <path 
+        d="M12 3C6.477 3 2 7.029 2 12c0 2.052.775 3.947 2.086 5.435L3.08 20.46a.7.7 0 0 0 .86.86l3.025-1.008A10.3 10.3 0 0 0 12 21c5.523 0 10-4.029 10-9s-4.477-9-10-9Z" 
+        stroke="currentColor" 
+        strokeWidth="2" 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        fill={filled ? "currentColor" : "none"}
+        fillOpacity={filled ? "0.15" : "0"}
+      />
+      {/* Dynamic 4-point AI Star in center */}
+      <path 
+        d="M12 7.5C12 9.6 10.6 10.8 8.5 11.2C10.6 11.6 12 12.8 12 14.9C12 12.8 13.4 11.6 15.5 11.2C13.4 10.8 12 9.6 12 7.5Z" 
+        fill="currentColor"
+      />
+      {/* Complementary AI Sparkle accent */}
+      <circle cx="16.5" cy="8" r="1" fill="currentColor" />
+    </svg>
+  );
+}
 
 export default function AiChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -260,7 +290,7 @@ export default function AiChatbotWidget() {
       const parts = line.split(/(\*\*.*?\*\*)/g);
       const formattedParts = parts.map((part, pIdx) => {
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={pIdx} className="text-white font-bold">{part.slice(2, -2)}</strong>;
+          return <strong key={pIdx} className="text-slate-900 font-bold">{part.slice(2, -2)}</strong>;
         }
         return part;
       });
@@ -286,35 +316,33 @@ export default function AiChatbotWidget() {
           <X className="w-6 h-6 text-white" />
         ) : (
           <div className="relative flex items-center justify-center">
-            <MessageSquare className="w-5 h-5 text-white drop-shadow fill-white/10" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-lime-accent rounded-full border-2 border-[#08090d] animate-pulse"></span>
+            <ModernAiChatIcon className="w-6 h-6 text-white drop-shadow-sm" filled />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></span>
           </div>
         )}
       </button>
 
       {/* Modern AI Chatbot Modal */}
       {isOpen && (
-        <div className="chatbot-modal">
+        <div className="chatbot-modal bg-white text-slate-900">
           
           {/* Header */}
-          <div className="p-4 border-b border-white/[0.08] flex items-center justify-between bg-gradient-to-r from-indigo-950/60 via-[#0e1118] to-[#121622]">
+          <div className="p-4 border-b border-slate-200 flex items-center justify-between bg-white shadow-xs">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-lime-accent/80 p-[1.5px] shadow-md shadow-indigo-500/20">
-                  <div className="w-full h-full rounded-[10px] bg-[#0c0f17] flex items-center justify-center text-lime-accent">
-                    <MessageSquare className="w-4 h-4" />
-                  </div>
+                <div className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-600 shadow-xs">
+                  <ModernAiChatIcon className="w-5 h-5 text-sky-600" />
                 </div>
-                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#0e1118]"></span>
+                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-white"></span>
               </div>
               
               <div>
-                <div className="text-sm font-extrabold text-white flex items-center gap-1.5">
+                <div className="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
                   <span>AMP Project Advisor</span>
-                  <span className="text-[10px] px-1.5 py-0.2 rounded bg-indigo-500/20 text-indigo-300 font-semibold border border-indigo-500/30">Live</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-200">Live</span>
                 </div>
-                <div className="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <div className="text-[11px] text-slate-500 font-medium flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   Instant Pricing & Technical Guide
                 </div>
               </div>
@@ -324,14 +352,14 @@ export default function AiChatbotWidget() {
               <button 
                 onClick={handleResetChat}
                 title="Restart Conversation"
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-all"
+                className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
               </button>
               <button 
                 onClick={() => setIsOpen(false)} 
                 title="Close Advisor"
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/[0.06] transition-all"
+                className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -341,7 +369,7 @@ export default function AiChatbotWidget() {
           {/* Voice Toast Alert Bar */}
           {voiceToast && (
             <div className={`px-4 py-2 text-xs flex items-center justify-between transition-all ${
-              isListening ? 'bg-red-500/20 border-b border-red-500/30 text-red-300' : 'bg-indigo-500/20 border-b border-indigo-500/30 text-indigo-200'
+              isListening ? 'bg-red-50 border-b border-red-200 text-red-700' : 'bg-sky-50 border-b border-sky-200 text-sky-700'
             }`}>
               <div className="flex items-center gap-2">
                 {isListening ? (
@@ -358,7 +386,7 @@ export default function AiChatbotWidget() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setVoiceLang(prev => prev === 'hi-IN' ? 'en-IN' : 'hi-IN')}
-                  className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-white transition-all"
+                  className="text-[10px] font-bold px-2 py-0.5 rounded bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 shadow-xs transition-all"
                   title="Switch Voice Language"
                 >
                   {voiceLang === 'hi-IN' ? '🇮🇳 हिंदी' : '🌐 Eng'}
@@ -366,7 +394,7 @@ export default function AiChatbotWidget() {
                 {isListening && (
                   <button 
                     onClick={toggleSpeechRecognition}
-                    className="text-[10px] uppercase font-bold text-red-400 underline"
+                    className="text-[10px] uppercase font-bold text-red-600 underline"
                   >
                     Send Now
                   </button>
@@ -376,17 +404,17 @@ export default function AiChatbotWidget() {
           )}
 
           {/* Scrollable Messages Area */}
-          <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-3.5 custom-chat-scrollbar bg-[#080a0f]/60">
+          <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-3.5 custom-chat-scrollbar bg-slate-50/70">
             {messages.map((m, idx) => (
               <div 
                 key={idx} 
                 className={`flex flex-col ${m.role === 'user' ? 'items-end' : 'items-start'}`}
               >
                 <div 
-                  className={`max-w-[88%] p-3.5 rounded-2xl text-xs shadow-md transition-all ${
+                  className={`max-w-[88%] p-3.5 rounded-2xl text-xs shadow-sm transition-all ${
                     m.role === 'user' 
-                      ? 'bg-gradient-to-r from-indigo-600 to-indigo-500 text-white rounded-br-xs shadow-indigo-600/20' 
-                      : 'bg-[#121622] text-slate-200 border border-white/[0.08] rounded-bl-xs shadow-black/40'
+                      ? 'bg-sky-500 text-white rounded-br-xs shadow-sky-500/20' 
+                      : 'bg-white text-slate-700 border border-slate-200 rounded-bl-xs'
                   }`}
                 >
                   <div className="leading-relaxed">
@@ -395,11 +423,11 @@ export default function AiChatbotWidget() {
 
                   {/* Interactive Action Chips */}
                   {m.suggested_actions && m.suggested_actions.length > 0 && (
-                    <div className="mt-3 pt-2.5 border-t border-white/[0.08] flex flex-wrap gap-1.5">
+                    <div className="mt-3 pt-2.5 border-t border-slate-100 flex flex-wrap gap-1.5">
                       {m.suggested_actions.map((act, aIdx) => (
                         <button 
                           key={aIdx} 
-                          className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.06] hover:bg-lime-accent hover:text-slate-950 text-slate-200 border border-white/[0.08] flex items-center gap-1 font-medium transition-all" 
+                          className="text-[11px] px-2.5 py-1 rounded-full bg-slate-50 hover:bg-sky-500 hover:text-white hover:border-sky-500 text-slate-700 border border-slate-200 flex items-center gap-1 font-medium transition-all shadow-xs" 
                           onClick={() => handleActionClick(act)}
                         >
                           <span>{act}</span>
@@ -414,11 +442,11 @@ export default function AiChatbotWidget() {
 
             {loading && (
               <div className="flex items-start">
-                <div className="bg-[#121622] text-slate-400 text-xs px-4 py-3 rounded-2xl rounded-bl-xs border border-white/[0.08] flex items-center gap-2">
+                <div className="bg-white text-slate-600 text-xs px-4 py-3 rounded-2xl rounded-bl-xs border border-slate-200 flex items-center gap-2 shadow-xs">
                   <div className="flex gap-1 items-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: '0s' }}></span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: '0.15s' }}></span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce" style={{ animationDelay: '0.3s' }}></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-bounce" style={{ animationDelay: '0s' }}></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-bounce" style={{ animationDelay: '0.15s' }}></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-bounce" style={{ animationDelay: '0.3s' }}></span>
                   </div>
                   <span className="text-[11px]">AI Advisor analyzing request...</span>
                 </div>
@@ -430,7 +458,7 @@ export default function AiChatbotWidget() {
 
           {/* Quick Prompts Carousel Bar */}
           {messages.length <= 3 && (
-            <div className="px-3.5 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar bg-[#0b0e16] border-t border-white/[0.06]">
+            <div className="px-3.5 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar bg-white border-t border-slate-200">
               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider flex-shrink-0">
                 Suggestions:
               </span>
@@ -438,7 +466,7 @@ export default function AiChatbotWidget() {
                 <button 
                   key={idx} 
                   onClick={() => handleSend(q)}
-                  className="text-[11px] px-3 py-1 rounded-full bg-white/[0.04] hover:bg-white/[0.1] border border-white/[0.08] text-slate-300 hover:text-white whitespace-nowrap transition-all flex-shrink-0"
+                  className="text-[11px] px-3 py-1 rounded-full bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 whitespace-nowrap transition-all flex-shrink-0 shadow-xs"
                 >
                   {q}
                 </button>
@@ -448,7 +476,7 @@ export default function AiChatbotWidget() {
 
           {/* Input Row with Speech-To-Text Mic & Language Toggle */}
           <form 
-            className="p-3 border-t border-white/[0.08] flex items-center gap-2 bg-[#0e1118]"
+            className="p-3 border-t border-slate-200 flex items-center gap-2 bg-white"
             onSubmit={(e) => { e.preventDefault(); handleSend(); }}
           >
             {/* Microphone Button */}
@@ -458,12 +486,12 @@ export default function AiChatbotWidget() {
               title={isListening ? "Stop & Send Voice Query" : `Speak in ${voiceLang === 'hi-IN' ? 'Hindi (हिंदी)' : 'English'}`}
               className={`p-2.5 rounded-xl border transition-all flex items-center justify-center relative ${
                 isListening 
-                  ? 'mic-listening border-red-500 bg-red-500/20 text-red-400 shadow-lg shadow-red-500/40 animate-pulse' 
-                  : 'bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white border-white/[0.08]'
+                  ? 'mic-listening border-red-400 bg-red-50 text-red-600 shadow-md shadow-red-500/20 animate-pulse' 
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
               {isListening ? (
-                <Mic className="w-4 h-4 text-red-400" />
+                <Mic className="w-4 h-4 text-red-500" />
               ) : (
                 <Mic className="w-4 h-4" />
               )}
@@ -481,7 +509,7 @@ export default function AiChatbotWidget() {
                 }
               }}
               title={`Active Voice Language: ${voiceLang === 'hi-IN' ? 'Hindi / Hinglish (Click to switch to English)' : 'English (Click to switch to Hindi)'}`}
-              className="px-2 py-1.5 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] text-[10px] font-bold text-slate-300 hover:text-white transition-all flex-shrink-0"
+              className="px-2 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-700 hover:text-slate-900 transition-all flex-shrink-0"
             >
               {voiceLang === 'hi-IN' ? '🇮🇳 हि' : '🌐 En'}
             </button>
@@ -497,13 +525,13 @@ export default function AiChatbotWidget() {
               }
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-grow bg-white/[0.05] border border-white/[0.1] rounded-xl px-3 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              className="flex-grow bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-sky-500 transition-colors"
             />
 
             {/* Send Button */}
             <button 
               type="submit" 
-              className="p-2.5 rounded-xl bg-lime-accent text-slate-950 hover:bg-lime-400 font-bold transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-lime-400/20"
+              className="p-2.5 rounded-xl bg-sky-500 text-white hover:bg-sky-600 font-bold transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-sky-500/25"
               disabled={!input.trim() || loading}
             >
               <Send className="w-3.5 h-3.5" />

@@ -40,9 +40,9 @@ class Settings(BaseModel):
     # Email & SMTP Settings
     SMTP_HOST: str = os.getenv("SMTP_HOST", "smtp.gmail.com")
     SMTP_PORT: int = int(os.getenv("SMTP_PORT", "587"))
-    SMTP_USER: str = os.getenv("SMTP_USER", "contact@ampventures.agency")
+    SMTP_USER: str = os.getenv("SMTP_USER", "ampventures7@gmail.com")
     SMTP_PASSWORD: str = os.getenv("SMTP_PASSWORD", "")
-    NOTIFICATION_EMAIL_TO: str = os.getenv("NOTIFICATION_EMAIL_TO", "contact@ampventures.agency")
+    NOTIFICATION_EMAIL_TO: str = os.getenv("NOTIFICATION_EMAIL_TO", "ampventures7@gmail.com")
     
     # Instant Mobile Notification Webhooks
     DISCORD_WEBHOOK_URL: str = os.getenv("DISCORD_WEBHOOK_URL", "")

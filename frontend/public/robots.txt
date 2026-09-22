@@ -1,5 +1,29 @@
+# robots.txt for AMP Ventures (SEO, AEO & GEO Optimized)
+
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /api/
 
-Sitemap: https://amp-ventures.vercel.app/sitemap.xml
+# Explicitly Allow AI Answer Engines & Generative Search Crawlers (AEO & GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Canonical Sitemap & Machine-Readable LLM Knowledge Spec
+Sitemap: https://ampventures.agency/sitemap.xml
+# LLMs Context: https://ampventures.agency/llms.txt
