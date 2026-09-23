@@ -45,20 +45,6 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
-                  isActive
-                    ? 'text-sky-400 bg-sky-950/70 border border-sky-500/30 font-semibold shadow-sm'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-900/80'
-                }`
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/services"
               className={({ isActive }) =>
                 `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -83,6 +69,20 @@ export default function Navbar() {
               }
             >
               Pricing
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                  isActive
+                    ? 'text-sky-400 bg-sky-950/70 border border-sky-500/30 font-semibold shadow-sm'
+                    : 'text-slate-300 hover:text-white hover:bg-slate-900/80'
+                }`
+              }
+            >
+              About
             </NavLink>
           </li>
           <li>
@@ -139,12 +139,6 @@ export default function Navbar() {
             Home <ArrowUpRight className="w-4 h-4 text-slate-500" />
           </Link>
           <Link 
-            to="/about" 
-            className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-slate-800/80"
-          >
-            About <ArrowUpRight className="w-4 h-4 text-slate-500" />
-          </Link>
-          <Link 
             to="/services" 
             className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-slate-800/80"
           >
@@ -155,6 +149,12 @@ export default function Navbar() {
             className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-slate-800/80"
           >
             Pricing & Plans <ArrowUpRight className="w-4 h-4 text-slate-500" />
+          </Link>
+          <Link 
+            to="/about" 
+            className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-slate-800/80"
+          >
+            About <ArrowUpRight className="w-4 h-4 text-slate-500" />
           </Link>
           <Link 
             to="/blog" 
