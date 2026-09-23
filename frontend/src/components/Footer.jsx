@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail } from 'lucide-react';
+import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail, Lock } from 'lucide-react';
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER, getWhatsAppUrl } from '../apiConfig';
 
 export default function Footer() {
@@ -105,8 +105,19 @@ export default function Footer() {
             © {new Date().getFullYear()} AMP Ventures Web Engineering Agency. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-emerald-300/60">Engineering for <strong className="text-emerald-300">Offline Growth</strong></span>
+          <div className="flex items-center gap-2.5">
+            <span className="text-xs text-emerald-300/60 hidden sm:inline">Engineering for <strong className="text-emerald-300">Offline Growth</strong></span>
+            
+            {/* Discreet Admin Portal Button */}
+            <Link 
+              to="/admin" 
+              className="w-7 h-7 rounded-lg flex items-center justify-center text-emerald-400/25 hover:text-emerald-200 bg-[#064e3b]/30 hover:bg-[#064e3b] border border-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-pointer" 
+              aria-label="Staff Terminal"
+              title="Staff Terminal"
+            >
+              <Lock className="w-3 h-3" />
+            </Link>
+
             <button 
               onClick={scrollToTop} 
               className="w-8 h-8 rounded-lg flex items-center justify-center text-emerald-200 bg-[#064e3b] border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all shadow-xs" 

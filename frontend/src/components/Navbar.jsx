@@ -168,12 +168,6 @@ export default function Navbar() {
           >
             Free Digital Audit Tool <ArrowUpRight className="w-4 h-4" />
           </Link>
-          <Link 
-            to="/admin" 
-            className="font-medium py-2 border-b flex justify-between items-center text-slate-400 hover:text-slate-200 border-slate-800/80"
-          >
-            Admin Lead Portal <ArrowUpRight className="w-4 h-4" />
-          </Link>
           
           <div className="pt-3 flex flex-col gap-2.5">
             <Link to="/contact" className="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-center text-sm shadow-md shadow-sky-500/25">

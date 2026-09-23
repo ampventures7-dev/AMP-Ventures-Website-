@@ -49,6 +49,24 @@ class TestAmpVenturesBackend(unittest.TestCase):
         res_bad = self.client.post("/api/auth/token", json={"admin_key": "wrong_key_123"})
         self.assertEqual(res_bad.status_code, 401)
 
+    def test_04b_auth_login_with_id_and_password(self):
+        # 1. Valid ID and Password
+        res = self.client.post("/api/auth/login", json={
+            "admin_id": "admin",
+            "password": settings.ADMIN_PASSWORD
+        })
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertIn("access_token", data)
+        self.assertEqual(data["token_type"], "bearer")
+
+        # 2. Invalid Password
+        res_bad = self.client.post("/api/auth/login", json={
+            "admin_id": "admin",
+            "password": "incorrect_password"
+        })
+        self.assertEqual(res_bad.status_code, 401)
+
     def test_05_auth_session_verification(self):
         # 1. Test with Bearer JWT
         res = self.client.get("/api/auth/me", headers={"Authorization": f"Bearer {self.jwt_token}"})

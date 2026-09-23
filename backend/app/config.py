@@ -21,7 +21,9 @@ class Settings(BaseModel):
     WHATSAPP_NUMBER: str = os.getenv("WHATSAPP_NUMBER", "+917000384330")
     
     # Security & Admin Authentication
-    ADMIN_SECRET_KEY: str = os.getenv("ADMIN_SECRET_KEY", "amp_admin_secret_key_2026")
+    ADMIN_USERNAME: str = os.getenv("ADMIN_USERNAME", "AMPVENTURES")
+    ADMIN_PASSWORD: str = os.getenv("ADMIN_PASSWORD", "AMD@ventures@123")
+    ADMIN_SECRET_KEY: str = os.getenv("ADMIN_SECRET_KEY", "AMD@ventures@123")
     JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "amp_ventures_secure_jwt_secret_key_change_in_production")
     JWT_ALGORITHM: str = os.getenv("JWT_ALGORITHM", "HS256")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "1440")) # 24 hours

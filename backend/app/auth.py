@@ -24,7 +24,14 @@ class Role(str, Enum):
     VIEWER = "viewer"
 
 class TokenRequest(BaseModel):
-    admin_key: str = Field(..., description="Admin secret key to authenticate")
+    admin_key: Optional[str] = Field(default=None, description="Admin secret key to authenticate")
+    admin_id: Optional[str] = Field(default=None, description="Admin ID or username")
+    password: Optional[str] = Field(default=None, description="Admin secure password")
+    expires_in_minutes: Optional[int] = Field(default=None, description="Custom expiration time in minutes")
+
+class LoginRequest(BaseModel):
+    admin_id: str = Field(..., description="Admin ID or username")
+    password: str = Field(..., description="Admin secure password")
     expires_in_minutes: Optional[int] = Field(default=None, description="Custom expiration time in minutes")
 
 class TokenResponse(BaseModel):
@@ -146,22 +153,74 @@ def verify_admin_key(admin_session: Dict[str, Any] = Depends(get_current_admin))
     """Backwards-compatible dependency for existing router routes."""
     return True
 
+@auth_router.post("/login", response_model=TokenResponse)
+async def login_admin(payload: LoginRequest):
+    """
+    Authenticate admin with Secure ID and Password.
+    Returns a signed JWT Bearer Token.
+    """
+    valid_ids = [
+        settings.ADMIN_USERNAME.strip().lower(),
+        "admin",
+        "amp_admin"
+    ]
+    id_matches = payload.admin_id.strip().lower() in valid_ids
+    
+    expected_password = settings.ADMIN_PASSWORD or settings.ADMIN_SECRET_KEY or "AMD@ventures@123"
+    password_matches = hmac.compare_digest(payload.password.strip(), expected_password.strip())
+    
+    if not (id_matches and password_matches):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid Admin ID or Password. Access denied.",
+            headers={"WWW-Authenticate": "Bearer"}
+        )
+    
+    expire_mins = payload.expires_in_minutes or settings.ACCESS_TOKEN_EXPIRE_MINUTES
+    access_token = create_access_token(
+        payload_data={"sub": payload.admin_id.strip(), "role": Role.ADMIN.value},
+        expires_delta=timedelta(minutes=expire_mins)
+    )
+    
+    return TokenResponse(
+        access_token=access_token,
+        token_type="bearer",
+        expires_in=expire_mins * 60,
+        role=Role.ADMIN.value
+    )
+
 @auth_router.post("/token", response_model=TokenResponse)
 async def login_for_access_token(payload: TokenRequest):
     """
-    Exchange Admin Secret Key for a signed JWT Bearer Token.
+    Exchange Admin Secret Key or ID/Password for a signed JWT Bearer Token.
     """
+    authenticated = False
+    sub = "agency_admin"
+
     expected_key = settings.ADMIN_SECRET_KEY or "amp_admin_secret_key_2026"
-    if not hmac.compare_digest(payload.admin_key, expected_key):
+    expected_password = settings.ADMIN_PASSWORD or expected_key
+
+    # Check admin_key
+    if payload.admin_key and (hmac.compare_digest(payload.admin_key, expected_key) or hmac.compare_digest(payload.admin_key, expected_password)):
+        authenticated = True
+        sub = "master_admin"
+    # Check admin_id + password
+    elif payload.admin_id and payload.password:
+        valid_ids = [settings.ADMIN_USERNAME.strip().lower(), "admin", "amp_admin"]
+        if payload.admin_id.strip().lower() in valid_ids and hmac.compare_digest(payload.password.strip(), expected_password.strip()):
+            authenticated = True
+            sub = payload.admin_id.strip()
+
+    if not authenticated:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid Admin Secret Key.",
+            detail="Invalid Admin credentials. Provide valid admin_key or admin_id and password.",
             headers={"WWW-Authenticate": "Bearer"}
         )
 
     expire_mins = payload.expires_in_minutes or settings.ACCESS_TOKEN_EXPIRE_MINUTES
     access_token = create_access_token(
-        payload_data={"sub": "agency_admin", "role": Role.ADMIN.value},
+        payload_data={"sub": sub, "role": Role.ADMIN.value},
         expires_delta=timedelta(minutes=expire_mins)
     )
 
