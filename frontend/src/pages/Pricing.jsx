@@ -8,7 +8,11 @@ const PRICING_TIERS = [
     id: 'tier1',
     name: 'Tier 1 — Basic',
     badge: 'Rapid Launch',
+<<<<<<< HEAD
     price: '₹9,999',
+=======
+    price: '₹14,999',
+>>>>>>> 297feca (prise update)
     timeline: '5–7 Days Delivery',
     description: 'Perfect for local shops, cafes & clinics needing a fast, professional online storefront.',
     features: [
