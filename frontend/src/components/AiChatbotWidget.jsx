@@ -240,19 +240,33 @@ export default function AiChatbotWidget() {
         ]);
       }
     } catch (e) {
-      // Local fallback logic
-      let fallbackReply = "Our Tier 1 starts at ₹9,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. Would you like a personalized quote?";
-      if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {
-        fallbackReply = "• **Tier 1 — Basic**: ₹9,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership.";
-      } else if (text.toLowerCase().includes("salon") || text.toLowerCase().includes("clinic") || text.toLowerCase().includes("restaurant")) {
+      // Local fallback logic if backend request encounters network error
+      const lower = text.toLowerCase();
+      let fallbackReply = "I do not have this information at the moment. For more detailed information, please contact the owners directly via WhatsApp at +91 70003 84330 or email at ampventures7@gmail.com.";
+      let fallbackActions = ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"];
+
+      if (lower.includes("founder") || lower.includes("owner") || lower.includes("who are") || lower.includes("who started") || lower.includes("iit") || lower.includes("ccna") || lower.includes("team")) {
+        fallbackReply = "AMP Ventures was founded and is led by Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We specialize in engineering high-speed websites, WhatsApp booking automations, and local Google SEO for offline businesses.";
+        fallbackActions = ["Chat with Founders on WhatsApp", "Explore Pricing", "View Portfolio"];
+      } else if (lower.includes("address") || lower.includes("location") || lower.includes("office") || lower.includes("where") || lower.includes("malad") || lower.includes("signet")) {
+        fallbackReply = "Our studio office is located at **SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai, Maharashtra, India**.";
+        fallbackActions = ["Chat on WhatsApp", "Book Consultation", "Explore Services"];
+      } else if (lower.includes("contact") || lower.includes("phone") || lower.includes("email") || lower.includes("whatsapp") || lower.includes("number")) {
+        fallbackReply = "You can reach the owners directly via:\n• **WhatsApp**: [+91 70003 84330](https://wa.me/917000384330)\n• **Email**: ampventures7@gmail.com\n• **Studio**: SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai";
+        fallbackActions = ["Open WhatsApp", "Book Consultation", "Explore Pricing"];
+      } else if (lower.includes("cost") || lower.includes("price") || lower.includes("tier") || lower.includes("rate") || lower.includes("package")) {
+        fallbackReply = "• **Tier 1 — Basic**: Starting at ₹9,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: Starting at ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: Starting at ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers include 100% full source code ownership.";
+        fallbackActions = ["View Pricing Breakdown", "Take Free Audit", "Chat on WhatsApp"];
+      } else if (lower.includes("salon") || lower.includes("clinic") || lower.includes("restaurant") || lower.includes("cafe") || lower.includes("retail")) {
         fallbackReply = "For offline salons, clinics, and restaurants, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp appointment/table booking, automated confirmation reminders, and local SEO dominance.";
+        fallbackActions = ["Compare Packages", "Talk on WhatsApp", "Take Free Audit"];
       }
       setMessages(prev => [
         ...prev, 
         { 
           role: 'bot', 
           content: fallbackReply,
-          suggested_actions: ["Explore Pricing", "Take Free Audit", "Chat on WhatsApp"]
+          suggested_actions: fallbackActions
         }
       ]);
     } finally {
