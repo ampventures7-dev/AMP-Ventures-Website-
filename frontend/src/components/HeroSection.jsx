@@ -94,7 +94,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.15 }}
             >
-              We build websites for salons, restaurants, clinics, and local shops — so customers can book you on WhatsApp and find you #1 on Google Maps.
+              We build high-converting websites for businesses across all niches — so customers can book you on WhatsApp, discover your services, and find you #1 on Google Maps.
             </motion.p>
 
             {/* Two-Tier CTAs */}

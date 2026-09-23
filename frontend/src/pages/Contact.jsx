@@ -7,7 +7,7 @@ import {
 import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 
 const TIER_OPTIONS = [
-  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹9,999)' },
+  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹14,999)' },
   { value: 'Tier 2 - Premium (CMS & Reviews)', label: 'Tier 2 — Premium (CMS & Reviews • ₹24,999)' },
   { value: 'Tier 3 - Premium Plus (3D & Automation)', label: 'Tier 3 — Premium Plus (3D & AI • ₹49,999)' },
   { value: 'Custom Enterprise / Multiple Outlets', label: 'Custom Enterprise / Multiple Outlets' }
@@ -243,7 +243,7 @@ export default function Contact() {
                       name="message"
                       rows={3}
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
-                      placeholder="e.g. We want an online salon booking portal with Google review sync to increase weekday bookings."
+                      placeholder="e.g. We want a high-converting website with WhatsApp booking and Google review sync to scale inbound customer inquiries."
                       value={formData.message}
                       onChange={handleChange}
                     ></textarea>

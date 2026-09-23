@@ -9,8 +9,8 @@ router = APIRouter()
 # Structured FAQ knowledge base for AMP Ventures (Instant, Accurate & Zero Cost)
 FAQS = [
     {
-        "keywords": ["founder", "owner", "ceo", "who are you", "who started", "who made", "leadership", "team", "credential", "qualification", "iit", "ccna", "lead architect", "kaun hai"],
-        "reply": "AMP Ventures was founded and is led by Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We specialize in engineering high-converting digital storefronts, WhatsApp booking automations, and local Google SEO for physical offline businesses.\n\nWould you like to connect with our Lead Architect directly on WhatsApp?",
+        "keywords": ["founder", "owner", "ceo", "who are you", "who started", "who made", "leadership", "team", "credential", "qualification", "iit", "ccna", "lead architect", "kaun hai", "ankit", "bandewar", "mohit", "jangid", "prachi", "pawar"],
+        "reply": "AMP Ventures was founded by **Ankit Bandewar, Mohit Jangid, and Prachi Pawar** — Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**.\n\nWe specialize in engineering high-converting digital storefronts, WhatsApp booking automations, and local Google SEO for physical offline businesses. Would you like to connect with the founders on WhatsApp?",
         "suggested_actions": ["Talk to Founders on WhatsApp", "View Service Packages", "Book Free Consultation"],
         "recommended_tier": "Tier 2 — Premium"
     },
@@ -28,13 +28,13 @@ FAQS = [
     },
     {
         "keywords": ["price", "cost", "pricing", "budget", "package", "how much", "rate", "fee", "tier", "kitna", "kitne", "daam", "kimat", "kharcha", "paise", "rupaye"],
-        "reply": "AMP Ventures offers 3 transparent packages with 100% source code ownership:\n• **Tier 1 — Basic (₹9,999)**: 4-6 responsive pages, Google Maps & local SEO, 5-7 days delivery.\n• **Tier 2 — Premium (₹24,999)** [Most Popular]: Custom CMS (edit menus/prices yourself), Google Reviews sync, Analytics.\n• **Tier 3 — Next-Gen 3D & AI (₹49,999)**: 3D interactive hero, WhatsApp Business API auto-booking, AI chatbot.\n\nWould you like a tailored recommendation for your business?",
+        "reply": "AMP Ventures offers 3 transparent packages with 100% source code ownership:\n• **Tier 1 — Basic (₹14,999)**: 4-6 responsive pages, Google Maps & local SEO, 5-7 days delivery.\n• **Tier 2 — Premium (₹24,999)** [Most Popular]: Custom CMS (edit menus/prices yourself), Google Reviews sync, Analytics.\n• **Tier 3 — Next-Gen 3D & AI (₹49,999)**: 3D interactive hero, WhatsApp Business API auto-booking, AI chatbot.\n\nWould you like a tailored recommendation for your business?",
         "suggested_actions": ["Compare All 3 Tiers", "Check Digital Readiness Score", "Talk on WhatsApp"],
         "recommended_tier": "Tier 2 — Premium"
     },
     {
         "keywords": ["tier 1", "basic", "static"],
-        "reply": "Our **Tier 1 — Basic** package (₹9,999) is ideal for local shops, cafes, and clinics wanting a clean, fast online presence in 5-7 days. It includes:\n• 4–6 responsive pages\n• Google Business Profile link & Map sync\n• Contact form with instant email alerts\n• Free SSL & domain setup guidance\n• 100% code ownership.",
+        "reply": "Our **Tier 1 — Basic** package (₹14,999) is ideal for businesses and professionals wanting a clean, fast online presence in 5-7 days. It includes:\n• 4–6 responsive pages\n• Google Business Profile link & Map sync\n• Contact form with instant email alerts\n• Free SSL & domain setup guidance\n• 100% code ownership.",
         "suggested_actions": ["Get Tier 1 Quote", "Compare with Tier 2"],
         "recommended_tier": "Tier 1 — Basic"
     },
@@ -57,8 +57,8 @@ FAQS = [
         "recommended_tier": None
     },
     {
-        "keywords": ["salon", "spa", "clinic", "doctor", "restaurant", "cafe", "retail", "shop", "gym", "boutique", "industry"],
-        "reply": "We specialize in local offline business growth:\n• **Salons/Spas**: Instant appointment booking & stylist lookbooks\n• **Clinics/Doctors**: Patient inquiry flow & clinic trust building\n• **Restaurants/Cafes**: Live digital menus, QR codes & Google map directions\n• **Retail/Jewelry**: Visual catalogs & WhatsApp order inquiries.",
+        "keywords": ["salon", "spa", "clinic", "doctor", "restaurant", "cafe", "retail", "shop", "gym", "boutique", "industry", "niche", "business"],
+        "reply": "We engineer websites for businesses across all niches:\n• **Services & Consultancies**: Online bookings, lead captures & client portals\n• **Retail & E-commerce**: Visual catalogs, fast checkouts & WhatsApp inquiries\n• **Hospitality & Clinics**: Direct reservations, menus & Google Maps dominance\n• **Custom Niches**: Tailored fullstack solutions built to your exact workflows.",
         "suggested_actions": ["Calculate Readiness Score", "Talk on WhatsApp"],
         "recommended_tier": "Tier 2 — Premium"
     },
@@ -70,13 +70,13 @@ FAQS = [
     },
     {
         "keywords": ["hindi", "hindi me", "madad", "sahayata", "namaste", "kaise ho"],
-        "reply": "नमस्ते! 🙏 जी हाँ, हम हिंदी (Hindi) और English दोनों में आपकी पूरी सहायता करते हैं। आप अपनी दुकान, सैलून, क्लिनिक या रेस्टोरेंट के लिए वेबसाइट बनवाने के बारे में कोई भी सवाल पूछ सकते हैं।",
+        "reply": "नमस्ते! 🙏 जी हाँ, हम हिंदी (Hindi) और English दोनों में आपकी पूरी सहायता करते हैं। आप किसी भी बिज़नेस या इंडस्ट्री के लिए वेबसाइट बनवाने के बारे में कोई भी सवाल पूछ सकते हैं।",
         "suggested_actions": ["View Pricing Breakdown", "Talk on WhatsApp"],
         "recommended_tier": None
     },
     {
         "keywords": ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "good evening", "halo"],
-        "reply": "Hello! 👋 Welcome to **AMP Ventures**. I can help you select website packages (starting at ₹9,999), check 5-day delivery timelines, explore WhatsApp booking automations, or connect with our leadership.\n\nWhat would you like to know?",
+        "reply": "Hello! 👋 Welcome to **AMP Ventures**. I can help you select website packages (starting at ₹14,999), check 5-day delivery timelines, explore WhatsApp booking automations, or connect with our leadership.\n\nWhat would you like to know?",
         "suggested_actions": ["View Pricing Breakdown", "Who are the founders?", "Talk on WhatsApp"],
         "recommended_tier": None
     }

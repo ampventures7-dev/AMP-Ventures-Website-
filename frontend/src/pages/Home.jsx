@@ -232,7 +232,7 @@ export default function Home() {
               From Manual Struggles to <span className="text-emerald-600">Automated Growth</span>
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
-              See how going online helps local businesses save time, get more customers, and grow daily revenue.
+              See how going online helps businesses across all niches save time, acquire more clients, and scale revenue.
             </p>
           </div>
 
@@ -325,7 +325,7 @@ export default function Home() {
                 
                 <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 mb-5">
                   <div className="text-[11px] text-slate-500">Starting at</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹9,999</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹14,999</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">⏱️ 5–7 Days Delivery</div>
                 </div>
 

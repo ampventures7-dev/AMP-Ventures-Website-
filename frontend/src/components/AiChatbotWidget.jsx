@@ -6,7 +6,7 @@ import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 const INITIAL_MESSAGES = [
   {
     role: 'bot',
-    content: "Hi! I'm the **AMP Ventures AI Advisor** 🚀\n\nI can help you select the ideal tier for your offline business (Salon, Clinic, Restaurant, Retail), compare package pricing, or estimate deployment timelines. What would you like to explore?",
+    content: "Hi! I'm the **AMP Ventures AI Advisor** 🚀\n\nI can help you select the ideal tier for your business across any niche, compare package pricing, or estimate deployment timelines. What would you like to explore?",
     suggested_actions: ["Explore Tiers & Pricing", "Take Free Digital Audit", "WhatsApp Us", "How fast can we launch?"]
   }
 ];
@@ -14,7 +14,7 @@ const INITIAL_MESSAGES = [
 const SUGGESTED_QUESTIONS = [
   "How much does Tier 2 cost?",
   "What's included in Tier 3 (3D + AI)?",
-  "How fast can my salon get online?",
+  "How fast can my business get online?",
   "Do you provide WhatsApp booking?",
   "Can you sync Google Maps & Reviews?"
 ];
@@ -234,7 +234,7 @@ export default function AiChatbotWidget() {
           ...prev, 
           { 
             role: 'bot', 
-            content: "We provide 3 tiers tailored for offline businesses:\n• **Tier 1 (₹9,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
+            content: "We provide 3 tiers tailored for businesses across all niches:\n• **Tier 1 (₹14,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
             suggested_actions: ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"]
           }
         ]);
@@ -246,7 +246,7 @@ export default function AiChatbotWidget() {
       let fallbackActions = ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"];
 
       if (lower.includes("founder") || lower.includes("owner") || lower.includes("who are") || lower.includes("who started") || lower.includes("iit") || lower.includes("ccna") || lower.includes("team")) {
-        fallbackReply = "AMP Ventures was founded and is led by Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We specialize in engineering high-speed websites, WhatsApp booking automations, and local Google SEO for offline businesses.";
+        fallbackReply = "AMP Ventures was founded and is led by Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We specialize in engineering high-speed websites, WhatsApp booking automations, and local Google SEO for businesses across all niches.";
         fallbackActions = ["Chat with Founders on WhatsApp", "Explore Pricing", "View Portfolio"];
       } else if (lower.includes("address") || lower.includes("location") || lower.includes("office") || lower.includes("where") || lower.includes("malad") || lower.includes("signet")) {
         fallbackReply = "Our studio office is located at **SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai, Maharashtra, India**.";
@@ -255,10 +255,10 @@ export default function AiChatbotWidget() {
         fallbackReply = "You can reach the owners directly via:\n• **WhatsApp**: [+91 70003 84330](https://wa.me/917000384330)\n• **Email**: ampventures7@gmail.com\n• **Studio**: SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai";
         fallbackActions = ["Open WhatsApp", "Book Consultation", "Explore Pricing"];
       } else if (lower.includes("cost") || lower.includes("price") || lower.includes("tier") || lower.includes("rate") || lower.includes("package")) {
-        fallbackReply = "• **Tier 1 — Basic**: Starting at ₹9,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: Starting at ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: Starting at ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers include 100% full source code ownership.";
+        fallbackReply = "• **Tier 1 — Basic**: Starting at ₹14,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: Starting at ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: Starting at ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers include 100% full source code ownership.";
         fallbackActions = ["View Pricing Breakdown", "Take Free Audit", "Chat on WhatsApp"];
-      } else if (lower.includes("salon") || lower.includes("clinic") || lower.includes("restaurant") || lower.includes("cafe") || lower.includes("retail")) {
-        fallbackReply = "For offline salons, clinics, and restaurants, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp appointment/table booking, automated confirmation reminders, and local SEO dominance.";
+      } else if (lower.includes("salon") || lower.includes("clinic") || lower.includes("restaurant") || lower.includes("cafe") || lower.includes("retail") || lower.includes("niche") || lower.includes("industry") || lower.includes("business")) {
+        fallbackReply = "We engineer websites for businesses across all niches. For active client booking and dynamic updates, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp customer booking, automated confirmations, and Google search dominance.";
         fallbackActions = ["Compare Packages", "Talk on WhatsApp", "Take Free Audit"];
       }
       setMessages(prev => [

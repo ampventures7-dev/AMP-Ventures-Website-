@@ -75,14 +75,14 @@ export default function About() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-            Empowering Offline Businesses With <br />
+            Empowering Modern Businesses With <br />
             <span className="text-sky-600">
               World-Class Web Engineering
             </span>
           </h1>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            AMP Ventures was founded to bridge the digital gap for physical businesses—replacing clunky, non-converting generic templates with ultra-fast, high-converting digital storefronts.
+            AMP Ventures was founded to bridge the digital gap for businesses across every niche—replacing clunky, non-converting generic templates with ultra-fast, high-converting digital storefronts.
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function About() {
                 </p>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Combining advanced <strong>IIT Roorkee AI/ML certification</strong> with <strong>Cisco Certified Network Associate (CCNA)</strong> enterprise infrastructure fundamentals, we engineer automated revenue engines for local salons, clinics, restaurants, and retail.
+                  Combining advanced <strong>IIT Roorkee AI/ML certification</strong> with <strong>Cisco Certified Network Associate (CCNA)</strong> enterprise infrastructure fundamentals, we engineer automated revenue engines for businesses across all niches and industries.
                 </p>
 
                 {/* Verified Credentials Pills */}
