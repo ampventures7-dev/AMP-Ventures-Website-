@@ -19,8 +19,8 @@ const SUGGESTED_QUESTIONS = [
   "Can you sync Google Maps & Reviews?"
 ];
 
-// Latest modern AI Assistant symbol: Sleek messenger bubble with 4-point AI intelligence star
-function ModernAiChatIcon({ className = "w-6 h-6", filled = false }) {
+// Bespoke Quantum Neural AI Core Symbol (Non-generic, futuristic intelligence glyph)
+function ModernAiChatIcon({ className = "w-6 h-6" }) {
   return (
     <svg 
       viewBox="0 0 24 24" 
@@ -28,23 +28,27 @@ function ModernAiChatIcon({ className = "w-6 h-6", filled = false }) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Modern conversational bubble */}
+      {/* Primary Radiant Neural AI Star */}
       <path 
-        d="M12 3C6.477 3 2 7.029 2 12c0 2.052.775 3.947 2.086 5.435L3.08 20.46a.7.7 0 0 0 .86.86l3.025-1.008A10.3 10.3 0 0 0 12 21c5.523 0 10-4.029 10-9s-4.477-9-10-9Z" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
-        fill={filled ? "currentColor" : "none"}
-        fillOpacity={filled ? "0.15" : "0"}
-      />
-      {/* Dynamic 4-point AI Star in center */}
-      <path 
-        d="M12 7.5C12 9.6 10.6 10.8 8.5 11.2C10.6 11.6 12 12.8 12 14.9C12 12.8 13.4 11.6 15.5 11.2C13.4 10.8 12 9.6 12 7.5Z" 
+        d="M12 2C12 6.8 8.2 10.8 3 12C8.2 13.2 12 17.2 12 22C12 17.2 15.8 13.2 21 12C15.8 10.8 12 6.8 12 2Z" 
         fill="currentColor"
       />
-      {/* Complementary AI Sparkle accent */}
-      <circle cx="16.5" cy="8" r="1" fill="currentColor" />
+      {/* Companion Intelligence Sparkle */}
+      <path 
+        d="M19 1.5C19 3.2 17.5 4.5 15.5 5C17.5 5.5 19 6.8 19 8.5C19 6.8 20.5 5.5 22.5 5C20.5 4.5 19 3.2 19 1.5Z" 
+        fill="currentColor"
+        opacity="0.9"
+      />
+      {/* Precision Neural Telemetry Node */}
+      <circle cx="5" cy="19" r="1.75" fill="currentColor" opacity="0.85" />
+      {/* Atmospheric Orbital Signal Arc */}
+      <path 
+        d="M3 6.5C4.5 4.8 6.5 3.8 8.8 3.5" 
+        stroke="currentColor" 
+        strokeWidth="1.6" 
+        strokeLinecap="round" 
+        opacity="0.6" 
+      />
     </svg>
   );
 }
@@ -241,18 +245,29 @@ export default function AiChatbotWidget() {
       }
     } catch (e) {
       // Local fallback logic
-      let fallbackReply = "Our Tier 1 starts at ₹14,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. Would you like a personalized quote?";
-      if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {
-        fallbackReply = "• **Tier 1 — Basic**: ₹14,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership.";
+      let fallbackReply = "Our Tier 1 starts at ₹14,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. For custom questions or inquiries not covered here, feel free to connect directly with our owners on Call/WhatsApp (+91 70003 84330), email (ampventures7@gmail.com), or submit our Follow Up form!";
+      let suggestedActions = ["Explore Pricing", "Talk on WhatsApp", "Fill Follow Up Form"];
+
+      if (text.toLowerCase().includes("founder") || text.toLowerCase().includes("owner") || text.toLowerCase().includes("team") || text.toLowerCase().includes("mohit") || text.toLowerCase().includes("prachi") || text.toLowerCase().includes("ankit") || text.toLowerCase().includes("who started") || text.toLowerCase().includes("leadership")) {
+        fallbackReply = "AMP Ventures was founded by 3 technical co-founders certified from **IIT Roorkee** who build and lead every project directly:\n\n• **Mohit Jangir** — AI/ML Engineer (IIT Roorkee Certified): AI automations & smart workflow tools\n• **Prachi Pawar** — AI/ML Developer (IIT Roorkee Certified): Conversational AI chatbots & smart web features\n• **Ankit Bandewar** — Full Stack Developer (IIT Roorkee Certified): High-speed responsive web applications & cloud architecture\n\nYou work directly with the founders without any non-technical middlemen! You can connect with them on WhatsApp or fill out our Follow Up form.";
+        suggestedActions = ["Talk on WhatsApp", "Fill Follow Up Form", "Meet Founders"];
+      } else if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {
+        fallbackReply = "• **Tier 1 — Basic**: ₹14,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership. For custom needs, connect directly with our owners on WhatsApp or fill out our Follow Up form.";
+        suggestedActions = ["Explore Pricing", "Fill Follow Up Form", "Talk on WhatsApp"];
       } else if (text.toLowerCase().includes("salon") || text.toLowerCase().includes("clinic") || text.toLowerCase().includes("restaurant")) {
         fallbackReply = "For offline salons, clinics, and restaurants, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp appointment/table booking, automated confirmation reminders, and local SEO dominance.";
+        suggestedActions = ["Explore Pricing", "Take Free Audit", "Talk on WhatsApp"];
+      } else if (text.toLowerCase().includes("contact") || text.toLowerCase().includes("call") || text.toLowerCase().includes("email") || text.toLowerCase().includes("phone") || text.toLowerCase().includes("connect")) {
+        fallbackReply = "You can connect directly with our founders anytime:\n• 📞 **Call / WhatsApp**: +91 70003 84330\n• ✉️ **Email**: ampventures7@gmail.com\n• 📝 **Follow Up Form**: Head to our Contact page to send your inquiry.";
+        suggestedActions = ["Talk on WhatsApp", "Fill Follow Up Form", "Explore Pricing"];
       }
+
       setMessages(prev => [
         ...prev, 
         { 
           role: 'bot', 
           content: fallbackReply,
-          suggested_actions: ["Explore Pricing", "Take Free Audit", "Chat on WhatsApp"]
+          suggested_actions: suggestedActions
         }
       ]);
     } finally {
@@ -267,8 +282,11 @@ export default function AiChatbotWidget() {
     } else if (action.includes("Audit") || action.includes("Diagnostic") || action.includes("Readiness")) {
       navigate('/readiness-score');
       setIsOpen(false);
-    } else if (action.includes("Quote") || action.includes("Project") || action.includes("Contact")) {
+    } else if (action.includes("Quote") || action.includes("Project") || action.includes("Contact") || action.includes("Follow Up") || action.includes("Form")) {
       navigate('/contact');
+      setIsOpen(false);
+    } else if (action.includes("Founder") || action.includes("Leadership")) {
+      navigate('/about');
       setIsOpen(false);
     } else if (action.includes("WhatsApp")) {
       window.open(getWhatsAppUrl("Hi AMP Ventures, I'd like to consult about a website for my business."), "_blank");
@@ -316,7 +334,7 @@ export default function AiChatbotWidget() {
           <X className="w-6 h-6 text-white" />
         ) : (
           <div className="relative flex items-center justify-center">
-            <ModernAiChatIcon className="w-6 h-6 text-white drop-shadow-sm" filled />
+            <ModernAiChatIcon className="w-6 h-6 text-white drop-shadow-sm" />
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white animate-pulse"></span>
           </div>
         )}

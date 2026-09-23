@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Sparkles, ArrowUpRight, ShieldCheck, CheckCircle2, 
-  TrendingUp, MessageSquare, MapPin, Zap, Clock, 
+  TrendingUp, MessageSquare, MapPin, Clock, 
   Layers, PhoneCall, QrCode, Globe, Check, Award
 } from 'lucide-react';
 import MockupGenerator from '../components/MockupGenerator.jsx';
-import FaqSection from '../components/FaqSection.jsx';
 import HeroSection from '../components/HeroSection.jsx';
 import { getWhatsAppUrl } from '../apiConfig';
 
@@ -297,124 +296,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* 6. 3 Service Tiers Overview */}
-      <section className="py-20 bg-slate-50/50 border-t border-slate-200/80">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 mb-3 shadow-xs">
-              <Zap className="w-3.5 h-3.5" />
-              <span>Transparent Pricing</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-display font-bold text-slate-900 mb-3 sm:mb-4">
-              3 Clear Tiers Built For <span className="text-emerald-600">Every Stage</span>
-            </h2>
-            <p className="text-slate-600 text-xs sm:text-base">
-              No bloated contracts. Choose the exact tier that matches your business goals and budget.
-            </p>
-          </div>
-
-          {/* Mobile Swipe Hint */}
-          <div className="flex lg:hidden items-center justify-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-4">
-            <span>← Swipe to compare all 3 tiers →</span>
-          </div>
-
-          <div className="mobile-snap-carousel lg:grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch no-scrollbar">
-            
-            {/* Tier 1 */}
-            <div className="mobile-snap-card p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 flex flex-col justify-between transition-all">
-              <div>
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Tier 1 • Rapid Launch</span>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-1.5">Basic Website</h3>
-                <p className="text-xs text-slate-600 mb-4 sm:mb-6">Fast 4–6 page web presence for businesses establishing their first digital footprint.</p>
-                
-                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 mb-5">
-                  <div className="text-[11px] text-slate-500">Starting at</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹14,999</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">⏱️ 5–7 Days Delivery</div>
-                </div>
-
-                <ul className="space-y-2 text-xs text-slate-700 mb-6">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> 4–6 Responsive Pages</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Google Business Maps Sync</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Instant Form to Email</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Free SSL & Fast CDN Hosting</li>
-                </ul>
-              </div>
-
-              <Link to="/contact?tier=tier1" className="w-full py-2.5 sm:py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-800 text-center border border-slate-300 transition-all">
-                Get Tier 1 Quote
-              </Link>
-            </div>
-
-            {/* Tier 2 (Featured) */}
-            <div className="mobile-snap-card p-6 sm:p-8 rounded-2xl bg-white border-2 border-sky-500 shadow-lg flex flex-col justify-between relative transform lg:-translate-y-2">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-sky-500 text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider shadow-sm whitespace-nowrap">
-                ⭐ Most Popular for Local Growth
-              </div>
-
-              <div>
-                <span className="text-[11px] font-bold text-sky-700 uppercase tracking-wider">Tier 2 • Full Control</span>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-1.5">Premium + Custom CMS</h3>
-                <p className="text-xs text-slate-600 mb-4 sm:mb-6">Dynamic web app with client CMS to update menus, rates, photos, plus Google reviews.</p>
-                
-                <div className="p-3.5 sm:p-4 rounded-xl bg-sky-50 border border-sky-200 mb-5">
-                  <div className="text-[11px] text-sky-700 font-medium">Starting at</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-sky-600 font-display">₹24,999</div>
-                  <div className="text-[10px] text-slate-600 mt-0.5">⏱️ 10–12 Days Delivery</div>
-                </div>
-
-                <ul className="space-y-2 text-xs text-slate-800 mb-6">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-sky-500 font-bold" /> Everything in Tier 1</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-sky-500 font-bold" /> Custom Admin Content CMS</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-sky-500 font-bold" /> Google Reviews Live Widget</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-sky-500 font-bold" /> Direct WhatsApp Lead Pipeline</li>
-                </ul>
-              </div>
-
-              <Link to="/contact?tier=tier2" className="w-full py-2.5 sm:py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold text-center shadow-sm transition-all">
-                Get Tier 2 Quote
-              </Link>
-            </div>
-
-            {/* Tier 3 */}
-            <div className="mobile-snap-card p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 flex flex-col justify-between transition-all">
-              <div>
-                <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Tier 3 • Market Leader</span>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mt-1 mb-1.5">3D WebGL & AI Automated</h3>
-                <p className="text-xs text-slate-600 mb-4 sm:mb-6">3D interactive hero, automated AI chatbot, and WhatsApp Business API integration.</p>
-                
-                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 mb-5">
-                  <div className="text-[11px] text-slate-500">Starting at</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹49,999</div>
-                  <div className="text-[10px] text-slate-500 mt-0.5">⏱️ 14–18 Days Delivery</div>
-                </div>
-
-                <ul className="space-y-2 text-xs text-slate-700 mb-6">
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Everything in Tier 2</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Interactive 3D WebGL Hero</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Custom AI Chatbot Assistant</li>
-                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Dedicated Technical Architect</li>
-                </ul>
-              </div>
-
-              <Link to="/contact?tier=tier3" className="w-full py-2.5 sm:py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold text-center shadow-md transition-all">
-                Get Tier 3 Quote
-              </Link>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* 7. FAQ Section */}
-      <section className="py-20 bg-slate-50/50 border-t border-slate-200/80">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <FaqSection />
-        </div>
-      </section>
-
     </div>
   );
 }

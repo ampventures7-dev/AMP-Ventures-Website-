@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-[#070e24]/95 backdrop-blur-md border-b border-sky-950/80 shadow-lg shadow-[#020617]/50">
-      <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-20 relative">
         
         {/* Brand Logo */}
-        <Link to="/" className="flex items-center group text-decoration-none py-1">
+        <Link to="/" className="flex items-center group text-decoration-none py-1 z-10">
           <div className="bg-white/95 rounded-xl px-2.5 py-1 transition-all group-hover:bg-white shadow-sm flex items-center">
             <img 
               src="/logo-transparent.png" 
@@ -28,7 +28,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center gap-1 list-none p-0 m-0">
+        <ul className="hidden md:flex items-center gap-1 list-none p-0 m-0 absolute left-1/2 -translate-x-1/2">
           <li>
             <NavLink
               to="/"
@@ -102,7 +102,7 @@ export default function Navbar() {
         </ul>
 
         {/* Right CTA Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 z-10">
           <Link 
             to="/readiness-score" 
             className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold transition-all text-sky-200 bg-[#0f1b3d] border border-sky-900/80 hover:bg-[#162758] hover:text-white hover:border-sky-400/50 shadow-xs"

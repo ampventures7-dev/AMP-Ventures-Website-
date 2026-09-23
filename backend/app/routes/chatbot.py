@@ -38,9 +38,15 @@ FAQS = [
         "recommended_tier": None
     },
     {
-        "keywords": ["founder", "credibility", "iit", "ccna", "who are you", "about"],
-        "reply": "AMP Ventures is led by technical architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We focus 100% on bridging the digital gap for local offline businesses with enterprise-grade engineering.",
-        "suggested_actions": ["Read Founder Story", "View Pricing"],
+        "keywords": ["founder", "founders", "owner", "owners", "team", "leadership", "who started", "who made", "who built", "mohit", "prachi", "ankit", "credibility", "iit", "ccna", "who are you", "about"],
+        "reply": (
+            "AMP Ventures was founded by 3 technical co-founders certified from **IIT Roorkee** who build and lead every project directly:\n\n"
+            "• **Mohit Jangir** — AI/ML Engineer (IIT Roorkee Certified): Leads AI automation and smart workflow tools.\n"
+            "• **Prachi Pawar** — AI/ML Developer (IIT Roorkee Certified): Specializes in custom conversational AI chatbots and interactive features.\n"
+            "• **Ankit Bandewar** — Full Stack Developer (IIT Roorkee Certified): Specializes in high-speed responsive web applications and cloud architecture.\n\n"
+            "Clients work directly with the founders with zero non-technical middlemen! You can talk with them directly on Call/WhatsApp (+91 70003 84330), email (ampventures7@gmail.com), or by filling out our Follow Up form."
+        ),
+        "suggested_actions": ["Talk on WhatsApp", "Fill Follow Up Form", "View Pricing Breakdown"],
         "recommended_tier": None
     },
     {
@@ -87,7 +93,13 @@ async def chat_with_bot(payload: ChatbotRequest):
             
     # 3. Default helpful fallback with quick guidance
     return ChatbotResponse(
-        reply="Welcome to **AMP Ventures**! I can help you select the ideal web package for your salon, clinic, restaurant, or retail store. Are you looking to understand our 3 service tiers, check pricing, or see how we can build your site in 7 days?",
-        suggested_actions=["Tell me about Tier 2 (Most Popular)", "How much does it cost?", "Book a Free Consultation"],
+        reply=(
+            "Welcome to **AMP Ventures**! We build fast, high-converting websites for offline businesses starting at ₹14,999, led directly by our IIT Roorkee certified founders (Mohit Jangir, Prachi Pawar, and Ankit Bandewar).\n\n"
+            "If you need custom details, a tailored quote, or have questions not covered here, we warmly invite you to connect directly with the owners:\n"
+            "• 📞 **Call / WhatsApp**: +91 70003 84330\n"
+            "• ✉️ **Email**: ampventures7@gmail.com\n"
+            "• 📝 **Follow Up Form**: Head to our Contact page to send a request."
+        ),
+        suggested_actions=["Meet Founders", "View Pricing Breakdown", "Talk on WhatsApp", "Fill Follow Up Form"],
         recommended_tier="Tier 2 — Premium"
     )

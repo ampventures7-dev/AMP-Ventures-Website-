@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Zap, Check, ArrowUpRight, Clock
+  Check, ArrowUpRight, Clock
 } from 'lucide-react';
 
 const SERVICES_DATA = [
@@ -99,20 +99,19 @@ export default function Services() {
       {/* Header */}
       <section className="py-8 sm:py-12 text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-4 sm:mb-6 shadow-xs">
-            <Zap className="w-3.5 h-3.5" />
-            <span>Tailored Architecture & Solutions</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-4 sm:mb-6 shadow-xs">
+            <span>Simple Pricing. Real Results</span>
           </div>
           
           <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-4 sm:mb-6 leading-tight">
-            Engineering Packages Built for <br />
+            Pick a Package. Get Online. <br />
             <span className="text-sky-600">
-              Measurable Local ROI
+              Start Getting Customers.
             </span>
           </h1>
 
           <p className="text-slate-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            From rapid 5-day launches to immersive 3D interactive experiences, we provide clean, predictable development packages designed for offline businesses.
+            Every tier includes clean, fast, mobile-ready pages — the difference is how much you want built in.
           </p>
         </div>
       </section>

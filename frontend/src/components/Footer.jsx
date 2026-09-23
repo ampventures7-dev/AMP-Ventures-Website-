@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail } from 'lucide-react';
+import { Sparkles, Award, ArrowUp, ArrowUpRight, MessageSquare, Phone, Mail } from 'lucide-react';
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER, getWhatsAppUrl } from '../apiConfig';
 
 export default function Footer() {
@@ -75,7 +75,7 @@ export default function Footer() {
                   <span>ampventures7@gmail.com</span>
                 </a>
               </li>
-              <li style={{ marginTop: '0.8rem' }}>
+              <li style={{ marginTop: '0.8rem' }} className="flex flex-col gap-2.5 items-start">
                 <a 
                   href={getWhatsAppUrl("Hi AMP Ventures, I'd like to consult about a website for my business.")} 
                   target="_blank" 
@@ -85,6 +85,14 @@ export default function Footer() {
                   <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
                   <span>WhatsApp Direct Chat</span>
                 </a>
+
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-xs font-bold transition-all shadow-md shadow-black/20 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <span>Follow Up</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
               </li>
             </ul>
           </div>

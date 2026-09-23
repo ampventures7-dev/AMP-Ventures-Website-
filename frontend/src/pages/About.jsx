@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Zap, Target, Lock, Cpu, Award, ShieldCheck, 
-  Check, ArrowUpRight, Sparkles 
+  Check, ArrowUpRight 
 } from 'lucide-react';
 import LeadershipSection from '../components/LeadershipSection.jsx';
 
@@ -90,9 +90,8 @@ export default function About() {
         transition={{ duration: 0.4 }}
       >
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-6 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Our Mission & Architectural Vision</span>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-6 shadow-xs">
+            <span>OUR MISSION & ARCHITECTURAL VISION</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
@@ -103,7 +102,7 @@ export default function About() {
           </h1>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            AMP Ventures was founded to bridge the digital gap for physical businesses—replacing clunky, non-converting generic templates with ultra-fast, high-converting digital storefronts.
+            AMP Ventures was founded to close the digital gap for physical businesses — replacing slow, generic templates with fast, engineered systems that actually convert visitors into customers.
           </p>
         </div>
       </motion.section>
@@ -117,22 +116,22 @@ export default function About() {
               <div className="lg:col-span-7 space-y-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold uppercase tracking-wider">
                   <Award className="w-3.5 h-3.5 text-indigo-600" />
-                  <span>Engineering Leadership</span>
+                  <span>ENGINEERING LEADERSHIP</span>
                 </div>
 
                 <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 leading-snug">
-                  Built on Rigorous <br />
+                  Built on Real Technical Training, <br />
                   <span className="text-sky-600">
-                    AI/ML & Networking Standards
+                    Not Guesswork
                   </span>
                 </h2>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Most web agencies deliver slow, cookie-cutter WordPress themes managed by non-technical middlemen. At AMP Ventures, every architecture is engineered from first principles.
+                  Most web agencies hand your project to someone running a templated WordPress theme with a stack of plugins bolted on. It works — until it doesn't.
                 </p>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Combining advanced <strong>IIT Roorkee AI/ML certification</strong> with <strong>Cisco Certified Network Associate (CCNA)</strong> enterprise infrastructure fundamentals, we engineer automated revenue engines for local salons, clinics, restaurants, and retail.
+                  We took a different path: formal <strong>AI/ML training from IIT Roorkee</strong> and a <strong>Cisco CCNA</strong> in enterprise networking. That means every system we build — booking flows, lead capture, automation — is engineered with an actual understanding of how it works, not just which plugin to install.
                 </p>
 
                 {/* Verified Credentials Pills */}

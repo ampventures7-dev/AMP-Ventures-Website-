@@ -6,7 +6,6 @@ import {
   Star, Clock, CheckCircle2, Lock, Sparkles, MapPin 
 } from 'lucide-react';
 import { getWhatsAppUrl } from '../apiConfig';
-import HeroBackgroundAnimation from './HeroBackgroundAnimation.jsx';
 
 // Lightweight animated counter component
 function AnimatedCounter({ value, suffix = '', duration = 1.0 }) {
@@ -50,9 +49,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-16 lg:pb-16 bg-gradient-to-b from-white via-slate-50/40 to-white overflow-hidden">
-      {/* Cool dynamic background animation & floating glow mesh */}
-      <HeroBackgroundAnimation />
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -92,7 +88,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.15 }}
             >
-              We build websites for salons, restaurants, clinics, and local shops — so customers can book you on WhatsApp and find you #1 on Google Maps.
+              We don't specialize in one industry — we build high-converting websites for every kind of local business, so customers can book you on WhatsApp and find you #1 on Google Maps.
             </motion.p>
 
             {/* Two-Tier CTAs */}

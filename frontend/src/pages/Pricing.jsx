@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Check, ArrowUpRight, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { Check, ArrowUpRight, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 import FaqSection from '../components/FaqSection.jsx';
 
 const PRICING_TIERS = [
@@ -84,8 +84,7 @@ export default function Pricing() {
       {/* Header */}
       <section className="py-8 sm:py-12 text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-4 sm:mb-6 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-4 sm:mb-6 shadow-xs">
             <span>Transparent Investment</span>
           </div>
           
