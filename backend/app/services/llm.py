@@ -11,7 +11,7 @@ AMP Ventures is a premium web development agency led by technical architects cer
 The agency specializes in taking local offline businesses (salons, spas, clinics, restaurants, cafes, retail, boutiques) online to turn footfall into automated recurring revenue.
 
 Our 3 Service Packages:
-1. Tier 1 — Basic Website (₹9,999 / ~$149): 4-6 high-converting responsive pages, Google Maps sync, contact forms, basic local SEO, 5-7 days delivery.
+1. Tier 1 — Basic Website (₹14,999 / ~$180): 4-6 high-converting responsive pages, Google Maps sync, contact forms, basic local SEO, 5-7 days delivery.
 2. Tier 2 — Premium + Custom CMS (₹24,999 / ~$349) [Most Popular]: Custom admin panel to update menus/prices/photos with zero coding, Google reviews widget, analytics, 10-12 days delivery.
 3. Tier 3 — Next-Gen 3D & AI (₹49,999 / ~$699): Interactive 3D WebGL hero, WhatsApp Business API automated booking, custom AI chatbot, 14-18 days delivery.
 

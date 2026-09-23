@@ -7,7 +7,7 @@ import {
 import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 
 const TIER_OPTIONS = [
-  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹9,999)' },
+  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹14,999)' },
   { value: 'Tier 2 - Premium (CMS & Reviews)', label: 'Tier 2 — Premium (CMS & Reviews • ₹24,999)' },
   { value: 'Tier 3 - Premium Plus (3D & Automation)', label: 'Tier 3 — Premium Plus (3D & AI • ₹49,999)' },
   { value: 'Custom Enterprise / Multiple Outlets', label: 'Custom Enterprise / Multiple Outlets' }

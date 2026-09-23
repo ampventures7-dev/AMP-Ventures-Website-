@@ -129,7 +129,7 @@ export default function ReadinessTool() {
         });
       }
 
-      const recTier = score < 40 ? 'Tier 1 — Basic Website (₹9,999)' : score < 70 ? 'Tier 2 — Premium + CMS (₹24,999)' : 'Tier 3 — 3D & AI Automation (₹49,999)';
+      const recTier = score < 40 ? 'Tier 1 — Basic Website (₹14,999)' : score < 70 ? 'Tier 2 — Premium + CMS (₹24,999)' : 'Tier 3 — 3D & AI Automation (₹49,999)';
       const level = score < 40 ? 'Low Digital Maturity (High Risk of Losing Local Footfall)' : score < 70 ? 'Moderate Digital Maturity (Significant Untapped Revenue)' : 'High Digital Maturity (Optimization Stage)';
 
       setResult({

@@ -10,7 +10,7 @@ const SERVICES_DATA = [
     tierNumber: 'Tier 1',
     name: 'Basic Static Website',
     tagline: 'Clean, lightning-fast web presence to build immediate local credibility.',
-    startingPrice: '₹9,999',
+    startingPrice: '₹14,999',
     timeline: '5–7 Business Days',
     badgeClass: 'bg-slate-100 text-slate-700 border-slate-200',
     idealFor: 'Local retail shops, solo salons, small cafes, single-doctor clinics wanting a professional online presence.',

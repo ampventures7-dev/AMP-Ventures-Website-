@@ -330,7 +330,7 @@ export default function Home() {
                 
                 <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 mb-5">
                   <div className="text-[11px] text-slate-500">Starting at</div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹9,999</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">₹14,999</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">⏱️ 5–7 Days Delivery</div>
                 </div>
 

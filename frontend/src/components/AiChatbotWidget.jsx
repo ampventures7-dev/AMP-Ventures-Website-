@@ -234,16 +234,16 @@ export default function AiChatbotWidget() {
           ...prev, 
           { 
             role: 'bot', 
-            content: "We provide 3 tiers tailored for offline businesses:\n• **Tier 1 (₹9,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
+            content: "We provide 3 tiers tailored for offline businesses:\n• **Tier 1 (₹14,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
             suggested_actions: ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"]
           }
         ]);
       }
     } catch (e) {
       // Local fallback logic
-      let fallbackReply = "Our Tier 1 starts at ₹9,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. Would you like a personalized quote?";
+      let fallbackReply = "Our Tier 1 starts at ₹14,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. Would you like a personalized quote?";
       if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {
-        fallbackReply = "• **Tier 1 — Basic**: ₹9,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership.";
+        fallbackReply = "• **Tier 1 — Basic**: ₹14,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership.";
       } else if (text.toLowerCase().includes("salon") || text.toLowerCase().includes("clinic") || text.toLowerCase().includes("restaurant")) {
         fallbackReply = "For offline salons, clinics, and restaurants, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp appointment/table booking, automated confirmation reminders, and local SEO dominance.";
       }

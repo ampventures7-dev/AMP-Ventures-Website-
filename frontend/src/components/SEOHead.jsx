@@ -12,7 +12,7 @@ const ROUTE_SEO = {
   },
   '/pricing': {
     title: 'Transparent Project Pricing & ROI | AMP VENTURES',
-    description: 'Predictable, one-time project pricing starting at ₹9,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
+    description: 'Predictable, one-time project pricing starting at ₹14,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
   },
   '/about': {
     title: 'Engineering Leadership & Mission | AMP VENTURES',

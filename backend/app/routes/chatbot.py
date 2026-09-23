@@ -9,13 +9,13 @@ router = APIRouter()
 FAQS = [
     {
         "keywords": ["price", "cost", "pricing", "budget", "package", "how much", "rate", "fee", "tier", "kitna", "kitne", "daam", "kimat", "kharcha", "paise", "rupaye"],
-        "reply": "AMP Ventures offers 3 distinct tiers tailored for offline businesses:\n• **Tier 1 (Basic)**: Starting at ₹9,999 (~$149) — 4-6 pages, mobile responsive, Google Map & basic SEO.\n• **Tier 2 (Premium)**: Starting at ₹24,999 (~$349) — Custom CMS, blog, analytics, reviews widget & retainer option.\n• **Tier 3 (Premium Plus)**: Starting at ₹49,999 (~$699) — 3D interactive hero, AI chatbot & WhatsApp Business API automation.\n\nWould you like a custom quote for your specific business?",
+        "reply": "AMP Ventures offers 3 distinct tiers tailored for offline businesses:\n• **Tier 1 (Basic)**: Starting at ₹14,999 (~$180) — 4-6 pages, mobile responsive, Google Map & basic SEO.\n• **Tier 2 (Premium)**: Starting at ₹24,999 (~$349) — Custom CMS, blog, analytics, reviews widget & retainer option.\n• **Tier 3 (Premium Plus)**: Starting at ₹49,999 (~$699) — 3D interactive hero, AI chatbot & WhatsApp Business API automation.\n\nWould you like a custom quote for your specific business?",
         "suggested_actions": ["View Pricing Breakdown", "Check Digital Readiness Score", "Talk on WhatsApp"],
         "recommended_tier": "Tier 2 — Premium"
     },
     {
         "keywords": ["tier 1", "basic", "static"],
-        "reply": "Our **Tier 1 — Basic** package (₹9,999) is ideal for local shops, cafes, and clinics wanting a clean, fast online presence in 5-7 days. It includes:\n• 4–6 responsive pages\n• Google Business Profile link & Map sync\n• Contact form with instant email alerts\n• Free SSL & domain setup guidance\n• 1 revision round.",
+        "reply": "Our **Tier 1 — Basic** package (₹14,999) is ideal for local shops, cafes, and clinics wanting a clean, fast online presence in 5-7 days. It includes:\n• 4–6 responsive pages\n• Google Business Profile link & Map sync\n• Contact form with instant email alerts\n• Free SSL & domain setup guidance\n• 1 revision round.",
         "suggested_actions": ["Get Tier 1 Quote", "Compare with Tier 2"],
         "recommended_tier": "Tier 1 — Basic"
     },
