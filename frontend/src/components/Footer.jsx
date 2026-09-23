@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail, Lock } from 'lucide-react';
+import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail, Lock, MapPin } from 'lucide-react';
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER, getWhatsAppUrl } from '../apiConfig';
 
 export default function Footer() {
@@ -57,10 +57,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Let's Connect */}
+          {/* Column 4: Contact Us */}
           <div>
-            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Direct Contact</h4>
+            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Contact Us</h4>
             <ul className="space-y-2.5 text-xs text-emerald-200/70 list-none p-0">
+              <li className="flex items-start gap-2 text-emerald-200/80 leading-relaxed">
+                <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                <span>SIGNET HEIGHTS, Western Express Highway, Malad East</span>
+              </li>
               <li>
                 <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="w-3.5 h-3.5 text-emerald-400" />

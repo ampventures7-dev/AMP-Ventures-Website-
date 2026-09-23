@@ -309,7 +309,7 @@ export default function Contact() {
                     <MapPin className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-slate-900 block font-semibold">Engineering Studio</strong>
-                      <span className="text-slate-500">Bengaluru & New Delhi Tech Corridors, India</span>
+                      <span className="text-slate-500">SIGNET HEIGHTS, Western Express Highway, Malad East</span>
                     </div>
                   </div>
 
