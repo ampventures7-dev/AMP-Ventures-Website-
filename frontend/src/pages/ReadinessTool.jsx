@@ -129,7 +129,7 @@ export default function ReadinessTool() {
         });
       }
 
-      const recTier = score < 40 ? 'Tier 1 — Basic Website (₹14,999)' : score < 70 ? 'Tier 2 — Premium + CMS (₹24,999)' : 'Tier 3 — 3D & AI Automation (₹49,999)';
+      const recTier = score < 40 ? 'Tier 1 — Basic Website (₹9,999)' : score < 70 ? 'Tier 2 — Premium + CMS (₹24,999)' : 'Tier 3 — 3D & AI Automation (₹49,999)';
       const level = score < 40 ? 'Low Digital Maturity (High Risk of Losing Local Footfall)' : score < 70 ? 'Moderate Digital Maturity (Significant Untapped Revenue)' : 'High Digital Maturity (Optimization Stage)';
 
       setResult({
@@ -293,7 +293,7 @@ export default function ReadinessTool() {
 
                 <button 
                   type="submit" 
-                  className="w-full py-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                  className="w-full py-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition-all disabled:opacity-50"
                   disabled={loading}
                 >
                   {loading ? 'Analyzing Digital Architecture...' : 'Generate Instant Diagnostic Score'}
@@ -366,7 +366,7 @@ export default function ReadinessTool() {
                 <p className="text-xs text-slate-600 leading-relaxed">{result.recommended_tier_reason}</p>
                 
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <Link to="/contact" className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-500/25 flex items-center gap-1.5 transition-all">
+                  <Link to="/contact" className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-sm flex items-center gap-1.5 transition-all">
                     <span>Fix These Gaps With Us</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>

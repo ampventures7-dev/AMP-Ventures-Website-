@@ -163,19 +163,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 20%, #a5b4fc 60%, #818cf8 100%);
+  background: linear-gradient(135deg, #059669 0%, #0284c7 50%, #4f46e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #4f46e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 60%, #d97706 100%);
+  background: linear-gradient(135deg, #d97706 0%, #b45309 60%, #78350f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -368,13 +368,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover:not(:disabled) {
   background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -387,31 +387,31 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .btn-accent {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-accent:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn-whatsapp {
   background: #25d366;
-  color: #063c1b;
+  color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-whatsapp:hover:not(:disabled) {
   background: #20ba59;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn-sm {
@@ -458,51 +458,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-btn-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #2563eb;
   color: #ffffff;
-  border: 1.5px solid rgba(147, 197, 253, 0.45);
-  box-shadow: 0 0 24px rgba(37, 99, 235, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  border: 1px solid #1d4ed8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .hero-btn-primary:hover {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  border-color: #93c5fd;
-  transform: translateY(-2px);
-  box-shadow: 0 0 32px rgba(59, 130, 246, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  background: #1d4ed8;
+  border-color: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
   color: #ffffff;
 }
 
 .hero-btn-secondary {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  color: #f1f5f9;
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(30, 41, 59, 0.9);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+  background: #f8fafc;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #0f172a;
 }
 
 .hero-btn-whatsapp {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.25) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  color: #34d399;
-  border: 1.5px solid rgba(16, 185, 129, 0.5);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  background: #25d366;
+  color: #ffffff;
+  border: 1px solid #20ba59;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .hero-btn-whatsapp:hover {
-  background: rgba(16, 185, 129, 0.3);
-  border-color: #34d399;
-  transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  background: #20ba59;
+  border-color: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
   color: #ffffff;
 }
 
@@ -1084,7 +1080,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary);
   border-color: var(--primary);
   color: #ffffff;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+  box-shadow: none;
 }
 
 .portfolio-grid {
@@ -1178,14 +1174,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  background: #25d366;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .floating-chatbot {
-  background: #0ea5e9;
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+  background: #0284c7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1601,21 +1597,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .floating-whatsapp {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  background: #25d366;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
 }
 
 .floating-whatsapp:hover {
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+  background: #20ba59;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
 .floating-chatbot {
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
-  box-shadow: 0 8px 26px rgba(99, 102, 241, 0.45);
+  background: #0284c7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
 }
 
 .floating-chatbot:hover {
-  box-shadow: 0 12px 34px rgba(14, 165, 233, 0.6);
+  background: #0369a1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
 /* Chatbot Modal Dialog */

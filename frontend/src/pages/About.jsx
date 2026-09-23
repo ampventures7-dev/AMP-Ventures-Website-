@@ -1,9 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Zap, Target, Lock, Cpu, Award, ShieldCheck, 
-  Check, ArrowUpRight, Sparkles, Clock, Globe, MessageSquare 
+  Check, ArrowUpRight, Sparkles 
 } from 'lucide-react';
+import LeadershipSection from '../components/LeadershipSection.jsx';
 
 const VALUES = [
   {
@@ -64,10 +66,29 @@ const PROCESS_STEPS = [
 ];
 
 export default function About() {
+  const location = useLocation();
+
+  // Scroll to #leadership if linked directly
+  useEffect(() => {
+    if (location.hash === '#leadership' || location.pathname === '/leadership') {
+      const el = document.getElementById('leadership');
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div className="about-page pt-28 pb-20 bg-white text-slate-900">
-      {/* Header */}
-      <section className="py-12 text-center">
+      {/* 1. Original About Header */}
+      <motion.section 
+        className="py-12 text-center"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+      >
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-6 shadow-xs">
             <Sparkles className="w-3.5 h-3.5" />
@@ -75,19 +96,19 @@ export default function About() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
-            Empowering Modern Businesses With <br />
+            Empowering Offline Businesses With <br />
             <span className="text-sky-600">
               World-Class Web Engineering
             </span>
           </h1>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            AMP Ventures was founded to bridge the digital gap for businesses across every niche—replacing clunky, non-converting generic templates with ultra-fast, high-converting digital storefronts.
+            AMP Ventures was founded to bridge the digital gap for physical businesses—replacing clunky, non-converting generic templates with ultra-fast, high-converting digital storefronts.
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Founder Credentials Card */}
+      {/* 2. Original Founder Credentials & Engineering Standards Card */}
       <section className="py-10">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="p-8 lg:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl">
@@ -111,18 +132,18 @@ export default function About() {
                 </p>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Combining advanced <strong>IIT Roorkee AI/ML certification</strong> with <strong>Cisco Certified Network Associate (CCNA)</strong> enterprise infrastructure fundamentals, we engineer automated revenue engines for businesses across all niches and industries.
+                  Combining advanced <strong>IIT Roorkee AI/ML certification</strong> with <strong>Cisco Certified Network Associate (CCNA)</strong> enterprise infrastructure fundamentals, we engineer automated revenue engines for local salons, clinics, restaurants, and retail.
                 </p>
 
                 {/* Verified Credentials Pills */}
                 <div className="space-y-3 pt-2">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center flex-shrink-0">
-                      <Award className="w-5 h-5 text-amber-600" />
+                    <div className="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center flex-shrink-0">
+                      <Award className="w-5 h-5 text-emerald-600" />
                     </div>
                     <div>
                       <div className="font-bold text-sm text-slate-900">IIT Roorkee Certified</div>
-                      <div className="text-xs text-slate-500">Advanced Artificial Intelligence & Machine Learning</div>
+                      <div className="text-xs text-slate-500">Advanced Artificial Intelligence, Machine Learning & Systems</div>
                     </div>
                   </div>
 
@@ -154,7 +175,7 @@ export default function About() {
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
                     <div>
                       <strong className="text-slate-900 block font-semibold mb-0.5">100% Code & Data Ownership</strong>
-                      <span className="text-slate-500 text-xs">You hold complete control of your domain and SQLite/Postgres database.</span>
+                      <span className="text-slate-500 text-xs">You hold complete control of your domain and database.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -168,7 +189,7 @@ export default function About() {
 
                 <Link
                   to="/contact"
-                  className="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-center text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all"
+                  className="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-center text-sm shadow-sm flex items-center justify-center gap-2 transition-all"
                 >
                   <span>Schedule Strategy Call</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -180,7 +201,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Principles Bento */}
+      {/* 3. Original Core Principles Bento */}
       <section className="py-16 bg-slate-50/50 border-t border-slate-200">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -205,7 +226,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4-Step Execution Process */}
+      {/* 4. Original 4-Step Execution Workflow */}
       <section className="py-16 bg-white border-t border-slate-200">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -227,6 +248,8 @@ export default function About() {
         </div>
       </section>
 
+      {/* 5. Co-Founders Leadership Section (Sabse Last Me Added) */}
+      <LeadershipSection id="leadership" />
     </div>
   );
 }

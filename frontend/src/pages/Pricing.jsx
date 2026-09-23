@@ -8,9 +8,9 @@ const PRICING_TIERS = [
     id: 'tier1',
     name: 'Tier 1 — Basic',
     badge: 'Rapid Launch',
-    price: '₹14,999',
+    price: '₹9,999',
     timeline: '5–7 Days Delivery',
-    description: 'Perfect for businesses, startups & professionals in any niche needing a fast, professional online storefront.',
+    description: 'Perfect for local shops, cafes & clinics needing a fast, professional online storefront.',
     features: [
       '4–6 Custom Responsive Pages',
       'Mobile-First Layout & Speed Tuning',
@@ -46,7 +46,7 @@ const PRICING_TIERS = [
     ctaText: 'Start Tier 2 Build',
     ctaLink: '/contact?tier=tier2',
     badgeClass: 'bg-sky-50 text-sky-700 border-sky-200',
-    btnClass: 'bg-sky-500 hover:bg-sky-600 text-white shadow-md shadow-sky-500/25'
+    btnClass: 'bg-sky-500 hover:bg-sky-600 text-white shadow-sm'
   },
   {
     id: 'tier3',
@@ -122,9 +122,9 @@ export default function Pricing() {
                   key={tier.id} 
                   className={`mobile-snap-card p-6 sm:p-8 rounded-3xl bg-white border ${
                     tier.isPopular 
-                      ? 'border-2 border-sky-500 shadow-xl shadow-sky-500/10 lg:-translate-y-2' 
+                      ? 'border-2 border-sky-500 shadow-xl lg:-translate-y-2' 
                       : tier.isPlus 
-                      ? 'border-2 border-indigo-400 shadow-xl shadow-indigo-500/10' 
+                      ? 'border-2 border-indigo-400 shadow-xl' 
                       : 'border border-slate-200 shadow-sm'
                   } flex flex-col justify-between transition-all`}
                 >

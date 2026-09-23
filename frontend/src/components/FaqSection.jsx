@@ -12,12 +12,12 @@ const FAQS_DATA = [
     a: 'No hidden fees. The website build is a one-time project fee. After launch, you own 100% of your source code, domain, and data. Cloud hosting and domain renewals are standard at-cost (approx. ₹1,500–₹3,000/year) with zero lock-in.'
   },
   {
-    q: 'Can I update my offerings, prices, photos, and services myself?',
-    a: 'Yes! With Tier 2 and Tier 3, we build a lightweight, custom admin portal where you or your staff can add offerings, update prices, and upload gallery photos in seconds with zero coding knowledge.'
+    q: 'Can I update my menu prices, photos, and services myself?',
+    a: 'Yes! With Tier 2 and Tier 3, we build a lightweight, custom admin portal where you or your staff can add menu items, update prices, and upload gallery photos in seconds with zero coding knowledge.'
   },
   {
     q: 'How does the WhatsApp 1-click booking integration work?',
-    a: 'We embed high-converting WhatsApp action buttons directly into your site. When visitors click to book an appointment, schedule a service, or order a product, a pre-filled WhatsApp message opens automatically on their phone with the details ready to send.'
+    a: 'We embed high-converting WhatsApp action buttons directly into your site. When visitors click to book a table, salon slot, or order a product, a pre-filled WhatsApp message opens automatically on their phone with the details ready to send.'
   },
   {
     q: 'Will my local business rank on Google Maps and search?',

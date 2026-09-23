@@ -145,7 +145,7 @@ export default function Blog() {
               Run our free Digital Readiness Score tool or book a 1-on-1 strategy call with our Lead Architect today.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link to="/readiness-score" className="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-500/25 flex items-center gap-2 transition-all">
+              <Link to="/readiness-score" className="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
                 <span>Take Free Audit</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
@@ -187,7 +187,7 @@ export default function Blog() {
             <div className="flex gap-3 pt-2">
               <Link 
                 to="/contact" 
-                className="flex-grow py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs text-center shadow-md shadow-sky-500/25 flex items-center justify-center gap-1.5 transition-all"
+                className="flex-grow py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs text-center shadow-sm flex items-center justify-center gap-1.5 transition-all"
                 onClick={() => setSelectedArticle(null)}
               >
                 <span>Implement This Setup With Us</span>

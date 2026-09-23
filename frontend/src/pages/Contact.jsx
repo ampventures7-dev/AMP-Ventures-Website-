@@ -7,7 +7,7 @@ import {
 import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 
 const TIER_OPTIONS = [
-  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹14,999)' },
+  { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹9,999)' },
   { value: 'Tier 2 - Premium (CMS & Reviews)', label: 'Tier 2 — Premium (CMS & Reviews • ₹24,999)' },
   { value: 'Tier 3 - Premium Plus (3D & Automation)', label: 'Tier 3 — Premium Plus (3D & AI • ₹49,999)' },
   { value: 'Custom Enterprise / Multiple Outlets', label: 'Custom Enterprise / Multiple Outlets' }
@@ -243,7 +243,7 @@ export default function Contact() {
                       name="message"
                       rows={3}
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:bg-white focus:border-sky-500 focus:outline-none transition-colors"
-                      placeholder="e.g. We want a high-converting website with WhatsApp booking and Google review sync to scale inbound customer inquiries."
+                      placeholder="e.g. We want an online salon booking portal with Google review sync to increase weekday bookings."
                       value={formData.message}
                       onChange={handleChange}
                     ></textarea>
@@ -251,7 +251,7 @@ export default function Contact() {
 
                   <button 
                     type="submit" 
-                    className="w-full py-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition-all disabled:opacity-50"
                     disabled={submitting}
                   >
                     <Send className="w-4 h-4" />
@@ -291,7 +291,7 @@ export default function Contact() {
                   href={getWhatsAppUrl("Hi AMP Ventures, I'd like to consult about a website for my business.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all"
+                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Open WhatsApp Consultation</span>
@@ -309,7 +309,7 @@ export default function Contact() {
                     <MapPin className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-slate-900 block font-semibold">Engineering Studio</strong>
-                      <span className="text-slate-500">SIGNET HEIGHTS, Western Express Highway, Malad East</span>
+                      <span className="text-slate-500">Bengaluru & New Delhi Tech Corridors, India</span>
                     </div>
                   </div>
 

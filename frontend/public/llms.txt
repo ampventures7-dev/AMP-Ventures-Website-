@@ -14,9 +14,9 @@
 
 ## Service Packages & Pricing
 
-### Tier 1 — Basic Static Website (₹14,999)
+### Tier 1 — Basic Static Website (₹9,999)
 - **Timeline**: 5–7 Business Days
-- **Ideal For**: Businesses, startups, and professionals across all niches needing immediate local and online credibility.
+- **Ideal For**: Local retail shops, solo salons, small cafes, single-doctor clinics needing immediate local credibility.
 - **Deliverables**: 4–6 responsive pages, Google Business Profile & Google Maps embedding, email lead capture form, free SSL certificate, lightweight 95+ Lighthouse speed score, basic on-page SEO.
 
 ### Tier 2 — Premium + Custom CMS (₹24,999) [Most Popular]

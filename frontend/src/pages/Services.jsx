@@ -10,10 +10,10 @@ const SERVICES_DATA = [
     tierNumber: 'Tier 1',
     name: 'Basic Static Website',
     tagline: 'Clean, lightning-fast web presence to build immediate local credibility.',
-    startingPrice: '₹14,999',
+    startingPrice: '₹9,999',
     timeline: '5–7 Business Days',
     badgeClass: 'bg-slate-100 text-slate-700 border-slate-200',
-    idealFor: 'Startups, local businesses, retail shops, independent professionals, and service providers wanting a credible online presence.',
+    idealFor: 'Local retail shops, solo salons, small cafes, single-doctor clinics wanting a professional online presence.',
     highlights: [
       '4–6 Custom Designed Responsive Pages (Home, About, Services, Gallery, Contact)',
       'Google Business Profile integration & Google Map embedding',
@@ -29,15 +29,15 @@ const SERVICES_DATA = [
     id: 'tier-2',
     tierNumber: 'Tier 2',
     name: 'Premium + Custom CMS',
-    tagline: 'Dynamic platform allowing you to edit offerings, prices, and gallery photos with zero code.',
+    tagline: 'Dynamic platform allowing you to edit menus, prices, and gallery photos with zero code.',
     startingPrice: '₹24,999',
     timeline: '10–12 Business Days',
     badgeClass: 'bg-sky-50 text-sky-700 border-sky-200',
     isPopular: true,
-    idealFor: 'Growing businesses across any niche needing dynamic menus, price lists, customer reviews, and direct WhatsApp lead capture.',
+    idealFor: 'Growing restaurants with seasonal menus, busy salons with stylist rosters, wellness clinics, and specialty retail.',
     highlights: [
       'Everything included in Tier 1',
-      'Lightweight Client CMS: Update your offerings, price lists, and portfolio images independently',
+      'Lightweight Client CMS: Update your menu items, price lists, and portfolio images independently',
       'Live Google Reviews Embed Widget to display 5-star customer ratings automatically',
       'Google Analytics 4 & Search Console setup for weekly traffic visibility',
       'Direct WhatsApp Slot Booking & click-to-chat CTA buttons',
@@ -55,10 +55,10 @@ const SERVICES_DATA = [
     timeline: '14–18 Business Days',
     badgeClass: 'bg-indigo-50 text-indigo-700 border-indigo-200',
     isPlus: true,
-    idealFor: 'High-end brands, premium agencies, multi-location businesses, and modern enterprises seeking futuristic interactive web experiences.',
+    idealFor: 'High-end fine dining, luxury aesthetics clinics, multi-location brands, and premium experience venues.',
     highlights: [
       'Everything included in Tier 2',
-      'Immersive 3D WebGL / Spline interactive hero sections (e.g. 3D interactive models, product showcases, or spatial branding)',
+      'Immersive 3D WebGL / Spline interactive hero sections (e.g. 3D rotating dish, 3D salon station, or interactive product)',
       'WhatsApp Business API integration for automated appointment confirmations & reminder broadcasts',
       '24/7 AI Chatbot Assistant capable of answering visitor FAQs and capturing qualified leads automatically',
       'Centralized Lead Admin Dashboard (view chatbot + WhatsApp + form leads in a single unified view)',
@@ -112,7 +112,7 @@ export default function Services() {
           </h1>
 
           <p className="text-slate-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            From rapid 5-day launches to immersive 3D interactive experiences, we provide clean, predictable development packages designed for businesses across all niches.
+            From rapid 5-day launches to immersive 3D interactive experiences, we provide clean, predictable development packages designed for offline businesses.
           </p>
         </div>
       </section>
@@ -126,9 +126,9 @@ export default function Services() {
               key={srv.id} 
               className={`p-6 sm:p-8 lg:p-12 rounded-3xl bg-white border ${
                 srv.isPopular 
-                  ? 'border-2 border-sky-500 shadow-xl shadow-sky-500/10' 
+                  ? 'border-2 border-sky-500 shadow-lg' 
                   : srv.isPlus 
-                  ? 'border-2 border-indigo-400 shadow-xl shadow-indigo-500/10' 
+                  ? 'border-2 border-indigo-400 shadow-lg' 
                   : 'border border-slate-200 shadow-sm'
               } transition-all`}
             >
@@ -162,11 +162,11 @@ export default function Services() {
 
                   <Link 
                     to={srv.ctaLink} 
-                    className={`w-full py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-center shadow-md flex items-center justify-center gap-2 transition-all ${
+                    className={`w-full py-3 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm text-center shadow-sm flex items-center justify-center gap-2 transition-all ${
                       srv.isPopular 
-                        ? 'bg-sky-500 hover:bg-sky-600 text-white shadow-sky-500/25' 
+                        ? 'bg-sky-500 hover:bg-sky-600 text-white' 
                         : srv.isPlus 
-                        ? 'bg-slate-900 hover:bg-slate-800 text-white shadow-slate-900/20' 
+                        ? 'bg-slate-900 hover:bg-slate-800 text-white' 
                         : 'bg-white hover:bg-slate-50 text-slate-800 border border-slate-300'
                     }`}
                   >

@@ -3,8 +3,8 @@ import { useLocation } from 'react-router-dom';
 
 const ROUTE_SEO = {
   '/': {
-    title: 'AMP VENTURES | Web Development Agency for Modern Businesses',
-    description: 'Transform your business into an automated digital revenue engine. 95+ PageSpeed guarantee, WhatsApp booking, and 100% code ownership across all niches.'
+    title: 'AMP VENTURES | Web Development Agency for Offline Businesses',
+    description: 'Transform your physical salon, clinic, restaurant, or retail store into an automated digital revenue engine. 95+ PageSpeed guarantee, WhatsApp booking, and 100% code ownership.'
   },
   '/services': {
     title: 'Engineering Packages & Capabilities | AMP VENTURES',
@@ -12,11 +12,11 @@ const ROUTE_SEO = {
   },
   '/pricing': {
     title: 'Transparent Project Pricing & ROI | AMP VENTURES',
-    description: 'Predictable, one-time project pricing starting at ₹14,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
+    description: 'Predictable, one-time project pricing starting at ₹9,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
   },
   '/about': {
     title: 'Engineering Leadership & Mission | AMP VENTURES',
-    description: 'Founded on first principles by IIT Roorkee AI/ML and Cisco Certified Network Associate (CCNA) engineers to bridge the digital gap for modern businesses across all industries.'
+    description: 'Founded on first principles by IIT Roorkee AI/ML and Cisco Certified Network Associate (CCNA) engineers to bridge the digital gap for offline businesses.'
   },
   '/readiness-score': {
     title: 'Free Digital Readiness & Revenue Gap Audit | AMP VENTURES',

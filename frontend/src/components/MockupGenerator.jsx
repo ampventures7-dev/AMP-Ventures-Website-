@@ -264,12 +264,14 @@ export default function MockupGenerator() {
 
   return (
     <div className="mockup-generator-section" style={{ position: 'relative' }}>
-      <div className="section-header">
-        <div className="section-tag">Instant AI Storefront Engine</div>
-        <h2 className="section-title">
-          Preview What Your Website Could Look Like <span className="text-gradient">— Right Now</span>
+      <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 mb-3.5 shadow-xs">
+          Instant AI Storefront Engine
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
+          Preview What Your Website Could Look Like <span className="text-emerald-400 font-extrabold">— Right Now</span>
         </h2>
-        <p className="section-subtitle">
+        <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-normal">
           Customize your business details below and test the interactive booking simulation in real time.
         </p>
       </div>
@@ -277,15 +279,15 @@ export default function MockupGenerator() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', alignItems: 'start' }}>
         
         {/* Left Column: Interactive Customizer Controls */}
-        <div className="glass-card" style={{ padding: '1.75rem', position: 'sticky', top: '90px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-            <h3 style={{ fontSize: '1.15rem', color: '#0f172a', margin: 0, fontWeight: 700 }}>⚡ Storefront Customizer</h3>
+        <div className="rounded-2xl bg-slate-800/90 border border-slate-700/80 backdrop-blur-md shadow-2xl p-6 sm:p-7 sticky top-[90px] text-white">
+          <div style={{ display: 'flex', itemsCenter: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+            <h3 style={{ fontSize: '1.15rem', color: '#ffffff', margin: 0, fontWeight: 700 }}>⚡ Storefront Customizer</h3>
             {loading && <span className="badge badge-cyan" style={{ fontSize: '0.72rem' }}>Updating...</span>}
           </div>
 
           {/* 1. Industry Selector */}
           <div className="form-group" style={{ marginBottom: '1.1rem' }}>
-            <label className="form-label" style={{ fontSize: '0.85rem' }}>1. Choose Business Industry</label>
+            <label className="form-label" style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>1. Choose Business Industry</label>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
               {INDUSTRIES.map((ind) => (
                 <button
@@ -298,7 +300,9 @@ export default function MockupGenerator() {
                     padding: '0.55rem 0.6rem',
                     textAlign: 'center',
                     height: 'auto',
-                    borderColor: industry === ind.id ? themeColor : 'rgba(255,255,255,0.1)'
+                    background: industry === ind.id ? 'rgba(56, 189, 248, 0.15)' : '#0f172a',
+                    color: industry === ind.id ? '#38bdf8' : '#cbd5e1',
+                    borderColor: industry === ind.id ? themeColor : '#334155'
                   }}
                 >
                   {ind.label}
@@ -309,33 +313,33 @@ export default function MockupGenerator() {
 
           {/* 2. Business Name */}
           <div className="form-group" style={{ marginBottom: '1.1rem' }}>
-            <label className="form-label" style={{ fontSize: '0.85rem' }}>2. Business / Brand Name</label>
+            <label className="form-label" style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>2. Business / Brand Name</label>
             <input
               type="text"
               className="form-input"
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
               placeholder="e.g. Saffron Hearth Bistro"
-              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#ffffff', color: '#0f172a', border: '1px solid #cbd5e1' }}
+              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#0f172a', color: '#ffffff', border: '1px solid #334155' }}
             />
           </div>
 
           {/* 3. City */}
           <div className="form-group" style={{ marginBottom: '1.1rem' }}>
-            <label className="form-label" style={{ fontSize: '0.85rem' }}>3. City / Neighborhood</label>
+            <label className="form-label" style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>3. City / Neighborhood</label>
             <input
               type="text"
               className="form-input"
               value={city}
               onChange={(e) => setCity(e.target.value)}
               placeholder="e.g. Bengaluru, Mumbai, Delhi"
-              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#ffffff', color: '#0f172a', border: '1px solid #cbd5e1' }}
+              style={{ fontSize: '0.9rem', padding: '0.65rem 0.85rem', background: '#0f172a', color: '#ffffff', border: '1px solid #334155' }}
             />
           </div>
 
           {/* 4. Brand Accent Color */}
           <div className="form-group" style={{ marginBottom: '1.25rem' }}>
-            <label className="form-label" style={{ fontSize: '0.85rem' }}>4. Brand Theme Accent</label>
+            <label className="form-label" style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>4. Brand Theme Accent</label>
             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
               {THEMES.map((theme) => (
                 <button
@@ -349,7 +353,7 @@ export default function MockupGenerator() {
                     background: theme.color,
                     border: themeColor === theme.color ? '3px solid #ffffff' : '2px solid transparent',
                     cursor: 'pointer',
-                    boxShadow: themeColor === theme.color ? `0 0 14px ${theme.color}` : 'none',
+                    boxShadow: 'none',
                     transform: themeColor === theme.color ? 'scale(1.15)' : 'scale(1)',
                     transition: 'all 0.2s ease'
                   }}
@@ -361,9 +365,9 @@ export default function MockupGenerator() {
 
           {/* 5. Website Preview Theme (Light / Dark) */}
           <div className="form-group" style={{ marginBottom: '1.4rem' }}>
-            <label className="form-label" style={{ fontSize: '0.85rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label className="form-label" style={{ fontSize: '0.85rem', color: '#cbd5e1', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span>5. Website Preview Theme</span>
-              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: isDark ? '#64748b' : '#0284c7' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: isDark ? '#38bdf8' : '#38bdf8' }}>
                 {isDark ? '🌙 Dark Active' : '☀️ Light Active'}
               </span>
             </label>
@@ -385,7 +389,7 @@ export default function MockupGenerator() {
                   border: !isDark ? '2px solid #0284c7' : '1px solid #cbd5e1',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  boxShadow: !isDark ? '0 2px 8px rgba(2,132,199,0.2)' : 'none'
+                  boxShadow: !isDark ? '0 1px 3px rgba(0,0,0,0.08)' : 'none'
                 }}
               >
                 <span>☀️</span> Light Theme
@@ -407,7 +411,7 @@ export default function MockupGenerator() {
                   border: isDark ? '2px solid #0f172a' : '1px solid #cbd5e1',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  boxShadow: isDark ? '0 2px 8px rgba(15,23,42,0.25)' : 'none'
+                  boxShadow: isDark ? '0 1px 3px rgba(0,0,0,0.15)' : 'none'
                 }}
               >
                 <span>🌙</span> Dark Theme
@@ -424,7 +428,7 @@ export default function MockupGenerator() {
                 width: '100%',
                 marginBottom: '0.75rem',
                 background: `linear-gradient(135deg, ${themeColor} 0%, #4338CA 100%)`,
-                boxShadow: `0 8px 20px ${themeColor}44`
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)'
               }}
             >
               🚀 Launch This Website in 5 Days →
@@ -447,7 +451,7 @@ export default function MockupGenerator() {
               background: isDark ? '#0B0F19' : '#ffffff',
               borderRadius: '20px',
               border: isDark ? '1.5px solid rgba(255, 255, 255, 0.15)' : '1.5px solid #cbd5e1',
-              boxShadow: isDark ? `0 25px 60px rgba(0,0,0,0.85), 0 0 40px ${themeColor}22` : `0 20px 50px rgba(0,0,0,0.08), 0 0 35px ${themeColor}15`,
+              boxShadow: isDark ? '0 20px 50px rgba(0,0,0,0.6)' : '0 15px 35px rgba(0,0,0,0.08)',
               overflow: 'hidden',
               transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative'
@@ -658,7 +662,7 @@ export default function MockupGenerator() {
                         color: '#fff',
                         fontWeight: 900,
                         fontSize: '0.95rem',
-                        boxShadow: `0 0 10px ${themeColor}66`
+                        boxShadow: 'none'
                       }}
                     >
                       ⚡
@@ -692,7 +696,7 @@ export default function MockupGenerator() {
                         fontSize: '0.75rem',
                         fontWeight: 700,
                         cursor: 'pointer',
-                        boxShadow: `0 0 12px ${themeColor}55`
+                        boxShadow: 'none'
                       }}
                     >
                       Book Now
@@ -775,7 +779,7 @@ export default function MockupGenerator() {
                           display: 'inline-flex',
                           alignItems: 'center',
                           gap: '0.35rem',
-                          boxShadow: '0 4px 12px rgba(37, 211, 102, 0.35)'
+                          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.12)'
                         }}
                       >
                         <span>💬</span> {previewData.cta_text}

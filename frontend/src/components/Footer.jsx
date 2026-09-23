@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail, Lock, MapPin } from 'lucide-react';
+import { Sparkles, Award, ArrowUp, MessageSquare, Phone, Mail } from 'lucide-react';
 import { WHATSAPP_DISPLAY, WHATSAPP_NUMBER, getWhatsAppUrl } from '../apiConfig';
 
 export default function Footer() {
@@ -38,6 +38,8 @@ export default function Footer() {
             <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Navigation</h4>
             <ul className="space-y-2 text-xs text-emerald-200/70 list-none p-0">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/about#leadership" className="hover:text-white transition-colors">Co-Founders & Leadership</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">3-Tier Solutions</Link></li>
               <li><Link to="/pricing" className="hover:text-white transition-colors">Transparent Pricing</Link></li>
               <li><Link to="/readiness-score" className="hover:text-white transition-colors">Digital Audit Score</Link></li>
@@ -57,14 +59,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact Us */}
+          {/* Column 4: Let's Connect */}
           <div>
-            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Contact Us</h4>
+            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Direct Contact</h4>
             <ul className="space-y-2.5 text-xs text-emerald-200/70 list-none p-0">
-              <li className="flex items-start gap-2 text-emerald-200/80 leading-relaxed">
-                <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                <span>SIGNET HEIGHTS, Western Express Highway, Malad East</span>
-              </li>
               <li>
                 <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="w-3.5 h-3.5 text-emerald-400" />
@@ -109,19 +107,8 @@ export default function Footer() {
             © {new Date().getFullYear()} AMP Ventures Web Engineering Agency. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-2.5">
-            <span className="text-xs text-emerald-300/60 hidden sm:inline">Engineering for <strong className="text-emerald-300">Offline Growth</strong></span>
-            
-            {/* Discreet Admin Portal Button */}
-            <Link 
-              to="/admin" 
-              className="w-7 h-7 rounded-lg flex items-center justify-center text-emerald-400/25 hover:text-emerald-200 bg-[#064e3b]/30 hover:bg-[#064e3b] border border-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-pointer" 
-              aria-label="Staff Terminal"
-              title="Staff Terminal"
-            >
-              <Lock className="w-3 h-3" />
-            </Link>
-
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-emerald-300/60">Engineering for <strong className="text-emerald-300">Offline Growth</strong></span>
             <button 
               onClick={scrollToTop} 
               className="w-8 h-8 rounded-lg flex items-center justify-center text-emerald-200 bg-[#064e3b] border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all shadow-xs" 

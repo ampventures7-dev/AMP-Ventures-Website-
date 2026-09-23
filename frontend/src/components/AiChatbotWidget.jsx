@@ -6,7 +6,7 @@ import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
 const INITIAL_MESSAGES = [
   {
     role: 'bot',
-    content: "Hi! I'm the **AMP Ventures AI Advisor** 🚀\n\nI can help you select the ideal tier for your business across any niche, compare package pricing, or estimate deployment timelines. What would you like to explore?",
+    content: "Hi! I'm the **AMP Ventures AI Advisor** 🚀\n\nI can help you select the ideal tier for your offline business (Salon, Clinic, Restaurant, Retail), compare package pricing, or estimate deployment timelines. What would you like to explore?",
     suggested_actions: ["Explore Tiers & Pricing", "Take Free Digital Audit", "WhatsApp Us", "How fast can we launch?"]
   }
 ];
@@ -14,7 +14,7 @@ const INITIAL_MESSAGES = [
 const SUGGESTED_QUESTIONS = [
   "How much does Tier 2 cost?",
   "What's included in Tier 3 (3D + AI)?",
-  "How fast can my business get online?",
+  "How fast can my salon get online?",
   "Do you provide WhatsApp booking?",
   "Can you sync Google Maps & Reviews?"
 ];
@@ -234,39 +234,25 @@ export default function AiChatbotWidget() {
           ...prev, 
           { 
             role: 'bot', 
-            content: "We provide 3 tiers tailored for businesses across all niches:\n• **Tier 1 (₹14,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
+            content: "We provide 3 tiers tailored for offline businesses:\n• **Tier 1 (₹9,999)**: 5-Day Launch\n• **Tier 2 (₹24,999)**: CMS + Reviews\n• **Tier 3 (₹49,999)**: 3D WebGL + AI + WhatsApp API\n\nWould you like to speak directly with our Technical Architect on WhatsApp?",
             suggested_actions: ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"]
           }
         ]);
       }
     } catch (e) {
-      // Local fallback logic if backend request encounters network error
-      const lower = text.toLowerCase();
-      let fallbackReply = "I do not have this information at the moment. For more detailed information, please contact the owners directly via WhatsApp at +91 70003 84330 or email at ampventures7@gmail.com.";
-      let fallbackActions = ["Chat on WhatsApp", "Explore Pricing", "Take Free Audit"];
-
-      if (lower.includes("founder") || lower.includes("owner") || lower.includes("who are") || lower.includes("who started") || lower.includes("iit") || lower.includes("ccna") || lower.includes("team")) {
-        fallbackReply = "AMP Ventures was founded and is led by Technical Architects certified in **AI/ML from IIT Roorkee** and **Cisco CCNA Networking**. We specialize in engineering high-speed websites, WhatsApp booking automations, and local Google SEO for businesses across all niches.";
-        fallbackActions = ["Chat with Founders on WhatsApp", "Explore Pricing", "View Portfolio"];
-      } else if (lower.includes("address") || lower.includes("location") || lower.includes("office") || lower.includes("where") || lower.includes("malad") || lower.includes("signet")) {
-        fallbackReply = "Our studio office is located at **SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai, Maharashtra, India**.";
-        fallbackActions = ["Chat on WhatsApp", "Book Consultation", "Explore Services"];
-      } else if (lower.includes("contact") || lower.includes("phone") || lower.includes("email") || lower.includes("whatsapp") || lower.includes("number")) {
-        fallbackReply = "You can reach the owners directly via:\n• **WhatsApp**: [+91 70003 84330](https://wa.me/917000384330)\n• **Email**: ampventures7@gmail.com\n• **Studio**: SIGNET HEIGHTS, Western Express Highway, Malad East, Mumbai";
-        fallbackActions = ["Open WhatsApp", "Book Consultation", "Explore Pricing"];
-      } else if (lower.includes("cost") || lower.includes("price") || lower.includes("tier") || lower.includes("rate") || lower.includes("package")) {
-        fallbackReply = "• **Tier 1 — Basic**: Starting at ₹14,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: Starting at ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: Starting at ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers include 100% full source code ownership.";
-        fallbackActions = ["View Pricing Breakdown", "Take Free Audit", "Chat on WhatsApp"];
-      } else if (lower.includes("salon") || lower.includes("clinic") || lower.includes("restaurant") || lower.includes("cafe") || lower.includes("retail") || lower.includes("niche") || lower.includes("industry") || lower.includes("business")) {
-        fallbackReply = "We engineer websites for businesses across all niches. For active client booking and dynamic updates, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp customer booking, automated confirmations, and Google search dominance.";
-        fallbackActions = ["Compare Packages", "Talk on WhatsApp", "Take Free Audit"];
+      // Local fallback logic
+      let fallbackReply = "Our Tier 1 starts at ₹9,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. Would you like a personalized quote?";
+      if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {
+        fallbackReply = "• **Tier 1 — Basic**: ₹9,999 (Fast 5-Day Setup)\n• **Tier 2 — Premium**: ₹24,999 (Dynamic CMS + Google Maps + Reviews)\n• **Tier 3 — Premium Plus**: ₹49,999 (3D Interactive WebGL + AI Agent + WhatsApp API)\n\nAll tiers come with 100% full source code ownership.";
+      } else if (text.toLowerCase().includes("salon") || text.toLowerCase().includes("clinic") || text.toLowerCase().includes("restaurant")) {
+        fallbackReply = "For offline salons, clinics, and restaurants, we recommend **Tier 2 (₹24,999)** or **Tier 3 (₹49,999)**. They include 1-click WhatsApp appointment/table booking, automated confirmation reminders, and local SEO dominance.";
       }
       setMessages(prev => [
         ...prev, 
         { 
           role: 'bot', 
           content: fallbackReply,
-          suggested_actions: fallbackActions
+          suggested_actions: ["Explore Pricing", "Take Free Audit", "Chat on WhatsApp"]
         }
       ]);
     } finally {
@@ -427,7 +413,7 @@ export default function AiChatbotWidget() {
                 <div 
                   className={`max-w-[88%] p-3.5 rounded-2xl text-xs shadow-sm transition-all ${
                     m.role === 'user' 
-                      ? 'bg-sky-500 text-white rounded-br-xs shadow-sky-500/20' 
+                      ? 'bg-sky-500 text-white rounded-br-xs' 
                       : 'bg-white text-slate-700 border border-slate-200 rounded-bl-xs'
                   }`}
                 >
@@ -500,7 +486,7 @@ export default function AiChatbotWidget() {
               title={isListening ? "Stop & Send Voice Query" : `Speak in ${voiceLang === 'hi-IN' ? 'Hindi (हिंदी)' : 'English'}`}
               className={`p-2.5 rounded-xl border transition-all flex items-center justify-center relative ${
                 isListening 
-                  ? 'mic-listening border-red-400 bg-red-50 text-red-600 shadow-md shadow-red-500/20 animate-pulse' 
+                  ? 'mic-listening border-red-400 bg-red-50 text-red-600 shadow-sm animate-pulse' 
                   : 'bg-slate-50 hover:bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
               }`}
             >
@@ -543,11 +529,11 @@ export default function AiChatbotWidget() {
             />
 
             {/* Send Button */}
-            <button 
-              type="submit" 
-              className="p-2.5 rounded-xl bg-sky-500 text-white hover:bg-sky-600 font-bold transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-sky-500/25"
-              disabled={!input.trim() || loading}
-            >
+                  <button 
+                    type="submit" 
+                    className="p-2.5 rounded-xl bg-sky-500 text-white hover:bg-sky-600 font-bold transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+                    disabled={!input.trim() || loading}
+                  >
               <Send className="w-3.5 h-3.5" />
             </button>
           </form>
