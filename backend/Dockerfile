@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir --no-warn-script-location -r requirements.txt
 # Copy backend application code
 COPY . .
 
-EXPOSE 8000
+EXPOSE 10000
 
-# Dynamically bind to Render's $PORT or default to 8000 using python -m uvicorn
-CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Dynamically bind to Render's $PORT or default to 10000 using python -m uvicorn
+CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
