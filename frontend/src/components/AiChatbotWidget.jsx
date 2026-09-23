@@ -211,6 +211,25 @@ export default function AiChatbotWidget() {
     const userMsg = { role: 'user', content: text };
     setMessages(prev => [...prev, userMsg]);
     if (typeof textToSend !== 'string') setInput('');
+
+    // Check for abusive / disrespectful language immediately
+    const abusiveKeywords = [
+      "fuck", "fucking", "fucked", "bitch", "shit", "bastard", "idiot", "asshole", 
+      "chutiya", "chutiye", "madarchod", "bhosdike", "gandu", "harami", "kutta", 
+      "kamina", "saale", "bc", "mc", "bsdk", "stfu", "dick", "pussy"
+    ];
+    if (abusiveKeywords.some(kw => new RegExp(`\\b${kw}\\b`, 'i').test(text))) {
+      setMessages(prev => [
+        ...prev,
+        {
+          role: 'bot',
+          content: "Please use gentle and respectful language. I'm here to assist you politely with any questions about our web development packages, pricing, or our founding team. How can I help you today?",
+          suggested_actions: ["Explore Pricing", "Meet Founders", "Talk on WhatsApp", "Fill Follow Up Form"]
+        }
+      ]);
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -248,7 +267,10 @@ export default function AiChatbotWidget() {
       let fallbackReply = "Our Tier 1 starts at ₹14,999 (5-7 days), Tier 2 is ₹24,999 with custom CMS (10-12 days), and Tier 3 is ₹49,999 with 3D WebGL and AI automations. For custom questions or inquiries not covered here, feel free to connect directly with our owners on Call/WhatsApp (+91 70003 84330), email (ampventures7@gmail.com), or submit our Follow Up form!";
       let suggestedActions = ["Explore Pricing", "Talk on WhatsApp", "Fill Follow Up Form"];
 
-      if (text.toLowerCase().includes("founder") || text.toLowerCase().includes("owner") || text.toLowerCase().includes("team") || text.toLowerCase().includes("mohit") || text.toLowerCase().includes("prachi") || text.toLowerCase().includes("ankit") || text.toLowerCase().includes("who started") || text.toLowerCase().includes("leadership")) {
+      if (text.toLowerCase().includes("who are you") || text.toLowerCase().includes("who r u") || text.toLowerCase().includes("what are you") || text.toLowerCase().includes("who is this") || text.toLowerCase().includes("kaun ho")) {
+        fallbackReply = "I'm the **AMP Ventures AI Advisor**! I assist business owners with web packages, pricing, delivery timelines, and technical questions.\n\nAMP Ventures was founded by IIT Roorkee certified engineers (Mohit Jangir, Prachi Pawar, and Ankit Bandewar) specializing in building fast, automated websites for offline businesses.";
+        suggestedActions = ["Meet Founders", "Explore Pricing", "Talk on WhatsApp"];
+      } else if (text.toLowerCase().includes("founder") || text.toLowerCase().includes("owner") || text.toLowerCase().includes("team") || text.toLowerCase().includes("mohit") || text.toLowerCase().includes("prachi") || text.toLowerCase().includes("ankit") || text.toLowerCase().includes("who started") || text.toLowerCase().includes("leadership")) {
         fallbackReply = "AMP Ventures was founded by 3 technical co-founders certified from **IIT Roorkee** who build and lead every project directly:\n\n• **Mohit Jangir** — AI/ML Engineer (IIT Roorkee Certified): AI automations & smart workflow tools\n• **Prachi Pawar** — AI/ML Developer (IIT Roorkee Certified): Conversational AI chatbots & smart web features\n• **Ankit Bandewar** — Full Stack Developer (IIT Roorkee Certified): High-speed responsive web applications & cloud architecture\n\nYou work directly with the founders without any non-technical middlemen! You can connect with them on WhatsApp or fill out our Follow Up form.";
         suggestedActions = ["Talk on WhatsApp", "Fill Follow Up Form", "Meet Founders"];
       } else if (text.toLowerCase().includes("cost") || text.toLowerCase().includes("price") || text.toLowerCase().includes("tier")) {

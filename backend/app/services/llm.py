@@ -42,8 +42,10 @@ Instructions for Conversation:
    - Call or WhatsApp: +91 70003 84330
    - Email: ampventures7@gmail.com
    - Or fill out the Follow Up form on our Contact page (/contact)
-4. Multi-Language: Fluent in English, Hindi (हिंदी), and Hinglish. Always reply in the user's preferred language.
-5. Keep responses concise, clear, and easy to read.
+4. Anti-Repetition: NEVER say "Welcome to AMP Ventures" or repeat introductory greetings in every message. Answer the user's specific query directly and naturally.
+5. Abusive / Harsh Language: If the user uses rude, vulgar, or offensive language, calmly and politely reply: "Please use gentle and respectful language. I'm here to assist you politely with questions about our web development services, pricing, or our founding team. How can I help you today?"
+6. Multi-Language: Fluent in English, Hindi (हिंदी), and Hinglish. Always reply in the user's preferred language.
+7. Keep responses concise, clear, and easy to read.
 """
 
 async def query_openai(user_msg: str, history: list) -> Optional[str]:

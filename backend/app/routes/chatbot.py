@@ -56,6 +56,15 @@ FAQS = [
         "recommended_tier": None
     },
     {
+        "keywords": ["who are you", "who r u", "what are you", "who is this", "tum kaun ho", "aap kaun ho", "kaun ho", "kon ho"],
+        "reply": (
+            "I'm the **AMP Ventures AI Advisor**! I assist business owners with web packages, pricing, timelines, and technical questions.\n\n"
+            "AMP Ventures is an engineering agency founded by IIT Roorkee certified engineers (Mohit Jangir, Prachi Pawar, and Ankit Bandewar) specializing in building fast, automated websites for local offline businesses."
+        ),
+        "suggested_actions": ["Meet Founders", "View Pricing Breakdown", "Talk on WhatsApp"],
+        "recommended_tier": None
+    },
+    {
         "keywords": ["hindi", "hindi me", "madad", "sahayata", "namaste", "kaise ho"],
         "reply": "नमस्ते! 🙏 जी हाँ, हम हिंदी (Hindi) और English दोनों में आपकी पूरी सहायता करते हैं। आप अपनी दुकान, सैलून, क्लिनिक या रेस्टोरेंट के लिए वेबसाइट बनवाने के बारे में कोई भी सवाल पूछ सकते हैं।",
         "suggested_actions": ["View Pricing Breakdown", "Talk on WhatsApp"],
@@ -63,16 +72,33 @@ FAQS = [
     }
 ]
 
+ABUSIVE_KEYWORDS = [
+    "fuck", "fucking", "fucked", "bitch", "shit", "bastard", "idiot", "asshole", 
+    "chutiya", "chutiye", "madarchod", "bhosdike", "gandu", "harami", "kutta", 
+    "kamina", "saale", "bc", "mc", "bsdk", "stfu", "dick", "pussy"
+]
+
 @router.post("/chatbot", response_model=ChatbotResponse)
 async def chat_with_bot(payload: ChatbotRequest):
     """
     Context-aware AI Chatbot endpoint for prospective clients.
+    0. Checks for abusive / harsh language and politely asks for respectful communication.
     1. Checks fast keyword FAQ matches first.
     2. Falls back to OpenAI / Gemini LLM if API key is provided.
-    3. Falls back to agency introduction guide.
+    3. Falls back to agency introduction guide (without repeating 'Welcome to AMP Ventures').
     """
     user_msg = payload.message.lower().strip()
     
+    # 0. Check for abusive / disrespectful language first
+    if any(re.search(rf"\b{kw}\b", user_msg) for kw in ABUSIVE_KEYWORDS):
+        return ChatbotResponse(
+            reply=(
+                "Please use gentle and respectful language. I'm here to assist you politely with any questions about our web development packages, pricing, or our founding team. How can I help you today?"
+            ),
+            suggested_actions=["Explore Services", "Meet Founders", "Check Pricing", "Talk on WhatsApp"],
+            recommended_tier=None
+        )
+
     # 1. Check keyword matches
     for faq in FAQS:
         if any(re.search(rf"\b{kw}\b", user_msg) for kw in faq["keywords"]):
@@ -91,14 +117,14 @@ async def chat_with_bot(payload: ChatbotRequest):
             recommended_tier="Tier 2 — Premium"
         )
             
-    # 3. Default helpful fallback with quick guidance
+    # 3. Default helpful fallback with quick guidance (No repeated "Welcome to AMP Ventures")
     return ChatbotResponse(
         reply=(
-            "Welcome to **AMP Ventures**! We build fast, high-converting websites for offline businesses starting at ₹14,999, led directly by our IIT Roorkee certified founders (Mohit Jangir, Prachi Pawar, and Ankit Bandewar).\n\n"
-            "If you need custom details, a tailored quote, or have questions not covered here, we warmly invite you to connect directly with the owners:\n"
+            "I'm here to assist you with package pricing, delivery timelines, or web features. Could you share a few details about your business and requirements?\n\n"
+            "For custom requirements or direct consultation, you can also reach our IIT Roorkee certified founders directly:\n"
             "• 📞 **Call / WhatsApp**: +91 70003 84330\n"
             "• ✉️ **Email**: ampventures7@gmail.com\n"
-            "• 📝 **Follow Up Form**: Head to our Contact page to send a request."
+            "• 📝 **Follow Up Form**: Head to our Contact page."
         ),
         suggested_actions=["Meet Founders", "View Pricing Breakdown", "Talk on WhatsApp", "Fill Follow Up Form"],
         recommended_tier="Tier 2 — Premium"
