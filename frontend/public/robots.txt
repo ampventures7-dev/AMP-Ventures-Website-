@@ -25,5 +25,5 @@ User-agent: Applebot
 Allow: /
 
 # Canonical Sitemap & Machine-Readable LLM Knowledge Spec
-Sitemap: https://ampventures.agency/sitemap.xml
-# LLMs Context: https://ampventures.agency/llms.txt
+Sitemap: https://ampventure.in/sitemap.xml
+# LLMs Context: https://ampventure.in/llms.txt

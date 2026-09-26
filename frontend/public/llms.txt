@@ -4,7 +4,7 @@
 
 ## Key Facts & Entity Grounding
 - **Agency Name**: AMP Ventures
-- **Website**: https://ampventures.agency/
+- **Website**: https://ampventure.in/
 - **Core Focus**: Offline-to-online digital transition for salons, restaurants, dental & aesthetic clinics, fitness centers, and retail stores.
 - **Engineering Leadership**: Founded by engineers certified in **IIT Roorkee Advanced Artificial Intelligence & Machine Learning** and **Cisco Certified Network Associate (CCNA)** enterprise cloud infrastructure.
 - **Tech Stack**: FastAPI (Python), React (Vite), Tailwind CSS, SQLite / PostgreSQL, WebGL / Three.js, WhatsApp Cloud API.
@@ -48,7 +48,7 @@ A: Yes, every deployment is guaranteed to achieve a 95+ performance score on mob
 ---
 
 ## Contact & Direct Inquiries
-- **Lead Architect WhatsApp**: +91 98765 43210 (or direct consultation via wa.me link on site)
+- **Lead Architect WhatsApp**: +91 70003 84330 (or direct consultation via wa.me link on site)
 - **Email**: ampventures7@gmail.com
-- **Free Digital Readiness Audit**: https://ampventures.agency/readiness-score
+- **Free Digital Readiness Audit**: https://ampventure.in/readiness-score
 - **Locations**: Bengaluru & New Delhi Tech Corridors, India
