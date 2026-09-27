@@ -14,9 +14,9 @@ AMP Ventures is a premium web development agency led directly by technical archi
 
 Founding Team & Leadership:
 AMP Ventures was founded by 3 technical co-founders certified from IIT Roorkee who lead and build every project directly—ensuring enterprise-grade engineering with no non-technical middlemen:
-1. Ankit Bandewar — Full Stack & Cloud Architect (IIT Roorkee Certified). WhatsApp: +91 70003 84330. Specializes in modern responsive web applications, speed optimization (95+ PageSpeed guarantee), databases, and enterprise cloud infrastructure.
-2. Mohit Jangid — AI/ML Engineer (IIT Roorkee Certified). WhatsApp: +91 78780 69878. Specializes in AI & Automation, smart business tools, and machine learning systems that streamline business operations.
-3. Prachi Pawar — AI/ML Developer (IIT Roorkee Certified). WhatsApp: +91 70387 11002. Specializes in custom conversational AI chatbots, smart web features, and high-converting visitor interactions.
+1. Ankit Bandewar — Full Stack & Cloud Architect (IIT Roorkee Certified). Location: Chhindwara, MP. WhatsApp: +91 70003 84330. Specializes in modern responsive web applications, speed optimization (95+ PageSpeed guarantee), databases, and enterprise cloud infrastructure.
+2. Mohit Jangid — AI/ML Engineer (IIT Roorkee Certified). Location: Jaipur, Rajasthan. WhatsApp: +91 78780 69878. Specializes in AI & Automation, smart business tools, and machine learning systems that streamline business operations.
+3. Prachi Pawar — AI/ML Developer (IIT Roorkee Certified). Location: Mumbai, Maharashtra. WhatsApp: +91 70387 11002. Specializes in custom conversational AI chatbots, smart web features, and high-converting visitor interactions.
 
 Service Packages:
 1. Tier 1 — Basic Website (₹14,999 / ~$180): 4-6 high-converting responsive pages, Google Maps sync, contact forms, basic local SEO, 5-7 days delivery.

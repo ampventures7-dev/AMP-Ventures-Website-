@@ -300,8 +300,12 @@ export default function Contact() {
                             {founder.tag}
                           </span>
                         </div>
-                        <div className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1.5">
+                        <div className="text-[11px] text-slate-500 mt-0.5 flex flex-wrap items-center gap-1.5">
                           <span>{founder.displayPhone}</span>
+                          <span>•</span>
+                          <span className="text-[10px] text-sky-700 font-medium bg-sky-50 px-1.5 py-0.5 rounded border border-sky-200/60">
+                            {founder.location}
+                          </span>
                           <span>•</span>
                           <span className="text-[10px] text-emerald-600 font-medium">{founder.badge}</span>
                         </div>
@@ -331,8 +335,12 @@ export default function Contact() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Headquarters & Studio</strong>
-                      <span className="text-slate-500">Chhindwara, Madhya Pradesh 480001 • Pan-India</span>
+                      <strong className="text-slate-900 block font-semibold mb-1">Engineering Hubs & Presence</strong>
+                      <div className="space-y-1 text-slate-600">
+                        <div>📍 <strong>Chhindwara</strong>, Madhya Pradesh 480001 (HQ)</div>
+                        <div>📍 <strong>Jaipur</strong>, Rajasthan</div>
+                        <div>📍 <strong>Mumbai</strong>, Maharashtra</div>
+                      </div>
                     </div>
                   </div>
 

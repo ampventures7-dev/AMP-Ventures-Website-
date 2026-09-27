@@ -23,9 +23,10 @@ export const FOUNDERS = [
     name: 'Mohit Jangid',
     role: 'AI/ML Engineer',
     badge: 'IIT Roorkee Certified',
+    location: 'Jaipur, Rajasthan',
     phone: '917878069878',
     photo: '/team/mohit-jangir.jpg',
-    bio: 'Certified in AI & Machine Learning from IIT Roorkee. Mohit builds smart AI tools and automation systems that help businesses save time, handle customer tasks automatically, and run more smoothly.',
+    bio: 'Certified in AI & Machine Learning from IIT Roorkee. Based in Jaipur, Mohit builds smart AI tools and automation systems that help businesses save time, handle customer tasks automatically, and run more smoothly.',
     specialties: ['AI & Automation', 'Smart Business Tools', 'Machine Learning'],
     linkedin: 'https://www.linkedin.com/in/mohit-jangir-3933583a6/'
   },
@@ -33,9 +34,10 @@ export const FOUNDERS = [
     name: 'Prachi Pawar',
     role: 'AI/ML Developer',
     badge: 'IIT Roorkee Certified',
+    location: 'Mumbai, Maharashtra',
     phone: '917038711002',
     photo: '/team/prachi-pawar.png',
-    bio: 'Certified in AI & Machine Learning from IIT Roorkee. Prachi builds custom AI features and smart chatbots that make website interactions easy, fast, and helpful for visitors.',
+    bio: 'Certified in AI & Machine Learning from IIT Roorkee. Based in Mumbai, Prachi builds custom AI features and smart chatbots that make website interactions easy, fast, and helpful for visitors.',
     specialties: ['AI Chatbots', 'Smart Web Features', 'Machine Learning'],
     linkedin: 'https://www.linkedin.com/in/prachipawar001/'
   },
@@ -43,9 +45,10 @@ export const FOUNDERS = [
     name: 'Ankit Bandewar',
     role: 'Full Stack Developer',
     badge: 'IIT Roorkee Certified',
+    location: 'Chhindwara, MP',
     phone: '917000384330',
     photo: '/team/ankit-bandewar.jpg',
-    bio: 'Certified in Full Stack Development from IIT Roorkee. Ankit creates fast, modern websites and web applications that load quickly and work smoothly on both mobile phones and laptops.',
+    bio: 'Certified in Full Stack Development from IIT Roorkee. Based in Chhindwara, Ankit creates fast, modern websites and web applications that load quickly and work smoothly on both mobile phones and laptops.',
     specialties: ['Website Development', 'Fast Web Apps', 'Database & Cloud'],
     linkedin: 'https://www.linkedin.com/in/ankit-bandewar-9a386821b/'
   }
@@ -119,11 +122,14 @@ export default function LeadershipSection({ className = '', id = 'leadership' })
                     {founder.role}
                   </div>
 
-                  {/* 'IIT Roorkee Certified' Badge Under Name */}
-                  <div className="mt-2.5 mb-4 flex justify-center">
+                  {/* Badges Under Name: IIT Roorkee + City Location */}
+                  <div className="mt-2.5 mb-4 flex flex-wrap justify-center items-center gap-1.5">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/80 shadow-2xs">
                       <Award className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
                       <span>{founder.badge}</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200/80 shadow-2xs">
+                      <span>📍 {founder.location}</span>
                     </span>
                   </div>
 

@@ -36,6 +36,7 @@ export const CO_FOUNDERS_CONTACT = [
   {
     name: 'Ankit Bandewar',
     role: 'Lead Full Stack & Cloud Architect',
+    location: 'Chhindwara, MP',
     phone: '917000384330',
     displayPhone: '+91 70003 84330',
     tag: 'Web & Cloud Architecture',
@@ -46,6 +47,7 @@ export const CO_FOUNDERS_CONTACT = [
   {
     name: 'Mohit Jangid',
     role: 'Co-Founder & AI/ML Engineer',
+    location: 'Jaipur, Rajasthan',
     phone: '917878069878',
     displayPhone: '+91 78780 69878',
     tag: 'AI & Smart Business Automation',
@@ -56,6 +58,7 @@ export const CO_FOUNDERS_CONTACT = [
   {
     name: 'Prachi Pawar',
     role: 'Co-Founder & AI/ML Developer',
+    location: 'Mumbai, Maharashtra',
     phone: '917038711002',
     displayPhone: '+91 70387 11002',
     tag: 'AI Chatbots & Conversational Features',
