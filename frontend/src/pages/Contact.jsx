@@ -331,8 +331,8 @@ export default function Contact() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-slate-900 block font-semibold">Engineering Studio</strong>
-                      <span className="text-slate-500">Bengaluru & New Delhi Tech Corridors, India</span>
+                      <strong className="text-slate-900 block font-semibold">Headquarters & Studio</strong>
+                      <span className="text-slate-500">Chhindwara, Madhya Pradesh 480001 • Pan-India</span>
                     </div>
                   </div>
 

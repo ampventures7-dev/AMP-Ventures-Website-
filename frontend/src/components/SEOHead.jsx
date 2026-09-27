@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom';
 
 const ROUTE_SEO = {
   '/': {
-    title: 'AMP VENTURES | Web Development Agency for Offline Businesses',
-    description: 'Transform your physical salon, clinic, restaurant, or retail store into an automated digital revenue engine. 95+ PageSpeed guarantee, WhatsApp booking, and 100% code ownership.'
+    title: 'AMP VENTURES | Best Web Development Agency in Chhindwara, MP',
+    description: 'Top-rated web development agency in Chhindwara, Madhya Pradesh. Transform your offline business into an automated revenue engine with 95+ PageSpeed & WhatsApp booking.'
   },
   '/services': {
-    title: 'Engineering Packages & Capabilities | AMP VENTURES',
+    title: 'Engineering Packages & Capabilities | AMP VENTURES Chhindwara',
     description: 'From 5-day rapid static storefronts to lightweight custom CMS portals and immersive 3D/AI interactive experiences. Explore all 3 development tiers.'
   },
   '/pricing': {
@@ -15,7 +15,7 @@ const ROUTE_SEO = {
     description: 'Predictable, one-time project pricing starting at ₹14,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
   },
   '/about': {
-    title: 'Engineering Leadership & Mission | AMP VENTURES',
+    title: 'Engineering Leadership & Mission | AMP VENTURES Chhindwara',
     description: 'Founded on first principles by IIT Roorkee AI/ML and Cisco Certified Network Associate (CCNA) engineers to bridge the digital gap for offline businesses.'
   },
   '/readiness-score': {
@@ -27,8 +27,8 @@ const ROUTE_SEO = {
     description: 'Practical, fluff-free guides and engineering breakdowns on local Google Maps SEO, WhatsApp commerce, and sub-second web speed conversion.'
   },
   '/contact': {
-    title: 'Schedule Lead Architect Consultation | AMP VENTURES',
-    description: 'Submit your project brief or connect directly on WhatsApp with our Lead Technical Architect for guaranteed same-day project scoping.'
+    title: 'Contact Web Development Agency in Chhindwara | AMP VENTURES',
+    description: 'Submit your project brief or connect directly on WhatsApp with our Co-Founders in Chhindwara for guaranteed same-day project scoping.'
   },
   '/admin': {
     title: 'Lead Intelligence & CRM Dashboard | AMP VENTURES',
