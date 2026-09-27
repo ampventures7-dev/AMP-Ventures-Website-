@@ -15,7 +15,6 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import ReadinessTool from './pages/ReadinessTool.jsx';
 import Blog from './pages/Blog.jsx';
-import AdminLeads from './pages/AdminLeads.jsx';
 
 import SEOHead from './components/SEOHead.jsx';
 
@@ -59,7 +58,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/readiness-score" element={<ReadinessTool />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/admin" element={<AdminLeads />} />
             {/* Catch-all fallback */}
             <Route path="*" element={<Home />} />
           </Routes>

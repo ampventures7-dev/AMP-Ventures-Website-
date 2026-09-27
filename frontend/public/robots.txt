@@ -2,7 +2,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /admin
 Disallow: /api/
 
 # Explicitly Allow AI Answer Engines & Generative Search Crawlers (AEO & GEO)

@@ -29,10 +29,6 @@ const ROUTE_SEO = {
   '/contact': {
     title: 'Contact Web Development Agency in Chhindwara | AMP VENTURES',
     description: 'Submit your project brief or connect directly on WhatsApp with our Co-Founders in Chhindwara for guaranteed same-day project scoping.'
-  },
-  '/admin': {
-    title: 'Lead Intelligence & CRM Dashboard | AMP VENTURES',
-    description: 'Internal operations dashboard tracking client inquiries and digital readiness audits.'
   }
 };
 
