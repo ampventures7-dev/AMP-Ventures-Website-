@@ -4,7 +4,7 @@ import {
   Sparkles, CheckCircle2, MessageSquare, MapPin, 
   Mail, Clock, Lock, ShieldCheck, Send 
 } from 'lucide-react';
-import { getApiUrl, getWhatsAppUrl } from '../apiConfig';
+import { getApiUrl, getWhatsAppUrl, CO_FOUNDERS_CONTACT, getFounderWhatsAppUrl } from '../apiConfig';
 
 const TIER_OPTIONS = [
   { value: 'Tier 1 - Basic (Static Website)', label: 'Tier 1 — Basic (Static Website • ₹14,999)' },
@@ -268,34 +268,57 @@ export default function Contact() {
 
             {/* Right: Direct Contacts & WhatsApp Priority Box */}
             <div className="lg:col-span-5 space-y-6">
-              {/* WhatsApp Card */}
-              <div className="p-7 rounded-3xl bg-emerald-50/70 border border-emerald-200 shadow-sm space-y-4">
+              {/* Co-Founders Direct WhatsApp Priority Box */}
+              <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-emerald-50/40 border border-emerald-200/90 shadow-sm space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-700">
                     <MessageSquare className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-slate-900">Direct WhatsApp Priority Line</h3>
+                    <h3 className="text-base font-bold text-slate-900">Direct Founder WhatsApp Lines</h3>
                     <span className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                      Instant reply from Lead Architect
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      1-on-1 direct consultation with Co-Founders
                     </span>
                   </div>
                 </div>
 
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Prefer a direct 1-on-1 chat? Skip the form and message our founder directly with your business location and questions.
+                  Connect directly with the founder best suited for your project needs:
                 </p>
 
-                <a 
-                  href={getWhatsAppUrl("Hi AMP Ventures, I'd like to consult about a website for my business.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Open WhatsApp Consultation</span>
-                </a>
+                <div className="space-y-3 pt-1">
+                  {CO_FOUNDERS_CONTACT.map((founder, fIdx) => (
+                    <div 
+                      key={fIdx} 
+                      className="p-3.5 rounded-2xl bg-white border border-emerald-100/90 shadow-2xs hover:border-emerald-300 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                    >
+                      <div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          <span className="font-bold text-slate-900 text-xs sm:text-sm">{founder.name}</span>
+                          <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
+                            {founder.tag}
+                          </span>
+                        </div>
+                        <div className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1.5">
+                          <span>{founder.displayPhone}</span>
+                          <span>•</span>
+                          <span className="text-[10px] text-emerald-600 font-medium">{founder.badge}</span>
+                        </div>
+                      </div>
+
+                      <a
+                        href={getFounderWhatsAppUrl(founder.phone, founder.defaultText)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs hover:shadow-sm transition-all whitespace-nowrap self-start sm:self-center"
+                      >
+                        <MessageSquare className="w-3.5 h-3.5" />
+                        <span>Chat on WhatsApp</span>
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Studio Info Card */}

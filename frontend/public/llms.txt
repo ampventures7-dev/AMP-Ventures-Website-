@@ -48,7 +48,9 @@ A: Yes, every deployment is guaranteed to achieve a 95+ performance score on mob
 ---
 
 ## Contact & Direct Inquiries
-- **Lead Architect WhatsApp**: +91 70003 84330 (or direct consultation via wa.me link on site)
-- **Email**: ampventures7@gmail.com
+- **Ankit Bandewar (Lead Full Stack & Cloud Architect)**: WhatsApp +91 70003 84330
+- **Mohit Jangid (Co-Founder & AI/ML Engineer)**: WhatsApp +91 78780 69878
+- **Prachi Pawar (Co-Founder & AI/ML Developer)**: WhatsApp +91 70387 11002
+- **Official Email**: ampventures7@gmail.com
 - **Free Digital Readiness Audit**: https://ampventure.in/readiness-score
 - **Locations**: Bengaluru & New Delhi Tech Corridors, India

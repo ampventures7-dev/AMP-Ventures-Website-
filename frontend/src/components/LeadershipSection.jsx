@@ -10,11 +10,20 @@ function LinkedInIcon({ className = "w-3.5 h-3.5" }) {
   );
 }
 
+function WhatsAppIcon({ className = "w-3.5 h-3.5" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.216 8.216 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" />
+    </svg>
+  );
+}
+
 export const FOUNDERS = [
   {
-    name: 'Mohit Jangir',
+    name: 'Mohit Jangid',
     role: 'AI/ML Engineer',
     badge: 'IIT Roorkee Certified',
+    phone: '917878069878',
     photo: '/team/mohit-jangir.jpg',
     bio: 'Certified in AI & Machine Learning from IIT Roorkee. Mohit builds smart AI tools and automation systems that help businesses save time, handle customer tasks automatically, and run more smoothly.',
     specialties: ['AI & Automation', 'Smart Business Tools', 'Machine Learning'],
@@ -24,6 +33,7 @@ export const FOUNDERS = [
     name: 'Prachi Pawar',
     role: 'AI/ML Developer',
     badge: 'IIT Roorkee Certified',
+    phone: '917038711002',
     photo: '/team/prachi-pawar.png',
     bio: 'Certified in AI & Machine Learning from IIT Roorkee. Prachi builds custom AI features and smart chatbots that make website interactions easy, fast, and helpful for visitors.',
     specialties: ['AI Chatbots', 'Smart Web Features', 'Machine Learning'],
@@ -33,6 +43,7 @@ export const FOUNDERS = [
     name: 'Ankit Bandewar',
     role: 'Full Stack Developer',
     badge: 'IIT Roorkee Certified',
+    phone: '917000384330',
     photo: '/team/ankit-bandewar.jpg',
     bio: 'Certified in Full Stack Development from IIT Roorkee. Ankit creates fast, modern websites and web applications that load quickly and work smoothly on both mobile phones and laptops.',
     specialties: ['Website Development', 'Fast Web Apps', 'Database & Cloud'],
@@ -139,19 +150,30 @@ export default function LeadershipSection({ className = '', id = 'leadership' })
                   </div>
                 </div>
 
-                {/* Card Footer: Only LinkedIn Button (Email Removed) */}
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-center mt-auto w-full">
+                {/* Card Footer: WhatsApp & LinkedIn Action Buttons */}
+                <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-2 mt-auto w-full">
+                  <a 
+                    href={`https://wa.me/${founder.phone}?text=${encodeURIComponent(`Hi ${founder.name.split(' ')[0]}, I'm visiting the AMP Ventures website and would like to connect.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-2xs"
+                    title={`Chat with ${founder.name} on WhatsApp`}
+                    aria-label={`Chat with ${founder.name} on WhatsApp`}
+                  >
+                    <WhatsAppIcon className="w-3.5 h-3.5" />
+                    <span>WhatsApp</span>
+                  </a>
+
                   <a 
                     href={founder.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-200 hover:bg-sky-100 hover:border-sky-300 transition-colors shadow-2xs"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-200 hover:bg-sky-100 hover:border-sky-300 transition-colors shadow-2xs"
                     title={`${founder.name} LinkedIn`}
                     aria-label={`${founder.name} LinkedIn`}
                   >
-                    <LinkedInIcon className="w-4 h-4 text-sky-600" />
-                    <span>Connect on LinkedIn</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-sky-500" />
+                    <LinkedInIcon className="w-3.5 h-3.5 text-sky-600" />
+                    <span>LinkedIn</span>
                   </a>
                 </div>
               </div>

@@ -32,10 +32,52 @@ export const getWhatsAppUrl = (text = '') => {
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
 };
 
+export const CO_FOUNDERS_CONTACT = [
+  {
+    name: 'Ankit Bandewar',
+    role: 'Lead Full Stack & Cloud Architect',
+    phone: '917000384330',
+    displayPhone: '+91 70003 84330',
+    tag: 'Web & Cloud Architecture',
+    badge: 'IIT Roorkee Certified',
+    bio: 'Direct consultation on web engineering, performance optimization, and custom hosting.',
+    defaultText: "Hi Ankit, I would like to consult about website development and architecture for my business."
+  },
+  {
+    name: 'Mohit Jangid',
+    role: 'Co-Founder & AI/ML Engineer',
+    phone: '917878069878',
+    displayPhone: '+91 78780 69878',
+    tag: 'AI & Smart Business Automation',
+    badge: 'IIT Roorkee Certified',
+    bio: 'Consultation on business automation, AI workflows, and machine learning systems.',
+    defaultText: "Hi Mohit, I would like to consult about AI automation and smart tools for my business."
+  },
+  {
+    name: 'Prachi Pawar',
+    role: 'Co-Founder & AI/ML Developer',
+    phone: '917038711002',
+    displayPhone: '+91 70387 11002',
+    tag: 'AI Chatbots & Conversational Features',
+    badge: 'IIT Roorkee Certified',
+    bio: 'Consultation on 24/7 custom AI chatbots and smart visitor interaction features.',
+    defaultText: "Hi Prachi, I would like to consult about an AI chatbot and customer engagement for my business."
+  }
+];
+
+export const getFounderWhatsAppUrl = (phone, text = '') => {
+  const digits = (phone || '').replace(/\D/g, '');
+  if (!text) return `https://wa.me/${digits}`;
+  return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
+};
+
 export default {
   API_BASE_URL,
   getApiUrl,
   WHATSAPP_NUMBER,
   WHATSAPP_DISPLAY,
   getWhatsAppUrl,
+  CO_FOUNDERS_CONTACT,
+  getFounderWhatsAppUrl,
 };
+
