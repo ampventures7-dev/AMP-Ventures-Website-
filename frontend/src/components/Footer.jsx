@@ -103,21 +103,12 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-200/60">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <span>•</span>
             <Link to="/about" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span>•</span>
             <Link to="/pricing" className="hover:text-white transition-colors">Refund Policy</Link>
-            <span>•</span>
-            <Link 
-              to="/admin" 
-              className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-md bg-[#064e3b]/80 border border-emerald-500/40 text-emerald-200 hover:text-white hover:bg-emerald-600 hover:border-emerald-400 transition-all shadow-2xs"
-              title="Admin CRM & Leads Portal"
-            >
-              <Lock className="w-3 h-3 text-emerald-400" />
-              <span>Admin Portal</span>
-            </Link>
           </div>
 
           <div>
