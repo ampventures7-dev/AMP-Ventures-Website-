@@ -66,7 +66,7 @@ export default function SEOHead() {
     // Update Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
-      canonical.setAttribute('href', `https://ampventure.in${pathname === '/' ? '' : pathname}`);
+      canonical.setAttribute('href', `https://www.ampventure.in${pathname === '/' ? '' : pathname}`);
     }
   }, [pathname]);
 
