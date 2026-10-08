@@ -364,7 +364,7 @@ export default function Services() {
               href="#tiers"
               className="px-6 py-3 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 font-bold text-xs sm:text-sm transition"
             >
-              Turnkey Web Packages
+              Website Packages
             </a>
             <a
               href={getWhatsAppUrl("Hi AMP Ventures, I want to discuss services for my business (SaaS / Ads / Web / Automation).")}
@@ -570,10 +570,10 @@ export default function Services() {
           
           <div className="text-center max-w-2xl mx-auto mb-10">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold uppercase tracking-wider text-sky-700 mb-3 shadow-xs">
-              <span>Turnkey Packages</span>
+              <span>Website Packages</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 mb-3">
-              3-Tier Website Architecture
+              3-Tier Website Packages
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm">
               All-inclusive development packages tailored for businesses transitioning offline to online.
