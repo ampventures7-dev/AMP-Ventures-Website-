@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Zap, Target, Lock, Cpu, Award, ShieldCheck, 
-  Check, ArrowUpRight 
+  Check, ArrowUpRight, CheckCircle2 
 } from 'lucide-react';
 import LeadershipSection from '../components/LeadershipSection.jsx';
 
@@ -126,13 +126,21 @@ export default function About() {
                   </span>
                 </h2>
 
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Most web agencies hand your project to someone running a templated WordPress theme with a stack of plugins bolted on. It works — until it doesn't.
-                </p>
-
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  We took a different path: formal <strong>AI/ML training from IIT Roorkee</strong> and a <strong>Cisco CCNA</strong> in enterprise networking. That means every system we build — booking flows, lead capture, automation — is engineered with an actual understanding of how it works, not just which plugin to install.
-                </p>
+                {/* Point-Format Core Values (Simple Plain English) */}
+                <ul className="space-y-3 p-0 m-0 list-none">
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>No Ready-Made Templates:</strong> Built from scratch for your business — no slow plugins or broken themes.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>IIT & Cisco Certified:</strong> Real technical training so your website is fast, secure, and reliable.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>Built to Get Customers:</strong> Easy 1-click WhatsApp booking, fast loading on mobile, and zero monthly rent.</span>
+                  </li>
+                </ul>
 
                 {/* Verified Credentials Pills */}
                 <div className="space-y-3 pt-2">
@@ -142,7 +150,7 @@ export default function About() {
                     </div>
                     <div>
                       <div className="font-bold text-sm text-slate-900">IIT Roorkee Certified</div>
-                      <div className="text-xs text-slate-500">Advanced Artificial Intelligence, Machine Learning & Systems</div>
+                      <div className="text-xs text-slate-500">Software Development & Modern AI Systems</div>
                     </div>
                   </div>
 
@@ -151,8 +159,8 @@ export default function About() {
                       <ShieldCheck className="w-5 h-5 text-sky-600" />
                     </div>
                     <div>
-                      <div className="font-bold text-sm text-slate-900">Cisco Certified Network Associate (CCNA)</div>
-                      <div className="text-xs text-slate-500">Enterprise Cloud Infrastructure, Routing & Cyber Security</div>
+                      <div className="font-bold text-sm text-slate-900">Cisco Certified (CCNA)</div>
+                      <div className="text-xs text-slate-500">Fast Cloud Servers & Online Security</div>
                     </div>
                   </div>
                 </div>
@@ -166,22 +174,22 @@ export default function About() {
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
                     <div>
-                      <strong className="text-slate-900 block font-semibold mb-0.5">95+ Google PageSpeed Guarantee</strong>
-                      <span className="text-slate-500 text-xs">Zero bloated plugins slowing down mobile visitors.</span>
+                      <strong className="text-slate-900 block font-semibold mb-0.5">Fast Mobile Speed Guarantee</strong>
+                      <span className="text-slate-500 text-xs">Opens instantly on every smartphone with zero lag.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
                     <div>
-                      <strong className="text-slate-900 block font-semibold mb-0.5">100% Code & Data Ownership</strong>
-                      <span className="text-slate-500 text-xs">You hold complete control of your domain and database.</span>
+                      <strong className="text-slate-900 block font-semibold mb-0.5">100% You Own Everything</strong>
+                      <span className="text-slate-500 text-xs">Full control of your website, domain name, and customer data.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">✓</div>
                     <div>
-                      <strong className="text-slate-900 block font-semibold mb-0.5">Direct Lead Architect Contact</strong>
-                      <span className="text-slate-500 text-xs">Direct technical access—no junior ticket handlers.</span>
+                      <strong className="text-slate-900 block font-semibold mb-0.5">Talk Directly to Developers</strong>
+                      <span className="text-slate-500 text-xs">Direct contact with the actual engineers building your site.</span>
                     </div>
                   </li>
                 </ul>
