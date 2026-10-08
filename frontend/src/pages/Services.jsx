@@ -364,8 +364,8 @@ export default function Services() {
             </span>
           </h1>
 
-          <p className="text-slate-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-            We build modern, high-performing digital solutions designed around your business goals. Everything you need to build, market, and scale your online presence.
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8 font-medium">
+            Fast websites, smart automations, and marketing built to bring you real customers.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
