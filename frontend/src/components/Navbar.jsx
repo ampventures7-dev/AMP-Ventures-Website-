@@ -73,6 +73,20 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink
+              to="/portfolio"
+              className={({ isActive }) =>
+                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                  isActive
+                    ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
+                    : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
+                }`
+              }
+            >
+              Portfolio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/about"
               className={({ isActive }) =>
                 `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -143,6 +157,12 @@ export default function Navbar() {
             className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-[#0f1b3d]"
           >
             Services <ArrowUpRight className="w-4 h-4 text-slate-500" />
+          </Link>
+          <Link 
+            to="/portfolio" 
+            className="font-medium py-2 border-b flex justify-between items-center text-slate-200 hover:text-white border-[#0f1b3d]"
+          >
+            Portfolio & Projects <ArrowUpRight className="w-4 h-4 text-slate-500" />
           </Link>
           <Link 
             to="/pricing" 

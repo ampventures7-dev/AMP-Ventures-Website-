@@ -38,6 +38,7 @@ export default function Footer() {
             <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Navigation</h4>
             <ul className="space-y-2 text-xs text-emerald-200/70 list-none p-0">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/portfolio" className="hover:text-white transition-colors">Delivered Portfolio</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/about#leadership" className="hover:text-white transition-colors">Co-Founders & Leadership</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">3-Tier Solutions</Link></li>
@@ -51,10 +52,13 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Solutions</h4>
             <ul className="space-y-2 text-xs text-emerald-200/70 list-none p-0">
-              <li><Link to="/services#tier-1" className="hover:text-white transition-colors">High-Converting Website</Link></li>
-              <li><Link to="/services#tier-2" className="hover:text-white transition-colors">WhatsApp Booking Automation</Link></li>
-              <li><Link to="/services#tier-3" className="hover:text-white transition-colors">3D & AI Interactive Engine</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">Google Maps Local SEO</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Website Development</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">SaaS & Software Development</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">WhatsApp Automation & AI</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Meta & Google Ads</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Advanced SEO & Local Dominance</Link></li>
+              <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Social Media Account Handling</Link></li>
+              <li><Link to="/services#tiers" className="hover:text-white transition-colors">3-Tier Web Packages</Link></li>
               <li><Link to="/readiness-score" className="text-emerald-300 font-semibold hover:underline">Free Digital Audit Tool</Link></li>
             </ul>
           </div>

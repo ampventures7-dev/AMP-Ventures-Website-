@@ -10,6 +10,10 @@ const ROUTE_SEO = {
     title: 'Engineering Packages & Capabilities | AMP VENTURES Chhindwara',
     description: 'From 5-day rapid static storefronts to lightweight custom CMS portals and immersive 3D/AI interactive experiences. Explore all 3 development tiers.'
   },
+  '/portfolio': {
+    title: 'Delivered Projects & Case Studies | AMP VENTURES',
+    description: 'Explore verified production websites and custom web systems engineered by AMP VENTURES with live deployments across India.'
+  },
   '/pricing': {
     title: 'Transparent Project Pricing & ROI | AMP VENTURES',
     description: 'Predictable, one-time project pricing starting at ₹14,999 with zero hidden fees, zero recurring plugin subscriptions, and 100% code and database ownership.'
