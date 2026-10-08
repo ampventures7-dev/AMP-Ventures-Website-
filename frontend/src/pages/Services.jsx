@@ -216,27 +216,42 @@ const PROCESS_STEPS = [
   }
 ];
 
-// 3. Why Choose Us (from Brochure: "Why Choose Us?")
+// 3. Why Choose Us (Point-Format & Concise)
 const WHY_CHOOSE_US = [
   {
-    title: 'Built For Your Business',
-    desc: 'No generic copy-paste templates. We engineer tailored solutions designed around your unique operational needs.'
+    title: 'Custom Engineering (Zero Templates)',
+    points: [
+      'Tailored around your exact operational workflow',
+      'Zero bloated WordPress themes or slow drag-and-drop builders'
+    ]
   },
   {
-    title: 'Modern Technology',
-    desc: 'We use bleeding-edge stacks (React, FastAPI, Next.js, Vercel Edge) to create fast, secure, and scalable products.'
+    title: 'Modern High-Speed Stack',
+    points: [
+      'Built with React, Next.js & FastAPI stacks',
+      'Loads in <0.4s on global CDN edge networks'
+    ]
   },
   {
-    title: 'Design + Development',
-    desc: 'From the first aesthetic wireframe to final cloud deployment, we handle the entire lifecycle under one roof.'
+    title: 'Design + Development Under One Roof',
+    points: [
+      'Wireframing, UI/UX, coding & cloud deployment',
+      'No third-party freelancer delays or handoff gaps'
+    ]
   },
   {
-    title: 'Transparent Process',
-    desc: 'Clear communication, defined requirements, milestone tracking, and frequent updates with zero surprises.'
+    title: '100% Transparent Process',
+    points: [
+      'Predictable 5–7 day milestone delivery',
+      'Fixed project pricing with zero surprise charges'
+    ]
   },
   {
-    title: 'Growth Ready Architecture',
-    desc: 'We build with future expansion in mind — easily add payment gateways, custom CRM, or AI tools as you grow.'
+    title: 'Growth-Ready Architecture',
+    points: [
+      'Plug-and-play WhatsApp AI, CRM & payment gateways',
+      'Scales effortlessly as your customer volume grows'
+    ]
   }
 ];
 
@@ -521,40 +536,57 @@ export default function Services() {
                 Why Choose Us?
               </h2>
 
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                We don't just build websites, we build solutions that work for you. Our decoupled code and automation pipelines ensure you never pay recurring software rent.
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+                Engineered for maximum ROI and long-term business performance — never bloated software rent.
               </p>
 
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white space-y-3">
+              {/* The AMP Advantage Card - Point Format */}
+              <div className="p-5 rounded-2xl bg-slate-900 text-white space-y-3.5 border border-slate-800 shadow-sm">
                 <div className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                  Your Success Is Our Success
+                  The AMP Advantage
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  We partner with local businesses for the long run. From first launch to ongoing lead generation, we're with you at every step.
-                </p>
-                <div className="pt-1 flex items-center gap-4 text-xs font-medium text-slate-200">
-                  <span>✓ 100% Code Ownership</span>
-                  <span>✓ Zero Monthly Rent</span>
-                </div>
+                <ul className="space-y-2 p-0 m-0 list-none">
+                  <li className="flex items-center gap-2 text-xs text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>100% Code & Asset Ownership</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Zero Monthly Platform or Plugin Rent</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Guaranteed 5–7 Days Production Delivery</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Direct Tech Lead & Co-Founder Support</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-4">
+            <div className="lg:col-span-7 space-y-3">
               {WHY_CHOOSE_US.map((item, idx) => (
                 <div 
                   key={idx}
-                  className="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-200/90 hover:border-slate-300 hover:bg-white transition-all flex items-start gap-4"
+                  className="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200/90 hover:border-slate-300 hover:bg-white transition-all flex items-start gap-3.5"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+                  <div className="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                     0{idx + 1}
                   </div>
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-slate-900 mb-1">
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-slate-900 mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <ul className="space-y-1 p-0 m-0 list-none">
+                      {item.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="flex items-center gap-2 text-xs text-slate-600">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
