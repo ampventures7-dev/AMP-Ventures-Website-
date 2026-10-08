@@ -7,7 +7,6 @@ import {
 } from 'lucide-react';
 import MockupGenerator from '../components/MockupGenerator.jsx';
 import HeroSection from '../components/HeroSection.jsx';
-import PortfolioSection from '../components/PortfolioSection.jsx';
 import { getWhatsAppUrl } from '../apiConfig';
 
 const TRUST_BADGES = [
@@ -213,10 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Delivered Projects Portfolio Section */}
-      <PortfolioSection />
-
-      {/* 4. Instant Website Mockup Generator (Dark Rich Premium Grey Section) */}
+      {/* 3. Instant Website Mockup Generator (Dark Rich Premium Grey Section) */}
       <section className="py-16 sm:py-20 bg-slate-900 border-y border-slate-800 relative overflow-hidden shadow-2xl">
         {/* Dark Rich Premium Ambient Glow */}
         <div 
