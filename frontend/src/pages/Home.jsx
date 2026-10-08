@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Sparkles, ArrowUpRight, ShieldCheck, CheckCircle2, 
   TrendingUp, MessageSquare, MapPin, Clock, 
-  Layers, PhoneCall, QrCode, Globe, Check, Award
+  Layers, PhoneCall, QrCode, Globe, Check, Award, Cpu, Zap
 } from 'lucide-react';
 import MockupGenerator from '../components/MockupGenerator.jsx';
 import HeroSection from '../components/HeroSection.jsx';
@@ -16,54 +16,58 @@ const TRUST_BADGES = [
   { icon: TrendingUp, title: 'Zero Platform Lock-In', desc: 'No Recurring Software Fees' },
 ];
 
-const TRANSFORMATION_ITEMS = [
+const UNIVERSAL_GROWTH_PILLARS = [
   {
+    number: "01",
     icon: MapPin,
-    industry: 'Salons & Luxury Spas',
-    metric: '+145% Bookings',
-    badgeClass: 'bg-emerald-50 text-emerald-700 border border-emerald-200',
-    offlinePoints: [
-      'Manual Calls',
-      'Empty Slots',
-      'Zero Reviews'
+    title: "Local Search & Map Dominance",
+    tagline: "Be the #1 business locals find on Google Search & Maps",
+    deliverables: [
+      "Targeted Google Maps #1 Ranking",
+      "Local Citation & GEO Schema Markup",
+      "Organic Inquiries Without Recurring Ads"
     ],
-    solutionPoints: [
-      'WhatsApp Booking',
-      'Digital Menu',
-      'Auto Reviews'
-    ]
+    metric: "#1 Local Rank",
+    colorBadge: "bg-emerald-50 text-emerald-800 border-emerald-200"
   },
   {
-    icon: QrCode,
-    industry: 'Restaurants & Cafes',
-    metric: '+210% Direct Orders',
-    badgeClass: 'bg-sky-50 text-sky-700 border border-sky-200',
-    offlinePoints: [
-      'High Commissions',
-      'Paper Menus',
-      'Slow Ordering'
+    number: "02",
+    icon: MessageSquare,
+    title: "1-Tap WhatsApp Conversion",
+    tagline: "Turn visitors into paying customers in <30 seconds",
+    deliverables: [
+      "Direct Click-to-WhatsApp Booking",
+      "Dynamic Pre-Filled Inquiry Templates",
+      "Zero Dead Contact Forms or Lost Leads"
     ],
-    solutionPoints: [
-      'QR Ordering',
-      '3D Food',
-      'Instant Tables'
-    ]
+    metric: "+180% Inquiries",
+    colorBadge: "bg-blue-50 text-blue-800 border-blue-200"
   },
   {
-    icon: Globe,
-    industry: 'Retail & Boutiques',
-    metric: '+180% Repeat Sales',
-    badgeClass: 'bg-indigo-50 text-indigo-700 border border-indigo-200',
-    offlinePoints: [
-      'Limited Hours',
-      'No Catalog',
-      'Zero Reach'
+    number: "03",
+    icon: Cpu,
+    title: "Automated Operations & Ledgers",
+    tagline: "Cut manual staff phone calls, paperwork & spreadsheets",
+    deliverables: [
+      "Custom Client Portals & Schedule Grids",
+      "Automated WhatsApp Payment Alerts",
+      "Digital Catalogs, Menus & Quotations"
     ],
-    solutionPoints: [
-      '24/7 Catalog',
-      'WhatsApp Checkout',
-      'Direct Alerts'
-    ]
+    metric: "15+ Hrs Saved/Wk",
+    colorBadge: "bg-indigo-50 text-indigo-800 border-indigo-200"
+  },
+  {
+    number: "04",
+    icon: ShieldCheck,
+    title: "100% Asset Ownership & Speed",
+    tagline: "Sub-second speed on global edge CDN with zero rent",
+    deliverables: [
+      "<0.4s Fast Core Web Vitals",
+      "Zero Monthly Shopify or Plugin Rent",
+      "Complete Source Code & Data Ownership"
+    ],
+    metric: "Zero Lock-In",
+    colorBadge: "bg-teal-50 text-teal-800 border-teal-200"
   }
 ];
 
@@ -224,76 +228,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Offline to Online Transformation Blueprint */}
-      <section className="py-20 bg-white">
+      {/* 5. Universal 4-Pillar Digital Engine (Built for All Niches) */}
+      <section className="py-20 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 mb-3 shadow-xs">
               <TrendingUp className="w-3.5 h-3.5" />
-              <span>Transformation Blueprint</span>
+              <span>Universal Growth Blueprint • All Industries</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mb-4">
-              From Manual Struggles to <span className="text-emerald-600">Automated Growth</span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-slate-900 mb-3">
+              Every Offline Business Needs <span className="text-emerald-600">4 Digital Engines</span> to Dominate
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base">
-              See how going online helps local businesses save time, get more customers, and grow daily revenue.
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Whether you run a manufacturing unit, hospital, school, construction firm, hotel, or retail showroom — our architecture turns your offline business into an automated revenue generator.
             </p>
           </div>
 
-          {/* Mobile Swipe Hint */}
-          <div className="flex md:hidden items-center justify-center gap-1.5 text-[11px] text-slate-500 font-semibold mb-4">
-            <span>← Swipe between industries →</span>
-          </div>
-
-          <div className="mobile-snap-carousel md:grid md:grid-cols-3 gap-6 no-scrollbar">
-            {TRANSFORMATION_ITEMS.map((item, idx) => (
-              <div key={idx} className="mobile-snap-card p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">{item.industry}</h3>
-                    <span className={`px-2.5 py-1 rounded-full font-bold text-[10px] sm:text-[11px] whitespace-nowrap flex-shrink-0 shadow-xs ${item.badgeClass}`}>
-                      {item.metric}
-                    </span>
-                  </div>
-
-                  {/* Offline Bottleneck */}
-                  <div className="mb-4 pb-4 border-b border-slate-100">
-                    <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-rose-600 mb-2">
-                      ✕ Offline Bottleneck:
+          {/* 4 Universal Pillars Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {UNIVERSAL_GROWTH_PILLARS.map((pillar, idx) => {
+              const IconComp = pillar.icon;
+              return (
+                <div 
+                  key={idx}
+                  className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:border-emerald-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-4">
+                      <span className="text-xs font-mono font-extrabold text-slate-400 group-hover:text-emerald-600 transition-colors">
+                        Pillar {pillar.number}
+                      </span>
+                      <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${pillar.colorBadge}`}>
+                        {pillar.metric}
+                      </span>
                     </div>
-                    <ul className="space-y-1.5 text-xs text-slate-600">
-                      {item.offlinePoints.map((pt, pIdx) => (
-                        <li key={pIdx} className="flex items-start gap-1.5">
-                          <span className="text-rose-500 font-bold">•</span>
-                          <span>{pt}</span>
+
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-emerald-50 text-slate-800 group-hover:text-emerald-700 flex items-center justify-center mb-4 transition-colors">
+                      <IconComp className="w-5 h-5" />
+                    </div>
+
+                    <h3 className="text-base font-bold text-slate-900 leading-snug mb-1">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 font-medium mb-4 leading-relaxed">
+                      {pillar.tagline}
+                    </p>
+
+                    <ul className="space-y-2 p-0 m-0 list-none pt-3 border-t border-slate-100">
+                      {pillar.deliverables.map((item, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* AMP Ventures Solution */}
-                  <div className="mb-5">
-                    <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-2">
-                      ✓ AMP Growth Stack:
-                    </div>
-                    <ul className="space-y-1.5 text-xs text-slate-800">
-                      {item.solutionPoints.map((pt, pIdx) => (
-                        <li key={pIdx} className="flex items-start gap-1.5">
-                          <Check className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                          <span className="font-medium">{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="pt-6 mt-4 border-t border-slate-100">
+                    <Link 
+                      to="/services" 
+                      className="w-full py-2.5 rounded-xl bg-slate-50 hover:bg-slate-900 hover:text-white text-xs font-bold text-slate-700 text-center border border-slate-200 transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <span>Explore Engineering</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
-
-                <Link to="/services" className="w-full py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800 text-center border border-slate-200 transition-all flex items-center justify-center gap-1.5">
-                  <span>Explore Architecture</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
+
+          {/* Cross-Industry Real Proof Strip */}
+          <div className="mt-12 p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div className="space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                Verified Across Diverse Industries
+              </div>
+              <div className="text-xs sm:text-sm font-semibold text-slate-800">
+                Civil Infrastructure • Education & Schools • Healthcare & NGOs • Manufacturing • Hospitality & ERP • Luxury Retail
+              </div>
+            </div>
+            <Link
+              to="/portfolio"
+              className="shrink-0 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5"
+            >
+              <span>Inspect Live Client Systems</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
         </div>
       </section>
     </div>
