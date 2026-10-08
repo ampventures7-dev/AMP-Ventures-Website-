@@ -19,7 +19,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#ea580c",
     badge_bg: "bg-orange-50 text-orange-700 border-orange-200",
     gradient: "from-orange-600 via-amber-600 to-amber-700",
-    description: "Engineered an authoritative civil engineering and commercial construction web platform with project milestone showcases, high-grade architectural gallery, and automated serverless contact lead capture.",
+    description: "Civil engineering platform with project milestones, architectural gallery, and instant lead capture.",
+    points: [
+      "Civil contracting & infrastructure portfolio showcase",
+      "Real-time project milestones & architectural gallery",
+      "Serverless lead capture with 0.4s edge latency"
+    ],
     deliverables: [
       "Responsive High-Speed Web Application",
       "Vercel Serverless Contact & Lead Capture API",
@@ -48,7 +53,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#1d4ed8",
     badge_bg: "bg-blue-50 text-blue-700 border-blue-200",
     gradient: "from-blue-600 via-indigo-600 to-sky-700",
-    description: "Crafted a world-class educational portal for Saroj Mehta International School featuring digital admission inquiry forms, interactive curriculum guides, faculty showcases, and panoramic campus galleries.",
+    description: "CBSE school portal with online admissions pipeline, interactive curriculum, and campus tour.",
+    points: [
+      "Digital student admissions & parent inquiry pipeline",
+      "Interactive CBSE curriculum & academic calendar",
+      "Panoramic campus visual tour & faculty showcase"
+    ],
     deliverables: [
       "CBSE-Aligned Digital School Portal",
       "Online Admissions Inquiry Pipeline",
@@ -77,7 +87,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#4f46e5",
     badge_bg: "bg-indigo-50 text-indigo-700 border-indigo-200",
     gradient: "from-indigo-600 via-purple-600 to-emerald-600",
-    description: "Built a mission-critical Hotel Management System (HMS) and Marriage Garden operations suite with a 25-room live room status grid, cash counter ledger, Hindi/English bilingual switch, and 1-click WhatsApp payment reminders.",
+    description: "25-room hotel ERP with banquet scheduler, bilingual ledger, and WhatsApp payment reminders.",
+    points: [
+      "25-room live room status & occupancy grid",
+      "Marriage garden event ledger & cashflow P&L",
+      "1-click WhatsApp payment reminders in Hindi & English"
+    ],
     deliverables: [
       "25-Room Live Interactive Room Board",
       "Marriage Garden & Banquet Event Scheduler",
@@ -106,7 +121,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#0284c7",
     badge_bg: "bg-sky-50 text-sky-700 border-sky-200",
     gradient: "from-sky-600 via-cyan-600 to-teal-700",
-    description: "Engineered a high-converting manufacturing catalog for heavy-duty food display counters, cake showcases, and cold rooms with deep AEO, GEO, and local Google SEO schema on a custom domain.",
+    description: "Commercial refrigeration catalog with local Google SEO schema and B2B WhatsApp quotation triggers.",
+    points: [
+      "Heavy-duty commercial refrigerated counter catalog",
+      "Deep local Google Maps SEO & technical schema",
+      "Direct WhatsApp 1-click B2B quotation triggers"
+    ],
     deliverables: [
       "Commercial Equipment Specs & Showcase",
       "Comprehensive AEO, GEO & Local SEO Schema",
@@ -135,7 +155,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#b91c1c",
     badge_bg: "bg-rose-50 text-rose-700 border-rose-200",
     gradient: "from-rose-600 via-red-600 to-amber-700",
-    description: "Designed a refined luxury retail and watch service storefront showcasing iconic horology collections, official brand authorizations, battery/movement service booking, and instant Google Maps directions.",
+    description: "Luxury watch retail storefront with horology catalog, warranty service booking, and Maps integration.",
+    points: [
+      "Luxury timepiece catalog (Titan, Fastrack, Sonata)",
+      "Official warranty & watch repair booking",
+      "Direct Google Maps integration for store footfall"
+    ],
     deliverables: [
       "High-Resolution Timepiece Catalog",
       "Official Brand Warranty & Service Showcase",
@@ -164,7 +189,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#78350f",
     badge_bg: "bg-amber-50 text-amber-800 border-amber-200",
     gradient: "from-amber-800 via-amber-700 to-stone-800",
-    description: "Crafted an evocative artisan furniture and coastal decor boutique showcasing wheel-thrown ceramics, seasoned teakwood furniture, and hand-carved Konkan wall art with direct WhatsApp order facilitation.",
+    description: "Artisan furniture & ceramics boutique with visual brand storytelling and direct WhatsApp ordering.",
+    points: [
+      "Handcrafted teakwood furniture & ceramics catalog",
+      "Artisan atelier brand storytelling experience",
+      "Direct WhatsApp order inquiries & customer chat"
+    ],
     deliverables: [
       "Bespoke Minimalist Earthy Aesthetics",
       "High-Resolution Artisan Product Showcase",
@@ -193,7 +223,12 @@ export const DELIVERED_PROJECTS = [
     accent_color: "#002868",
     badge_bg: "bg-blue-50 text-blue-900 border-blue-200",
     gradient: "from-blue-900 via-indigo-900 to-slate-900",
-    description: "Engineered an official foundation digital portal managing grassroots school health camps, WHO child growth assessment algorithms, parent OTP student report card lookups, and instant certified PDF card generation.",
+    description: "Healthcare NGO portal with school health camp management, WHO growth metrics, and PDF generation.",
+    points: [
+      "School health camp screening management portal",
+      "WHO child growth assessment & pediatric metrics",
+      "Instant certified student health card PDF generator"
+    ],
     deliverables: [
       "Official Govt Reg. NGO Portal",
       "WHO Growth Assessment Calculator",

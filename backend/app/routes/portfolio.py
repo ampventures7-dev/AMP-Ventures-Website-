@@ -18,7 +18,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "4.9 ★ Rating",
             "page_load_speed": "0.4s Speed"
         },
-        "description": "Engineered an authoritative civil engineering and commercial construction web platform with real-time project milestone tracking, high-grade architectural gallery, and automated serverless contact lead capture.",
+        "description": "Civil engineering platform with project milestones, architectural gallery, and instant lead capture.",
+        "points": [
+            "Civil contracting & infrastructure portfolio showcase",
+            "Real-time project milestones & architectural gallery",
+            "Serverless lead capture with 0.4s edge latency"
+        ],
         "deliverables": [
             "High-Speed Responsive Web App",
             "Vercel Serverless Contact API",
@@ -42,7 +47,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "4.9 ★ Trust",
             "page_load_speed": "0.5s Load"
         },
-        "description": "Crafted a world-class educational portal for Saroj Mehta International School (managed by Santoshbhai Mehta Foundation) featuring online admission inquiry pipelines, interactive grade curriculum guides, and campus visual tours.",
+        "description": "CBSE school portal with online admissions pipeline, interactive curriculum, and campus tour.",
+        "points": [
+            "Digital student admissions & parent inquiry pipeline",
+            "Interactive CBSE curriculum & academic calendar",
+            "Panoramic campus visual tour & faculty showcase"
+        ],
         "deliverables": [
             "CBSE-Aligned School Portal",
             "Admissions Inquiry Lead Capture",
@@ -66,7 +76,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "25 Rooms Managed",
             "page_load_speed": "0.3s Real-Time"
         },
-        "description": "Engineered a full-scale Hotel Management System (HMS) and Marriage Garden booking ERP featuring a 25-room live status grid, cashflow counter ledger, bilingual English/Hindi interface, and 1-click WhatsApp payment reminders.",
+        "description": "25-room hotel ERP with banquet scheduler, bilingual ledger, and WhatsApp payment reminders.",
+        "points": [
+            "25-room live room status & occupancy grid",
+            "Marriage garden event ledger & cashflow P&L",
+            "1-click WhatsApp payment reminders in Hindi & English"
+        ],
         "deliverables": [
             "25-Room Interactive Live Board",
             "Banquet & Marriage Garden Event Scheduler",
@@ -90,7 +105,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "30+ Yrs Legacy",
             "page_load_speed": "0.4s Fast CDN"
         },
-        "description": "Developed a high-converting manufacturing showcase and commercial catalog for heavy-duty food display counters, cold rooms, and bakery showcases with deep AEO, GEO, and local Google SEO schema.",
+        "description": "Commercial refrigeration catalog with local Google SEO schema and B2B WhatsApp quotation triggers.",
+        "points": [
+            "Heavy-duty commercial refrigerated counter catalog",
+            "Deep local Google Maps SEO & technical schema",
+            "Direct WhatsApp 1-click B2B quotation triggers"
+        ],
         "deliverables": [
             "Commercial Catalog & Technical Specs",
             "Comprehensive AEO, GEO & Local SEO",
@@ -114,7 +134,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "50+ Yrs Trust",
             "page_load_speed": "0.3s Ultralight"
         },
-        "description": "Built a refined luxury retail and watch repair web storefront showcasing premium horology collections, brand authorizations, battery/movement service inquiries, and immediate Google Maps navigation.",
+        "description": "Luxury watch retail storefront with horology catalog, warranty service booking, and Maps integration.",
+        "points": [
+            "Luxury timepiece catalog (Titan, Fastrack, Sonata)",
+            "Official warranty & watch repair booking",
+            "Direct Google Maps integration for store footfall"
+        ],
         "deliverables": [
             "High-Resolution Timepiece Catalog",
             "Official Brand & Warranty Showcase",
@@ -138,7 +163,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "100% Artisan",
             "page_load_speed": "0.5s Fast Image"
         },
-        "description": "Crafted an evocative artisan furniture and coastal decor boutique showcasing wheel-thrown terracotta ceramics, seasoned teakwood daybeds, and hand-carved wall art with direct WhatsApp order facilitation.",
+        "description": "Artisan furniture & ceramics boutique with visual brand storytelling and direct WhatsApp ordering.",
+        "points": [
+            "Handcrafted teakwood furniture & ceramics catalog",
+            "Artisan atelier brand storytelling experience",
+            "Direct WhatsApp order inquiries & customer chat"
+        ],
         "deliverables": [
             "Bespoke Earthy Minimalist UI",
             "High-Resolution Art & Furniture Gallery",
@@ -162,7 +192,12 @@ PORTFOLIO_CASE_STUDIES = [
             "google_reviews": "Govt. Registered",
             "page_load_speed": "0.4s Fast PDF"
         },
-        "description": "Engineered an official foundation digital portal managing school health camps, WHO LMS child growth assessment calculators, parent OTP student report card lookups, and instant certified PDF card generation.",
+        "description": "Healthcare NGO portal with school health camp management, WHO growth metrics, and PDF generation.",
+        "points": [
+            "School health camp screening management portal",
+            "WHO child growth assessment & pediatric metrics",
+            "Instant certified student health card PDF generator"
+        ],
         "deliverables": [
             "Official Govt Reg. NGO Portal",
             "WHO Growth Assessment Calculator",

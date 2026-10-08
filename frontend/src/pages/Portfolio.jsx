@@ -178,9 +178,15 @@ export default function Portfolio() {
 
                 {/* Body Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {project.description}
-                  </p>
+                  {/* Scope & Highlights (Points) */}
+                  <ul className="space-y-2 p-0 m-0 list-none">
+                    {(project.points || project.deliverables.slice(0, 3)).map((point, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-700 leading-snug">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {/* Key Metrics Highlight Box */}
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 grid grid-cols-3 gap-2 text-center">
@@ -208,21 +214,6 @@ export default function Portfolio() {
                         Trust
                       </div>
                     </div>
-                  </div>
-
-                  {/* Deliverables List */}
-                  <div className="space-y-1.5">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                      Engineering Deliverables:
-                    </div>
-                    <ul className="space-y-1.5 p-0 m-0 list-none">
-                      {project.deliverables.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-1.5 text-xs text-slate-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
                   {/* Tech Tags */}
