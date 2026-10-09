@@ -28,12 +28,12 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center gap-1 list-none p-0 m-0 absolute left-1/2 -translate-x-1/2">
+        <ul className="hidden md:flex items-center gap-0.5 lg:gap-1 list-none p-0 m-0 absolute left-1/2 -translate-x-1/2">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -47,7 +47,7 @@ export default function Navbar() {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -61,7 +61,7 @@ export default function Navbar() {
             <NavLink
               to="/pricing"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -75,7 +75,7 @@ export default function Navbar() {
             <NavLink
               to="/portfolio"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -89,7 +89,7 @@ export default function Navbar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -103,7 +103,7 @@ export default function Navbar() {
             <NavLink
               to="/blog"
               className={({ isActive }) =>
-                `px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
+                `px-2.5 lg:px-3.5 py-1.5 lg:py-2 rounded-lg text-xs lg:text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'text-sky-300 bg-sky-950/90 border border-sky-500/40 font-semibold shadow-xs shadow-sky-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-sky-950/40'
@@ -116,10 +116,10 @@ export default function Navbar() {
         </ul>
 
         {/* Right CTA Button */}
-        <div className="flex items-center gap-3 z-10">
+        <div className="flex items-center gap-2 lg:gap-3 z-10 shrink-0">
           <Link 
             to="/readiness-score" 
-            className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold transition-all text-sky-200 bg-[#0f1b3d] border border-sky-900/80 hover:bg-[#162758] hover:text-white hover:border-sky-400/50 shadow-xs"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 lg:px-3.5 lg:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all text-sky-200 bg-[#0f1b3d] border border-sky-900/80 hover:bg-[#162758] hover:text-white hover:border-sky-400/50 shadow-xs"
           >
             <span>Free Audit</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -127,10 +127,10 @@ export default function Navbar() {
 
           <Link 
             to="/contact" 
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-flex items-center gap-1.5 lg:gap-2 px-3.5 py-2 lg:px-5 lg:py-2.5 rounded-full text-xs lg:text-sm font-bold whitespace-nowrap text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
             <span>Let's Talk</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
           </Link>
 
           <button 
