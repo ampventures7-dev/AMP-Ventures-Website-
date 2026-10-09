@@ -41,7 +41,7 @@ function AnimatedCounter({ value, suffix = '', duration = 1.0 }) {
 export default function HeroSection() {
 
   return (
-    <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-16 lg:pb-16 bg-gradient-to-b from-white via-slate-50/40 to-white overflow-hidden">
+    <section className="relative pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-16 lg:pb-16 bg-gradient-to-b from-[#FDFBF7] via-[#FAF7F0] to-[#FDFBF7] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -54,29 +54,29 @@ export default function HeroSection() {
           >
             {/* Kicker Pill */}
             <motion.div 
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-700 mb-5 shadow-xs"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBEBE6] border border-[#F7D6CC] text-xs font-semibold uppercase tracking-wider text-[#983B23] mb-5 shadow-xs"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.05 }}
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#C85A3C] animate-pulse" />
               <span>For Offline & Local Businesses</span>
             </motion.div>
 
             {/* Simplified Dominant Display H1 */}
             <motion.h1 
-              className="font-display text-4xl sm:text-6xl lg:text-[4.2rem] font-bold text-slate-900 tracking-[-0.035em] leading-[1.08] mb-5"
+              className="font-display text-4xl sm:text-6xl lg:text-[4.2rem] font-bold text-stone-900 tracking-[-0.035em] leading-[1.08] mb-5"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.1 }}
             >
               Get More Customers <br />
-              <span className="text-emerald-600">Without Ads</span>
+              <span className="text-[#C85A3C]">Without Ads</span>
             </motion.h1>
 
             {/* Direct Plain English Subheadline */}
             <motion.p 
-              className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mb-8 font-normal"
+              className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-2xl mb-8 font-normal"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: 0.15 }}
@@ -94,7 +94,7 @@ export default function HeroSection() {
               <motion.div whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.98 }}>
                 <Link 
                   to="/readiness-score" 
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-white bg-sky-500 hover:bg-sky-600 transition-colors shadow-sm text-sm sm:text-base w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-white bg-[#C85A3C] hover:bg-[#B44C30] transition-colors shadow-sm text-sm sm:text-base w-full sm:w-auto"
                 >
                   <span>Get Free Digital Audit</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -104,7 +104,7 @@ export default function HeroSection() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link 
                   to="/pricing" 
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 transition-colors shadow-xs text-sm sm:text-base w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-stone-800 bg-white hover:bg-[#FAF7F0] border border-[#EAE4D8] transition-colors shadow-xs text-sm sm:text-base w-full sm:w-auto"
                 >
                   <span>Explore 3 Tiers & Pricing</span>
                 </Link>
@@ -114,82 +114,82 @@ export default function HeroSection() {
                 href={getWhatsAppUrl("Hi AMP Ventures, I'd like a website for my local business.")} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-sky-700 hover:text-sky-800 px-3 py-2 transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-[#2C4438] hover:text-[#1E3027] px-3 py-2 transition-colors"
               >
-                <MessageSquare className="w-3.5 h-3.5" />
+                <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Or WhatsApp Us</span>
               </a>
             </motion.div>
 
             {/* Item 3: Above-the-Fold Services Discovery Quick-Bar */}
             <motion.div
-              className="pt-5 border-t border-slate-200/80 mb-6"
+              className="pt-5 border-t border-[#EAE4D8] mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.22 }}
             >
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5 flex items-center gap-2">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mb-2.5 flex items-center gap-2">
                 <span>Core Capabilities</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C85A3C] animate-pulse" />
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <Link 
                   to="/services#capabilities" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-900 hover:text-white border border-slate-200 text-slate-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#2C4438] hover:text-white border border-[#EAE4D8] text-stone-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
                 >
                   <span>🌐</span> Custom Websites
                 </Link>
                 <Link 
                   to="/services#capabilities" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-900 hover:text-white border border-slate-200 text-slate-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#2C4438] hover:text-white border border-[#EAE4D8] text-stone-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
                 >
                   <span>⚡</span> SaaS & Web Apps
                 </Link>
                 <Link 
                   to="/services#capabilities" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-900 hover:text-white border border-slate-200 text-slate-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#2C4438] hover:text-white border border-[#EAE4D8] text-stone-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
                 >
                   <span>💬</span> WhatsApp Automation
                 </Link>
                 <Link 
                   to="/services#capabilities" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-900 hover:text-white border border-slate-200 text-slate-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#2C4438] hover:text-white border border-[#EAE4D8] text-stone-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
                 >
                   <span>🎯</span> Google & Meta Ads
                 </Link>
                 <Link 
                   to="/services#capabilities" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-slate-900 hover:text-white border border-slate-200 text-slate-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white hover:bg-[#2C4438] hover:text-white border border-[#EAE4D8] text-stone-700 text-xs font-semibold transition-all shadow-2xs hover:scale-105"
                 >
                   <span>📈</span> Advanced SEO
                 </Link>
               </div>
             </motion.div>
 
-            {/* Human Proof Guarantees in Light Style */}
+            {/* Human Proof Guarantees in Warm Light Style */}
             <motion.div 
-              className="pt-4 border-t border-slate-100 grid grid-cols-3 gap-4 max-w-lg"
+              className="pt-4 border-t border-[#EAE4D8] grid grid-cols-3 gap-4 max-w-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.25 }}
             >
               <div>
-                <div className="font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                <div className="font-display text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">
                   <AnimatedCounter value="5" suffix="–7 Days" />
                 </div>
-                <div className="text-xs text-slate-500 mt-0.5 font-medium">Ready to Launch</div>
+                <div className="text-xs text-stone-500 mt-0.5 font-medium">Ready to Launch</div>
               </div>
               <div>
-                <div className="font-display text-2xl sm:text-3xl font-bold text-emerald-600 tracking-tight">
+                <div className="font-display text-2xl sm:text-3xl font-bold text-[#C85A3C] tracking-tight">
                   <AnimatedCounter value="100" suffix="%" />
                 </div>
-                <div className="text-xs text-slate-500 mt-0.5 font-medium">You Own the Code</div>
+                <div className="text-xs text-stone-500 mt-0.5 font-medium">You Own the Code</div>
               </div>
               <div>
-                <div className="font-display text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+                <div className="font-display text-2xl sm:text-3xl font-bold text-stone-900 tracking-tight">
                   ₹0
                 </div>
-                <div className="text-xs text-slate-500 mt-0.5 font-medium">Monthly Platform Fees</div>
+                <div className="text-xs text-stone-500 mt-0.5 font-medium">Monthly Platform Fees</div>
               </div>
             </motion.div>
           </motion.div>

@@ -69,23 +69,23 @@ export default function Blog() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   return (
-    <div className="blog-page pt-28 pb-20 bg-white text-slate-900">
+    <div className="blog-page pt-28 pb-20 bg-[#FDFBF7] text-stone-900">
       {/* Header */}
       <section className="py-12 text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold uppercase tracking-wider text-sky-700 mb-6 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FBEBE6] border border-[#F7D6CC] text-xs font-semibold uppercase tracking-wider text-[#983B23] mb-6 shadow-xs">
             <BookOpen className="w-3.5 h-3.5" />
             <span>Growth Knowledge Hub</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-display font-extrabold text-stone-900 tracking-tight mb-6 leading-tight">
             Offline-to-Online <br />
-            <span className="text-sky-600">
+            <span className="text-[#C85A3C]">
               Growth Insights & Playbooks
             </span>
           </h1>
 
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Practical, fluff-free guides and engineering breakdowns on turning local walk-ins into predictable automated digital revenue.
           </p>
         </div>
@@ -96,35 +96,35 @@ export default function Blog() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {BLOG_POSTS.map((post) => (
-              <div key={post.id} className="rounded-3xl bg-white border border-slate-200 overflow-hidden flex flex-col justify-between hover:border-slate-300 hover:shadow-lg transition-all">
+              <div key={post.id} className="rounded-3xl bg-white border border-[#EAE4D8] overflow-hidden flex flex-col justify-between hover:border-[#C85A3C]/40 hover:shadow-lg transition-all">
                 <div>
                   <div 
                     className="h-44 bg-cover bg-center p-4 flex items-end relative"
                     style={{ backgroundImage: `linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%), url(${post.image})` }}
                   >
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 backdrop-blur-md text-slate-900 border border-slate-200 shadow-sm">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 backdrop-blur-md text-stone-900 border border-[#EAE4D8] shadow-sm">
                       {post.category}
                     </span>
                   </div>
 
                   <div className="p-6 space-y-3">
-                    <div className="flex justify-between items-center text-[11px] text-slate-500">
+                    <div className="flex justify-between items-center text-[11px] text-stone-500">
                       <span>{post.date}</span>
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3 text-slate-400" />
+                        <Clock className="w-3 h-3 text-stone-400" />
                         {post.readTime}
                       </span>
                     </div>
 
-                    <h3 className="text-base font-bold text-slate-900 leading-snug font-display">{post.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">{post.excerpt}</p>
+                    <h3 className="text-base font-bold text-stone-900 leading-snug font-display">{post.title}</h3>
+                    <p className="text-xs text-stone-600 leading-relaxed">{post.excerpt}</p>
                   </div>
                 </div>
 
                 <div className="p-6 pt-0">
                   <button 
                     onClick={() => setSelectedArticle(post)}
-                    className="w-full py-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800 border border-slate-200 transition-all flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 rounded-xl bg-[#FAF7F0] hover:bg-[#FBEBE6] text-xs font-semibold text-stone-800 hover:text-[#983B23] border border-[#EAE4D8] transition-all flex items-center justify-center gap-1.5"
                   >
                     <span>Read Executive Summary</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -139,17 +139,17 @@ export default function Blog() {
       {/* Free Audit CTA Strip */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="p-8 lg:p-12 rounded-3xl bg-slate-50 border border-slate-200 text-center space-y-6 shadow-sm">
-            <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">Want a Personalized Growth Architecture for Your Business?</h2>
-            <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+          <div className="p-8 lg:p-12 rounded-3xl bg-[#FAF7F0] border border-[#EAE4D8] text-center space-y-6 shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-stone-900">Want a Personalized Growth Architecture for Your Business?</h2>
+            <p className="text-xs sm:text-sm text-stone-600 max-w-xl mx-auto leading-relaxed">
               Run our free Digital Readiness Score tool or book a 1-on-1 strategy call with our Lead Architect today.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link to="/readiness-score" className="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
+              <Link to="/readiness-score" className="px-6 py-3 rounded-full bg-[#C85A3C] hover:bg-[#B44C30] text-white font-bold text-xs shadow-sm flex items-center gap-2 transition-all">
                 <span>Take Free Audit</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
-              <Link to="/contact" className="px-6 py-3 rounded-full bg-white hover:bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-300 transition-all">
+              <Link to="/contact" className="px-6 py-3 rounded-full bg-white hover:bg-stone-50 text-stone-800 text-xs font-semibold border border-[#EAE4D8] transition-all">
                 Request Custom Proposal
               </Link>
             </div>
@@ -159,42 +159,42 @@ export default function Blog() {
 
       {/* Quick Article Modal */}
       {selectedArticle && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-2xl max-w-xl w-full space-y-5 max-h-[85vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-stone-950/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="p-8 rounded-3xl bg-white border border-[#EAE4D8] shadow-2xl max-w-xl w-full space-y-5 max-h-[85vh] overflow-y-auto">
             <div className="flex justify-between items-center">
-              <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">{selectedArticle.category}</span>
+              <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-[#FBEBE6] text-[#983B23] border border-[#F7D6CC]">{selectedArticle.category}</span>
               <button 
                 onClick={() => setSelectedArticle(null)}
-                className="p-1 text-slate-400 hover:text-slate-800 transition-colors"
+                className="p-1 text-stone-400 hover:text-stone-800 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <h2 className="text-xl font-display font-bold text-slate-900">{selectedArticle.title}</h2>
-            <div className="text-xs text-slate-500">
+            <h2 className="text-xl font-display font-bold text-stone-900">{selectedArticle.title}</h2>
+            <div className="text-xs text-stone-500">
               By {selectedArticle.author} • {selectedArticle.date} • {selectedArticle.readTime}
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
               {selectedArticle.excerpt}
             </p>
             
-            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed bg-[#FAF7F0] p-4 rounded-xl border border-[#EAE4D8]">
               In today's hyper-local economy, physical foot traffic is increasingly decided on smartphones before the customer ever steps out of their house. Having a fast, high-converting digital storefront ensures that when local buyers search on Google or Instagram, your business wins the first impression and the booking.
             </p>
 
             <div className="flex gap-3 pt-2">
               <Link 
                 to="/contact" 
-                className="flex-grow py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs text-center shadow-sm flex items-center justify-center gap-1.5 transition-all"
+                className="flex-grow py-3 rounded-xl bg-[#C85A3C] hover:bg-[#B44C30] text-white font-bold text-xs text-center shadow-sm flex items-center justify-center gap-1.5 transition-all"
                 onClick={() => setSelectedArticle(null)}
               >
                 <span>Implement This Setup With Us</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
               <button 
-                className="px-4 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 text-xs font-semibold border border-slate-300" 
+                className="px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-stone-800 text-xs font-semibold border border-[#EAE4D8]" 
                 onClick={() => setSelectedArticle(null)}
               >
                 Close

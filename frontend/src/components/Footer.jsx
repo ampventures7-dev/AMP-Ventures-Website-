@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#064e3b] bg-[#022c22] text-emerald-100 pt-16 pb-12">
+    <footer className="border-t border-[#26352D] bg-[#18231E] text-stone-300 pt-16 pb-12">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* 4 Columns Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
@@ -24,19 +24,19 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-xs text-emerald-200/75 leading-relaxed mb-6">
+            <p className="text-xs text-stone-400 leading-relaxed mb-6">
               Specialized web engineering, WhatsApp booking automations, and local Google SEO engineered for offline business growth.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#064e3b]/80 border border-emerald-500/30 text-[11px] font-semibold text-emerald-200 shadow-inner">
-              <Award className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#26352D] border border-stone-700/60 text-[11px] font-semibold text-stone-300 shadow-inner">
+              <Award className="w-3.5 h-3.5 text-[#E07A5F]" />
               <span>Rapid 5-Day Delivery • Zero Monthly Rent</span>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Navigation</h4>
-            <ul className="space-y-2 text-xs text-emerald-200/70 list-none p-0">
+            <h4 className="font-bold text-xs uppercase tracking-wider text-stone-200 mb-4">Navigation</h4>
+            <ul className="space-y-2 text-xs text-stone-400 list-none p-0">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link to="/portfolio" className="hover:text-white transition-colors">Delivered Portfolio</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
@@ -50,8 +50,8 @@ export default function Footer() {
 
           {/* Column 3: Solutions */}
           <div>
-            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Solutions</h4>
-            <ul className="space-y-2 text-xs text-emerald-200/70 list-none p-0">
+            <h4 className="font-bold text-xs uppercase tracking-wider text-stone-200 mb-4">Solutions</h4>
+            <ul className="space-y-2 text-xs text-stone-400 list-none p-0">
               <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Website Development</Link></li>
               <li><Link to="/services#capabilities" className="hover:text-white transition-colors">SaaS & Software Development</Link></li>
               <li><Link to="/services#capabilities" className="hover:text-white transition-colors">WhatsApp Automation & AI</Link></li>
@@ -59,23 +59,23 @@ export default function Footer() {
               <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Advanced SEO & Local Dominance</Link></li>
               <li><Link to="/services#capabilities" className="hover:text-white transition-colors">Social Media Account Handling</Link></li>
               <li><Link to="/services#tiers" className="hover:text-white transition-colors">3-Tier Web Packages</Link></li>
-              <li><Link to="/readiness-score" className="text-emerald-300 font-semibold hover:underline">Free Digital Audit Tool</Link></li>
+              <li><Link to="/readiness-score" className="text-[#E07A5F] font-semibold hover:underline">Free Digital Audit Tool</Link></li>
             </ul>
           </div>
 
           {/* Column 4: Let's Connect */}
           <div>
-            <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-300 mb-4">Direct Contact</h4>
-            <ul className="space-y-2.5 text-xs text-emerald-200/70 list-none p-0">
+            <h4 className="font-bold text-xs uppercase tracking-wider text-stone-200 mb-4">Direct Contact</h4>
+            <ul className="space-y-2.5 text-xs text-stone-400 list-none p-0">
               <li>
                 <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2 hover:text-white transition-colors">
-                  <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                  <Phone className="w-3.5 h-3.5 text-[#E07A5F]" />
                   <span>{WHATSAPP_DISPLAY}</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:ampventures7@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                  <Mail className="w-3.5 h-3.5 text-emerald-400" />
+                  <Mail className="w-3.5 h-3.5 text-[#E07A5F]" />
                   <span>ampventures7@gmail.com</span>
                 </a>
               </li>
@@ -84,7 +84,7 @@ export default function Footer() {
                   href={getWhatsAppUrl("Hi AMP Ventures, I'd like to consult about a website for my business.")} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#064e3b] border border-emerald-500/40 text-emerald-100 text-xs font-bold hover:bg-emerald-600 hover:text-white transition-all shadow-md shadow-emerald-950/40"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#26352D] border border-stone-700/60 text-stone-200 text-xs font-bold hover:bg-[#2e4237] hover:text-white transition-all shadow-md"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
                   <span>WhatsApp Direct Chat</span>
@@ -92,9 +92,9 @@ export default function Footer() {
 
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white text-xs font-bold transition-all shadow-md shadow-black/20 hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#C85A3C] hover:bg-[#B44C30] text-white text-xs font-bold transition-all shadow-md shadow-black/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <span>Follow Up</span>
+                  <span>Project Consultation</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </li>
@@ -103,10 +103,10 @@ export default function Footer() {
         </div>
 
         {/* Divider Line */}
-        <div className="h-px bg-[#064e3b]/80 my-8"></div>
+        <div className="h-px bg-[#26352D] my-8"></div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-200/60">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <span>•</span>
@@ -120,10 +120,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-xs text-emerald-300/60">Engineering for <strong className="text-emerald-300">Offline Growth</strong></span>
+            <span className="text-xs text-stone-400">Engineering for <strong className="text-stone-200">Offline Growth</strong></span>
             <button 
               onClick={scrollToTop} 
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-emerald-200 bg-[#064e3b] border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all shadow-xs" 
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-stone-300 bg-[#26352D] border border-stone-700 hover:bg-[#C85A3C] hover:text-white transition-all shadow-xs" 
               aria-label="Scroll to top"
               title="Back to Top"
             >
@@ -133,5 +133,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
   );
 }
