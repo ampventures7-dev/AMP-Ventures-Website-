@@ -490,27 +490,63 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PROCESS_STEPS.map((proc, pIdx) => (
-              <div 
-                key={pIdx}
-                className="p-6 rounded-2xl bg-white border border-[#EAE4D8] shadow-xs hover:shadow-md transition-all relative overflow-hidden"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-2xl font-black font-mono text-[#C85A3C]/40">
-                    {proc.step}
-                  </span>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-stone-100 text-stone-600">
-                    Phase {proc.step}
-                  </span>
+            {PROCESS_STEPS.map((proc, pIdx) => {
+              const stepStyles = [
+                {
+                  card: 'bg-gradient-to-b from-amber-100/70 via-[#FFFBEB] to-white border-amber-300/80 hover:border-amber-400',
+                  num: 'text-amber-600',
+                  badge: 'bg-amber-100 text-amber-900 border-amber-300'
+                },
+                {
+                  card: 'bg-gradient-to-b from-sky-100/70 via-[#F0F9FF] to-white border-sky-300/80 hover:border-sky-400',
+                  num: 'text-sky-600',
+                  badge: 'bg-sky-100 text-sky-900 border-sky-300'
+                },
+                {
+                  card: 'bg-gradient-to-b from-rose-100/70 via-[#FFF1F2] to-white border-rose-300/80 hover:border-rose-400',
+                  num: 'text-rose-600',
+                  badge: 'bg-rose-100 text-rose-900 border-rose-300'
+                },
+                {
+                  card: 'bg-gradient-to-b from-purple-100/70 via-[#FAF5FF] to-white border-purple-300/80 hover:border-purple-400',
+                  num: 'text-purple-600',
+                  badge: 'bg-purple-100 text-purple-900 border-purple-300'
+                },
+                {
+                  card: 'bg-gradient-to-b from-emerald-100/70 via-[#F0FDF4] to-white border-emerald-300/80 hover:border-emerald-400',
+                  num: 'text-emerald-700',
+                  badge: 'bg-emerald-100 text-emerald-900 border-emerald-300'
+                },
+                {
+                  card: 'bg-gradient-to-b from-orange-100/70 via-[#FFF7ED] to-white border-orange-300/80 hover:border-orange-400',
+                  num: 'text-[#C85A3C]',
+                  badge: 'bg-[#FBEBE6] text-[#983B23] border-[#F7D6CC]'
+                }
+              ];
+              const sStyle = stepStyles[pIdx % stepStyles.length];
+
+              return (
+                <div 
+                  key={pIdx}
+                  className={`p-6 rounded-2xl ${sStyle.card} border shadow-xs hover:shadow-md transition-all relative overflow-hidden`}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`text-2xl font-black font-mono ${sStyle.num}`}>
+                      {proc.step}
+                    </span>
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${sStyle.badge}`}>
+                      Phase {proc.step}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-stone-900 mb-2">
+                    {proc.title}
+                  </h3>
+                  <p className="text-xs text-stone-600 leading-relaxed">
+                    {proc.desc}
+                  </p>
                 </div>
-                <h3 className="text-base font-bold text-stone-900 mb-2">
-                  {proc.title}
-                </h3>
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  {proc.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-10 text-center">

@@ -199,28 +199,28 @@ export default function Portfolio() {
                   </ul>
 
                   {/* Key Metrics Highlight Box */}
-                  <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#EAE4D8] grid grid-cols-3 gap-2 text-center">
-                    <div>
-                      <div className="text-xs sm:text-sm font-extrabold text-stone-900 font-mono">
+                  <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#EAE4D8] grid grid-cols-[1.1fr_0.8fr_1.1fr] gap-2 text-center items-center">
+                    <div className="flex flex-col justify-center min-w-0">
+                      <div className="text-xs sm:text-[13px] font-extrabold text-stone-900 font-mono leading-tight">
                         {project.metrics.primary}
                       </div>
-                      <div className="text-[10px] text-stone-500 font-medium truncate mt-0.5">
+                      <div className="text-[10px] text-stone-500 font-medium mt-0.5 leading-tight">
                         {project.metrics.label}
                       </div>
                     </div>
-                    <div className="border-x border-[#EAE4D8]">
-                      <div className="text-xs sm:text-sm font-extrabold text-emerald-600 font-mono">
+                    <div className="border-x border-[#EAE4D8] px-1.5 flex flex-col justify-center min-w-0">
+                      <div className="text-xs sm:text-[13px] font-extrabold text-emerald-600 font-mono leading-tight">
                         {project.metrics.speed}
                       </div>
-                      <div className="text-[10px] text-stone-500 font-medium truncate mt-0.5">
+                      <div className="text-[10px] text-stone-500 font-medium mt-0.5 leading-tight">
                         Speed
                       </div>
                     </div>
-                    <div>
-                      <div className="text-xs sm:text-sm font-extrabold text-[#C85A3C] font-mono truncate">
+                    <div className="flex flex-col justify-center min-w-0">
+                      <div className="text-xs sm:text-[13px] font-extrabold text-[#C85A3C] font-mono leading-tight whitespace-normal break-words">
                         {project.metrics.reviews}
                       </div>
-                      <div className="text-[10px] text-stone-500 font-medium truncate mt-0.5">
+                      <div className="text-[10px] text-stone-500 font-medium mt-0.5 leading-tight">
                         Trust
                       </div>
                     </div>

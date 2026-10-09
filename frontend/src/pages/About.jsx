@@ -246,15 +246,37 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {PROCESS_STEPS.map((s, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-white border border-[#EAE4D8] shadow-xs flex flex-col justify-between">
-                <div>
-                  <div className="text-2xl font-black font-mono text-[#C85A3C] mb-3">{s.step}</div>
-                  <h3 className="text-sm font-bold text-stone-900 mb-2 font-display">{s.title}</h3>
-                  <p className="text-xs text-stone-600 leading-relaxed">{s.desc}</p>
+            {PROCESS_STEPS.map((s, idx) => {
+              const stepStyles = [
+                {
+                  card: 'bg-gradient-to-b from-amber-100/70 via-[#FFFBEB] to-white border-amber-300/80',
+                  num: 'text-amber-600'
+                },
+                {
+                  card: 'bg-gradient-to-b from-sky-100/70 via-[#F0F9FF] to-white border-sky-300/80',
+                  num: 'text-sky-600'
+                },
+                {
+                  card: 'bg-gradient-to-b from-emerald-100/70 via-[#F0FDF4] to-white border-emerald-300/80',
+                  num: 'text-emerald-700'
+                },
+                {
+                  card: 'bg-gradient-to-b from-rose-100/70 via-[#FFF1F2] to-white border-rose-300/80',
+                  num: 'text-[#C85A3C]'
+                }
+              ];
+              const sStyle = stepStyles[idx % stepStyles.length];
+
+              return (
+                <div key={idx} className={`p-6 rounded-2xl ${sStyle.card} border shadow-xs flex flex-col justify-between`}>
+                  <div>
+                    <div className={`text-2xl font-black font-mono ${sStyle.num} mb-3`}>{s.step}</div>
+                    <h3 className="text-sm font-bold text-stone-900 mb-2 font-display">{s.title}</h3>
+                    <p className="text-xs text-stone-600 leading-relaxed">{s.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
