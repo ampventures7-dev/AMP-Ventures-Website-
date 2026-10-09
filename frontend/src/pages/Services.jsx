@@ -18,13 +18,12 @@ const AGENCY_CAPABILITIES = [
     icon: Globe,
     iconColor: 'text-blue-600',
     iconBg: 'bg-blue-50',
-    description: 'Modern, high-performing websites engineered to build instant local credibility and turn visitors into paying clients.',
+    description: 'Fast, conversion-focused websites that turn local visitors into paying customers.',
     deliverables: [
-      'Business Websites & Portfolios',
-      'High-Converting Landing Pages',
-      'Service-Based Websites (Salons, Clinics, Cafes)',
-      'E-Commerce Online Stores & Catalogs',
-      'Fast CDN Edge Hosting & Free SSL'
+      'Business Websites & Landing Pages',
+      'Instant WhatsApp Booking & Inquiries',
+      'E-Commerce & Online Service Catalogs',
+      'Ultra-Fast CDN Hosting with Free SSL'
     ]
   },
   {
@@ -35,13 +34,12 @@ const AGENCY_CAPABILITIES = [
     icon: Code2,
     iconColor: 'text-indigo-600',
     iconBg: 'bg-indigo-50',
-    description: 'Custom web applications, multi-tenant SaaS platforms, and enterprise operational software built to scale your business.',
+    description: 'Custom software and web apps built to automate workflows and scale operations.',
     deliverables: [
-      'Custom Web Applications & Micro-SaaS',
-      'Admin Dashboards & Real-Time Analytics',
-      'Automated Booking & Appointment Systems',
-      'Business Management Systems & ERPs',
-      'Secure Customer & Client Portals'
+      'Custom Web Apps & Micro-SaaS Platforms',
+      'Admin Dashboards & Live Business Analytics',
+      'Automated Booking & Appointment Engines',
+      'Secure Client Portals & Role-Based Access'
     ]
   },
   {
@@ -52,13 +50,12 @@ const AGENCY_CAPABILITIES = [
     icon: Bot,
     iconColor: 'text-purple-600',
     iconBg: 'bg-purple-50',
-    description: 'Supercharge your operations with 24/7 autonomous AI assistants that answer questions and capture qualified leads.',
+    description: '24/7 autonomous AI assistants that answer questions and capture hot leads.',
     deliverables: [
-      '24/7 Context-Aware AI Chatbot Assistants',
-      'AI-Powered Search & Product Suggestions',
+      '24/7 Context-Aware Smart AI Chatbots',
       'Automated Inbound Lead Qualification',
-      'Smart Business Process Automation',
-      'Custom LLM / OpenAI API Integration'
+      'Instant WhatsApp & CRM Sync',
+      'Custom OpenAI & LLM Integrations'
     ]
   },
   {
@@ -69,13 +66,12 @@ const AGENCY_CAPABILITIES = [
     icon: Megaphone,
     iconColor: 'text-rose-600',
     iconBg: 'bg-rose-50',
-    description: 'Laser-targeted advertising campaigns across Instagram and Facebook engineered to flood your calendar with leads.',
+    description: 'Laser-targeted social campaigns engineered to flood your calendar with buyer inquiries.',
     deliverables: [
-      'Targeted Ad Campaigns (Hyper-Local & Pan-India)',
-      'High-Intent Lead Generation Forms',
-      'Brand Awareness & Video Retargeting',
-      'Direct Sales, WhatsApp & Messenger Ads',
-      'Creative Ad Copywriting & A/B Testing'
+      'Hyper-Local Instagram & Facebook Campaigns',
+      'Direct WhatsApp & Call Ad Funnels',
+      'High-Converting Ad Creatives & Copy',
+      'A/B Testing & Weekly ROI Reports'
     ]
   },
   {
@@ -86,13 +82,12 @@ const AGENCY_CAPABILITIES = [
     icon: Target,
     iconColor: 'text-amber-600',
     iconBg: 'bg-amber-50',
-    description: 'Reach high-intent buyers at the exact moment they search on Google for services and products in your local area.',
+    description: 'Reach buyers at the exact second they search Google for your services.',
     deliverables: [
-      'Google Search Ads (High-Buyer Intent Keywords)',
-      'Local Google Maps Ads & Call Extensions',
-      'Google Display Network & Banner Ads',
-      'Performance Max Campaigns & Smart Bidding',
-      'Negative Keyword Filtering & ROI Tracking'
+      'High-Intent Google Search Ads',
+      'Google Maps & Click-to-Call Extensions',
+      'Negative Keyword Filtering to Stop Ad Waste',
+      'Conversion Tracking & Smart Bidding'
     ]
   },
   {
@@ -103,30 +98,28 @@ const AGENCY_CAPABILITIES = [
     icon: TrendingUp,
     iconColor: 'text-emerald-600',
     iconBg: 'bg-emerald-50',
-    description: 'Data-driven technical, on-page, and local SEO strategies to rank your business at the top of Google Search and Google Maps.',
+    description: 'Data-driven SEO to rank your business at the top of Google Search and Maps.',
     deliverables: [
-      'Google Maps & Google Business Profile (GBP) Local 3-Pack Dominance',
-      'Technical SEO, Core Web Vitals & Sub-0.5s Speed Optimization',
-      'AEO & GEO (AI Engine Optimization for ChatGPT & Gemini Search)',
-      'JSON-LD Structured Data Schema Markup & Rich Search Snippets',
-      'High-Intent Keyword Mapping, On-Page SEO & Canonical Audits'
+      'Google Maps 3-Pack Local Dominance',
+      'Sub-0.5s Speed & Core Web Vitals Optimization',
+      'AI Search Readiness (ChatGPT & Gemini)',
+      'Schema Markup for Rich Search Snippets'
     ]
   },
   {
     id: 'social-media-handling',
-    title: 'Social Media Account Handling',
+    title: 'Social Media Management',
     tag: 'Brand Authority',
     badgeClass: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     icon: Share2,
     iconColor: 'text-cyan-600',
     iconBg: 'bg-cyan-50',
-    description: 'Complete management of your social profiles to build authentic brand loyalty, consistent organic reach, and engaged fans.',
+    description: 'Professional social handling that builds authority, organic reach, and customer trust.',
     deliverables: [
-      'Profile Branding & Bio Optimization',
-      'High-Impact Graphic Posts & Video Reels',
-      'Strategic Hashtag & Keyword Research',
-      'Captions & Conversion-Focused Copywriting',
-      'Audience Engagement & DM Lead Routing'
+      'High-Impact Reels, Carousels & Graphics',
+      'Conversion-Focused Copy & Captions',
+      'Hashtag & Local Audience Targeting',
+      'Active DM Lead Capture & Routing'
     ]
   },
   {
@@ -137,13 +130,12 @@ const AGENCY_CAPABILITIES = [
     icon: Palette,
     iconColor: 'text-teal-600',
     iconBg: 'bg-teal-50',
-    description: 'Clean, professional, and intuitive user experiences designed from scratch in Figma to elevate your brand prestige.',
+    description: 'Clean, intuitive designs in Figma crafted for effortless user engagement.',
     deliverables: [
-      'Modern UI Wireframing & Interactive Prototypes',
-      'Mobile-First Responsive Interface Architecture',
-      'Brand Identity Systems & Visual Guidelines',
-      'Complete Website Modernization & Redesign',
-      'Conversion Rate Optimization (CRO) Layouts'
+      'Figma Wireframes & Interactive Prototypes',
+      'Mobile-First Responsive Layouts',
+      'Brand Identity Systems & Style Guides',
+      'Conversion Rate Optimization (CRO)'
     ]
   },
   {
@@ -154,13 +146,12 @@ const AGENCY_CAPABILITIES = [
     icon: Wrench,
     iconColor: 'text-slate-600',
     iconBg: 'bg-slate-100',
-    description: 'Dependable post-launch technical management so your web systems stay secure, updated, and blazing fast 24/7.',
+    description: 'Reliable technical support so your systems stay secure, updated, and fast 24/7.',
     deliverables: [
-      'Proactive Bug Fixes & Security Patches',
+      '24/7 Security Patches & Bug Fixes',
       'Regular Content, Menu & Price Updates',
-      'Speed Optimizations & Core Web Vitals Monitoring',
-      'Cloud Server Backups & Domain SSL Renewals',
-      'Priority On-Call Technical Support SLA'
+      'Daily Cloud Backups & SSL Renewals',
+      'Priority Developer On-Call SLA'
     ]
   },
   {
@@ -171,13 +162,12 @@ const AGENCY_CAPABILITIES = [
     icon: MessageSquare,
     iconColor: 'text-emerald-600',
     iconBg: 'bg-emerald-50',
-    description: 'Automate customer bookings, order confirmations, broadcast alerts, and payment reminders directly on WhatsApp.',
+    description: 'Automate bookings, confirmations, alerts, and reminders directly on WhatsApp.',
     deliverables: [
-      'WhatsApp Business API Setup & Verification',
-      '1-Click Direct WhatsApp Booking Triggers',
-      'Automated Slot & Order Confirmations',
-      'Payment Due / Takada Reminder Alerts',
-      'Pre-Filled Inbound Lead Questionnaires'
+      'Official WhatsApp Business API Setup',
+      '1-Click WhatsApp Booking Triggers',
+      'Automated Order & Slot Confirmations',
+      'Payment Reminders & Inbound Questionnaires'
     ]
   }
 ];
