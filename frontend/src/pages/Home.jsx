@@ -216,15 +216,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Instant Website Mockup Generator (Dark Rich Premium Grey Section) */}
-      <section className="py-16 sm:py-20 bg-slate-900 border-y border-slate-800 relative overflow-hidden shadow-2xl">
-        {/* Dark Rich Premium Ambient Glow */}
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-emerald-500/10 via-sky-500/10 to-indigo-500/10 blur-[130px] rounded-full pointer-events-none" 
-          aria-hidden="true" 
-        />
+      {/* 3. Instant Website Mockup Generator (Seamless Elevated Island Studio) */}
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-white via-slate-100/60 to-white relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <MockupGenerator />
+          {/* Elevated Dark Studio Module with Soft Ambient Glow */}
+          <div className="relative rounded-3xl bg-slate-950 border border-slate-800 shadow-2xl shadow-slate-900/20 p-5 sm:p-8 lg:p-10 overflow-hidden">
+            {/* Ambient Multi-Hue Glow */}
+            <div 
+              className="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" 
+              aria-hidden="true" 
+            />
+            <div 
+              className="absolute -bottom-24 -right-24 w-96 h-96 bg-sky-500/10 blur-[120px] rounded-full pointer-events-none" 
+              aria-hidden="true" 
+            />
+            
+            <div className="relative z-10">
+              <MockupGenerator />
+            </div>
+          </div>
         </div>
       </section>
 
